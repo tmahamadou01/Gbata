@@ -14,6 +14,8 @@
 
 Route::get('/', 'HomeController@index')->name('accueil');
 
+Route::get('/offer/list', 'OfferController@listoffer')->name('list_offer');
+
 
 
 Auth::routes();

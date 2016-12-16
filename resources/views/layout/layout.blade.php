@@ -11,6 +11,7 @@
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style_offre.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/slick.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/animate.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -33,12 +34,12 @@
         <div id="menu-bar">
             <div class="container">
                 <div class="col-sm-2">
-                    <a href="{{ route('accueil') }}"><img src="img/logo.png" class="logo-gbata" alt=""></a>
+                    <a href="{{ route('accueil') }}"><img src="{{ asset('img/logo.png') }}" class="logo-gbata" alt=""></a>
                 </div>
                 <div class="col-sm-10 text-right">
                     <ul id="menu">
                         <li class="menu-item"><a class="menu-link" href="">Comment ça marche ?</a></li>
-                        <li class="menu-item"><a class="menu-link" href="">Offres</a></li>
+                        <li class="menu-item"><a class="menu-link" href="{{ route('list_offer') }}">Offres</a></li>
                         <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
                         <li class="menu-item connexion-btn-style"><a href="{{ route('login') }}" class="">Connexion</a></li>
                     </ul>
@@ -46,7 +47,7 @@
                         <li class="menu-item"><span class="menu-link" href=""><i class="fa fa-align-justify fa-2x" aria-hidden="true"></i></span>
                             <ul id="sous-menu-sm">
                                 <li><a href="">Comment ça marche ?</a></li>
-                                <li><a href="">Offres</a></li>
+                                <li><a href="{{ route('list_offer') }}">Offres</a></li>
                                 <li><a href="">Contacts</a></li>
                                 <li><a href="{{ route('login') }}">Connexion</a></li>
                             </ul>

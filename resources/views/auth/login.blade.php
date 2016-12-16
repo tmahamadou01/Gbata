@@ -14,7 +14,7 @@
         <div class="col-sm-4">
 
             <div class="form-logo">
-                <img src="img/logo.png" alt="">
+                <img src="{{ asset('img/logo.png') }}" alt="">
             </div>
 
             <div class="form-message">
