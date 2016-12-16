@@ -26,5 +26,15 @@ $(document).ready(function(){
 
     });
 
+    $('.carousel-sidebar').slick({
+        dots: false,
+        infinite: true,
+        speed: 800,
+        fade: false,
+        cssEase: 'linear',
+        autoplay: true,
+        arrows: false
+    });
+
 
 });
