@@ -25,4 +25,10 @@ class HomeController extends Controller
     {
         return view('home/index');
     }
+
+    public function how()
+    {
+
+        return view('home/comment-sa-marche');
+    }
 }

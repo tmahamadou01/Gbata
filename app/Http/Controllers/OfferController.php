@@ -10,4 +10,10 @@ class OfferController extends Controller
 
         return view('offer/list');
     }
+
+    public function detailoffer($id_offer){
+
+
+        return view('offer/detail');
+    }
 }

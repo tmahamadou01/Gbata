@@ -69,7 +69,7 @@
             </div>
 
             <div class="form-register">
-                Pas encore de compte ? <a href="">inscrivez vous ici</a>
+                Pas encore de compte ? <a href="{{ route('register') }}">inscrivez vous ici</a>
             </div>
             <br><br><br>
         </div>

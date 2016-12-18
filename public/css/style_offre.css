@@ -189,7 +189,7 @@
 }
 
 .associe .block-vert{
-    z-index: 999 !important;
+    z-index: 9 !important;
     position: absolute;
     bottom: 11em;
     left: 2.5em;
@@ -203,7 +203,7 @@
 }
 
 .associe .block-noir{
-    z-index: 999;
+    z-index: 9;
     position: absolute;
     bottom: 11em;
     right: 2.5em;
@@ -217,7 +217,7 @@
 }
 
 .associe .block-prix{
-    z-index: 999;
+    z-index: 9;
     position: absolute;
     bottom: 0.3em;
     left: 2em;
@@ -227,7 +227,7 @@
 }
 
 .associe .block-favorite{
-    z-index: 999;
+    z-index: 9;
     position: absolute;
     bottom: 0.5em;
     right: 3em;
@@ -261,4 +261,122 @@
 
 .associe .offre-block:hover .offre-img{
     transform: scale(1.1);
+}
+
+/*:::::::::::::::::::::::::::::::: page detail ::::::::::::::::::::::::::::::::*/
+
+.detail-page-style{
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #DDDDDD;
+}
+
+.detail-page-style .offre-name{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.offre-slide-arrow{
+    text-align: center;
+}
+.offre-slide-arrow .item{
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+.detail-page-style .control-right{
+    z-index: 9;
+    position: absolute;
+    top: 23em;
+    right: 3em;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 12px;
+    background-color: #000;
+    opacity: 0.7;
+    padding: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.detail-page-style .control-left{
+    z-index: 9;
+    position: absolute;
+    top: 23em;
+    left: 3em;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 12px;
+    background-color: #000;
+    opacity: 0.7;
+    padding: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.detail-page-style .control-left:hover{
+    background-color: #00AEEF;
+}
+
+.detail-page-style .control-right:hover{
+    background-color: #00AEEF;
+}
+
+.detail-page-style .carateristique{
+    margin-top: 15px;
+}
+.detail-page-style .carateristique table{
+    padding-left: 5px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #EEEEEE;
+    color: #818799;
+}
+.detail-page-style .les-detail span{
+    font-size: 16px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.detail-page-style .les-detail table{
+    margin-top: 15px;
+}
+.les-detail .diviseur{
+    padding: 0;
+    text-align: right;
+    display: inline-block;
+    margin-left: 5em;
+
+}
+.diviseur img{
+    margin: -2px;
+    text-align: right;
+}
+.detail-page-style .les-detail-over{
+    padding: 10px;
+}
+.les-detail-over .col-sm-3{
+    padding: 10px;
+}
+.les-detail-over .fa{
+    color: green;
+}
+
+.detail-page-style .description span{
+    font-size: 16px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.detail-page-style .description table{
+    margin-top: 15px;
+}
+.description .diviseur{
+    padding: 0;
+    text-align: right;
+    display: inline-block;
+    margin-left: 16em;
+
+}
+.description .col-sm-12{
+    padding: 1.5em;
 }

@@ -26,15 +26,15 @@ $(document).ready(function(){
 
     });
 
-    $('.carousel-sidebar').slick({
-        dots: false,
+    $('.offre-slide-content').slick({
         infinite: true,
-        speed: 800,
+        speed: 500,
         fade: false,
         cssEase: 'linear',
         autoplay: true,
-        arrows: false
+        arrows: true,
+        nextArrow: '.offre-slide .control-right',
+        prevArrow: '.offre-slide .control-left'
     });
-
 
 });

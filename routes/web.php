@@ -14,7 +14,16 @@
 
 Route::get('/', 'HomeController@index')->name('accueil');
 
-Route::get('/offer/list', 'OfferController@listoffer')->name('list_offer');
+Route::get('/comment-ca-marche', 'HomeController@how')->name('how');
+
+
+
+Route::group(['prefix' => 'offer'], function () {
+
+    Route::get('/list', 'OfferController@listoffer')->name('list_offer');
+    Route::get('/{id_offer}/detail', 'OfferController@detailoffer')->name('detail_offer')->where('id_offer', '[0-9]+');
+
+});
 
 
 
