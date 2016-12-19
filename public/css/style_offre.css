@@ -1,6 +1,6 @@
 .offre-block{
     padding: 7px;
-    border: 1px solid #F5F5F5;
+    border: 1px solid #ccc;
 }
 .offre-img-block{
     width: 100%;
@@ -108,13 +108,7 @@
 .offre-name .detail-button:hover{
     text-decoration: none;
 }
-.offre-date{
-    border: 1px solid #F5F5F5;
-}
-.offre-date span{
-    font-size: 12px;
-    color: #9d9d9d;
-}
+
 .location-link{
     display: inline-block;
     padding: 0.7em 2em;
@@ -142,9 +136,8 @@
 .sidebar-offre .recherche{
     padding: 5px;
     /*background-color: #808080;*/
-    border: 1px solid #00AEEF;
+    border: 1px solid #dddddd;
     color: #00AEEF;
-    border-radius: 4px;
 }
 .sidebar-offre .recherche span{
     font-size: 16px;
@@ -379,4 +372,36 @@
 }
 .description .col-sm-12{
     padding: 1.5em;
+}
+.detail-page-style .localisation span{
+    text-transform: uppercase;
+}
+.localisation .diviseur{
+    padding: 0;
+    text-align: right;
+    display: inline-block;
+    margin-left: 18em;
+
+}
+/*::::::::::::::: detail page side bar ::::::::::::::::::::*/
+.detail-page-sidebar{
+    padding: 0;
+    border: 1px solid #dddddd;
+}
+
+.agency img{
+    width: 100%;
+    height: 250px;
+}
+.favori-button{
+    padding: 1em;
+    border: 1px solid #2ab27b;
+    color: #2ab27b;
+    border-radius: 4px;
+    width: 100%;
+}
+.favori-button:hover{
+    background-color: #2ab27b;
+    text-decoration: none;
+    color: #FFF;
 }

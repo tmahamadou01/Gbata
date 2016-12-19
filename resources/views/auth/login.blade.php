@@ -11,11 +11,7 @@
     <div class="row" id="connexion-page-background">
 
         <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-
-            <div class="form-logo">
-                <img src="{{ asset('img/logo.png') }}" alt="">
-            </div>
+        <div class="col-sm-4" style="margin-top: 7em;">
 
             <div class="form-message">
                 Vous devez vous inscrire avant de pouvoir le faire ! &nbsp;&nbsp;&nbsp; <i id="close" class="fa fa-times" aria-hidden="true"></i>
@@ -71,7 +67,7 @@
             <div class="form-register">
                 Pas encore de compte ? <a href="{{ route('register') }}">inscrivez vous ici</a>
             </div>
-            <br><br><br>
+            <br><br>
         </div>
         <div class="col-sm-4"></div>
 

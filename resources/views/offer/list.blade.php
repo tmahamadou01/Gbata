@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="container" style="margin-top: 8em;">
+    <div class="container" style="margin-top: 6.5em;">
 
         <div class="row">
             <div class="col-sm-3 text-justify">
@@ -56,29 +56,19 @@
                             </button>
                         </form>
                     </div>
-                    <div class="categorie">
-                        <span>Categorie</span>
-                        <hr>
-                        <ul>
-                            <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Maison basse</a></li>
-                            <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Appartement</a></li>
-                            <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Studio</a></li>
-                            <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Villa</a></li>
-                            <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Chateau</a></li>
-                        </ul>
-                    </div>
-                    <div class="associe">
+
+                    <!--<div class="associe">
                         <hr>
                         <div>
                             <div class="offre-img-block">
-                                <img src="{{ asset('img/mg_2381.jpg') }}" class="offre-img" alt="">
+                                <img src="{{-- asset('img/mg_2381.jpg') --}}" class="offre-img" alt="">
                                 <div class="block-vert">Villa</div>
                                 <div class="block-noir">à vendre</div>
                                 <div class="block-prix">150000 F / moi</div>
                                 <div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
 
                 <!-- sidebar -->
@@ -123,7 +113,7 @@
 
                         <div class="offre-block">
                             <div class="offre-img-block">
-                                <img src="{{ asset('img/1.jpg') }}" class="offre-img" alt="">
+                                <img src="{{ asset('img/villa_1.jpg') }}" class="offre-img" alt="">
                                 <div class="block-vert">Appartement</div>
                                 <div class="block-noir">à vendre</div>
                                 <div class="block-prix">150000 F / moi</div>
@@ -142,9 +132,8 @@
                                 </div>
                                 <br>
                             </div>
-                        </div>
-                        <div class="offre-date" style="padding: 10px;">
-                            <div class="row">
+                            <div style="padding: 0; border-bottom: 1px solid #dddddd;"></div>
+                            <div class="row" style="font-size: 12px; color: #9d9d9d; padding: 5px;">
                                 <div class="col-sm-6" style="margin-top: 5px;">
                                     <span><i class="fa fa-user" aria-hidden="true"></i> allhasco</span>
                                 </div>
@@ -163,7 +152,7 @@
 
                         <div class="offre-block">
                             <div class="offre-img-block">
-                                <img src="{{ asset('img/mg_2381.jpg') }}" class="offre-img" alt="">
+                                <img src="{{ asset('img/villa_3.jpg') }}" class="offre-img" alt="">
                                 <div class="block-vert">Villa</div>
                                 <div class="block-noir">à vendre</div>
                                 <div class="block-prix">150000 F / moi</div>
@@ -182,9 +171,8 @@
                                 </div>
                                 <br>
                             </div>
-                        </div>
-                        <div class="offre-date" style="padding: 10px;">
-                            <div class="row">
+                            <div style="padding: 0; border-bottom: 1px solid #dddddd;"></div>
+                            <div class="row" style="font-size: 12px; color: #9d9d9d; padding: 5px;">
                                 <div class="col-sm-6" style="margin-top: 5px;">
                                     <span><i class="fa fa-user" aria-hidden="true"></i> allhasco</span>
                                 </div>
@@ -201,7 +189,34 @@
                     <?php } ?>
 
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
             </div>
+
         </div>
 
     </div>

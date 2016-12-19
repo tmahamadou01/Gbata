@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="container" style="margin-top: 8em;">
+    <div class="container" style="margin-top: 6.5em;">
 
         <div class="row">
 
@@ -79,9 +79,6 @@
                     <div class="les-detail">
                         <span>information complementaire</span>
 
-                            <div class="diviseur">
-                                <?php for($i=0; $i<=120; $i++){ ?><img src="{{ asset('img/divider1.png') }}" alt=""> <?php } ?>
-                            </div>
 
                         <div class="row">
                             <div class="col-sm-6">
@@ -141,9 +138,6 @@
                     <div class="description">
                         <span>description</span>
 
-                        <div class="diviseur">
-                            <?php for($i=0; $i<=120; $i++){ ?><img src="{{ asset('img/divider1.png') }}" alt=""> <?php } ?>
-                        </div>
 
                         <div class="row">
                             <div class="col-sm-12">
@@ -153,12 +147,81 @@
                             </div>
                         </div>
                     </div>
+                    <div class="localisation">
+                        <span>localisation</span>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-4.037690162658692%2C5.3401045702320715%2C-4.006834030151368%2C5.365698755750563&amp;layer=mapnik&amp;marker=5.352880432802857%2C-4.02224063873291" style="border: 1px solid #dddddd; width: 100%; height: 300px;"></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
             <div class="col-sm-3">
 
+                <div class="detail-page-sidebar">
+                    <div class="agency">
+                        <div style="padding: 10px; font-weight: bold;">Logement proposé par GBATA</div>
+                        <hr>
 
+                        <div style="padding: 10px;">
+                            Agence situé a par exemple tu es a yopougon et puis tu veut partir laba donc tu empreunte un gbaka et tu descent a la liberte maintenant les gbaka qui disent adjamé la tu prend un et tu descent au paillet et tu appel il von venir te chercher
+
+                        </div>
+                        <hr>
+                        <div class="text-center" style="padding: 10px;">
+                            mail : agencebizar@mousso.com
+                        </div>
+                        <hr>
+                        <div class="text-center" style="padding: 10px;">
+                            contact : (+225) 49 32 66 23
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="detail-page-sidebar">
+
+                    <div class="row" style="padding: 15px 10px 0;">
+                        <div class="col-sm-6">
+                            Publié le
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            28/10/2016
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row" style="padding: 15px 10px 0;">
+                        <div class="col-sm-6">
+                            Reponse
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            moin de 48h
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row" style="padding: 15px 10px 0;">
+                        <div class="col-sm-6">
+                            Vérifié
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            OUI
+                        </div>
+                    </div>
+
+
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <a href="" class="favori-button"><i class="fa fa-heart" aria-hidden="true"></i> Ajouter à mes favoris</a>
+                    </div>
+                </div>
 
             </div>
 
