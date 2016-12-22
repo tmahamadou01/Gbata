@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class OfferController extends Controller
 {
     public function listoffer(){
@@ -15,5 +16,10 @@ class OfferController extends Controller
 
 
         return view('offer/detail');
+    }
+
+    public function addoffer(){
+
+        return view('offer/add');
     }
 }

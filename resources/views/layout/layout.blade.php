@@ -14,6 +14,8 @@
     <link href="{{ URL::asset('css/style_offre.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/slick.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/tinymice/skin.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/selectize.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
     @yield('custom_css')
@@ -49,7 +51,11 @@
                                 <li><a href="{{ route('how') }}">Comment ça marche ?</a></li>
                                 <li><a href="{{ route('list_offer') }}">Offres</a></li>
                                 <li><a href="">Contacts</a></li>
-                                <li><a href="{{ route('login') }}">Connexion</a></li>
+                                @if(Auth::guest())
+                                    <li><a href="{{ route('login') }}">Connexion</a></li>
+                                @else
+                                    {{ Auth::user()->name }}
+                                @endif
                             </ul>
                         </li>
                     </ul>
@@ -108,9 +114,16 @@
                 </div>
                 <div class="col-sm-4 col-sm-offset-6">
                     <div class="social-block">
-                        <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                        <div class="reseau-social" >
+                            <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="reseau-social" >
+                            <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="reseau-social" >
+                            <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                        </div>
+
                     </div>
                     <div class="top text-right">
                         <a id="back-to-top" href="#" role="button">
@@ -129,8 +142,12 @@
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('js/slick.min.js') }}"></script>
+<script src="{{ URL::asset('js/selectize.min.js') }}"></script>
+<script src="{{ URL::asset('js/plugin.js') }}"></script>
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src="{{ URL::asset('js/script.js') }}"></script>
 <script>
+    tinymce.init({ selector:'textarea' });
     @yield('js_script')
 </script>
 

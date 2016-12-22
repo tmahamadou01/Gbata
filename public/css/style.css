@@ -53,6 +53,10 @@ body{
 }
 /*::::::::::: end menu :::::::::::*/
 
+.help-block{
+    font-weight: bold;
+    color: red;
+}
 
 /*::::::::::: search box :::::::::::*/
 .search-box{
@@ -87,6 +91,10 @@ body{
     border: 1px solid #0F75BC;
     width: 100%;
     border-radius: 3px;
+}
+.search-box-button:hover{
+    background-color: rgb(12, 93, 149);
+    border: 1px solid rgb(12, 93, 149);
 }
 /* :::::::::::::: avantage :::::::::::::::*/
 .rubrique-title span{
@@ -160,19 +168,19 @@ body{
 .block-footer a:hover{
     color: #FFF;
 }
-.social-block i{
+
+.social-block .reseau-social{
+    border: 1px solid #FFF;
     padding: 10px;
     width: 50px;
     height: 50px;
-    border: 2px solid #FFF;
     border-radius: 100%;
     color: #2185D0;
+    display: inline-block;
+    margin-right: 5px;
 }
-.social-block a{
-    margin-right: 10px;
-}
-.social-block a:hover .social-block i{
-    color: #FFF;
+.reseau-social a{
+    color: #2185D0;
 }
 
 .top{

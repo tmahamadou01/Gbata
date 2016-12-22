@@ -37,4 +37,16 @@ $(document).ready(function(){
         prevArrow: '.offre-slide .control-left'
     });
 
+    $('#divers').selectize({
+        plugins: ['remove_button'],
+        delimiter: ',',
+        persist: false,
+        create: function(input) {
+            return {
+                value: input,
+                text: input
+            }
+        }
+    });
+
 });
