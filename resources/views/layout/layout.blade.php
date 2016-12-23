@@ -20,6 +20,13 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
     @yield('custom_css')
 
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,7 +50,12 @@
                         <li class="menu-item"><a class="menu-link" href="{{ route('how') }}">Comment ça marche ?</a></li>
                         <li class="menu-item"><a class="menu-link" href="{{ route('list_offer') }}">Offres</a></li>
                         <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
-                        <li class="menu-item connexion-btn-style"><a href="{{ route('login') }}" class="">Connexion</a></li>
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li class="menu-item connexion-btn-style"><a href="{{ route('login') }}" class="">Connexion</a></li>
+                        @else
+                            {{ Auth::user()->name }} <a href="{{ route('logout') }}" class="btn btn-danger">Deconnexion</a>
+                        @endif
                     </ul>
                     <ul id="menu-sm">
                         <li class="menu-item"><span class="menu-link" href=""><i class="fa fa-align-justify fa-2x" aria-hidden="true"></i></span>
@@ -51,11 +63,6 @@
                                 <li><a href="{{ route('how') }}">Comment ça marche ?</a></li>
                                 <li><a href="{{ route('list_offer') }}">Offres</a></li>
                                 <li><a href="">Contacts</a></li>
-                                @if(Auth::guest())
-                                    <li><a href="{{ route('login') }}">Connexion</a></li>
-                                @else
-                                    {{ Auth::user()->name }}
-                                @endif
                             </ul>
                         </li>
                     </ul>

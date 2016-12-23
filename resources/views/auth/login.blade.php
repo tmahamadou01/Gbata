@@ -27,11 +27,11 @@
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon">+225</div>
-                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                            <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
                         </div>
-                        @if ($errors->has('email'))
+                        @if ($errors->has('mobile'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('email') }}</strong>
+                                <strong>{{ $errors->first('mobile') }}</strong>
                             </span>
                         @endif
                     </div>
