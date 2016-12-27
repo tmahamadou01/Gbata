@@ -12,10 +12,10 @@
     <link href="{{ URL::asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/style_offre.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/slick.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/plugin/slick/slick.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/plugin/animate.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/tinymice/skin.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/selectize.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/plugin/selectize/selectize.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
     @yield('custom_css')
@@ -148,9 +148,9 @@
 
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ URL::asset('js/slick.min.js') }}"></script>
-<script src="{{ URL::asset('js/selectize.min.js') }}"></script>
-<script src="{{ URL::asset('js/plugin.js') }}"></script>
+<script src="{{ URL::asset('js/slick/slick.min.js') }}"></script>
+<script src="{{ URL::asset('js/selectize/selectize.min.js') }}"></script>
+<script src="{{ URL::asset('js/selectize/plugin.js') }}"></script>
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src="{{ URL::asset('js/script.js') }}"></script>
 <script>

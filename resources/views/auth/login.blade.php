@@ -39,7 +39,7 @@
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon">&nbsp;&nbsp;<i class="fa fa-key" aria-hidden="true"></i>&nbsp;&nbsp;</div>
-                            <input id="password" type="password" class="form-control" name="password" required>
+                            <input id="password" type="password" class="form-control" name="password" required><a class="mp-perdu" href="{{ url('/password/reset') }}">Perdu ?</a>
                         </div>
                         @if ($errors->has('password'))
                             <span class="help-block">

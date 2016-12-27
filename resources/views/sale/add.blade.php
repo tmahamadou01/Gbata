@@ -98,8 +98,8 @@
 
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="" role="tab" data-toggle="tab">LOCATION</a></li>
-                                <li><a href="{{ route('add_sale') }}" >VENTE</a></li>
+                                <li class="active"><a href="" role="tab" data-toggle="tab">VENTE</a></li>
+                                <li><a href="{{ route('add_offer') }}" >LOCATION</a></li>
                             </ul>
 
                         </div>
@@ -181,20 +181,11 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="">Loyer</label>
-                                            <input type="text" class="form-control" placeholder="ex. 150000">
+                                            <label for="">Prix</label>
+                                            <input type="text" class="form-control" placeholder="ex. 150000000">
                                         </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="">Caution</label>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Selectionner la caution ...</option>
-                                            @for($i=1; $i<10; $i++)
-                                                <option value="">{{ $i }} moi(s)</option>
-                                            @endfor
-                                        </select>
                                     </div>
                                 </div>
 

@@ -1,7 +1,7 @@
 @extends('layout/layout')
 
 @section('title')
-    Liste des Offres
+    Liste des Offres de vente
 @endsection
 
 @section('content')
@@ -16,14 +16,14 @@
                 <div class="sidebar-offre">
 
                     <div class="agence">
-                        <span>KôKôTi Home Agency</span>
+                        <span>Nick la sosiété Agency</span>
                         <hr>
                         <div class="agence_logo">
                             <img src="{{ asset('img/logoagence.bmp') }}" width="200" height="150" alt="">
                         </div>
                         <div class="service_agence">
                             <ul>
-                                <li><a href="{{ route('add_offer') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
+                                <li><a href="{{ route('add_sale') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Vendre un bien</a></li>
                                 <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Lister mes biens</a></li>
                             </ul>
                         </div>
@@ -98,13 +98,9 @@
 
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="" role="tab" data-toggle="tab">LOCATION</a></li>
-                                <li><a href="{{ route('list_sale') }}">VENTE</a></li>
+                                <li class="active"><a href="" role="tab" data-toggle="tab">VENTE</a></li>
+                                <li><a href="{{ route('list_offer') }}" >LOCATION</a></li>
                             </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                            </div>
 
                         </div>
 
@@ -128,10 +124,10 @@
 
                         <div class="offre-block">
                             <div class="offre-img-block">
-                                <img src="{{ asset('img/villa_1.jpg') }}" class="offre-img" alt="">
+                                <img src="{{ asset('img/villa_6.jpg') }}" class="offre-img" alt="">
                                 <div class="block-vert">Appartement</div>
-                                <div class="block-noir">à louer</div>
-                                <div class="block-prix">150000 F / moi</div>
+                                <div class="block-noir">à vendre</div>
+                                <div class="block-prix">150000000 F</div>
                                 <div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                             </div>
                             <div class="offre-name">
@@ -142,7 +138,7 @@
                                         <span style="font-size: 14px; font-weight: bold;">Appartement</span>
                                     </div>
                                     <div class="col-sm-6 text-right" style="margin-top: 5px;">
-                                        <a class="detail-button" href="{{ route('detail_offer',1) }}">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a class="detail-button" href="{{ route('detail_sale',1) }}">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <br>
@@ -167,21 +163,21 @@
 
                         <div class="offre-block">
                             <div class="offre-img-block">
-                                <img src="{{ asset('img/villa_3.jpg') }}" class="offre-img" alt="">
+                                <img src="{{ asset('img/villa_5.jpg') }}" class="offre-img" alt="">
                                 <div class="block-vert">Villa</div>
                                 <div class="block-noir">à vendre</div>
-                                <div class="block-prix">150000 F / moi</div>
+                                <div class="block-prix">220000000 F</div>
                                 <div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                             </div>
                             <div class="offre-name">
-                                <span class="name">Appartement Open Source 404</span>
+                                <span class="name">Viens goutter la villa</span>
                                 <span class="city-name">Yopougon / Annanerai</span>
                                 <div class="row">
                                     <div class="col-sm-6" style="margin-top: 5px;">
                                         <span style="font-size: 14px; font-weight: bold;">Appartement</span>
                                     </div>
                                     <div class="col-sm-6 text-right" style="margin-top: 5px;">
-                                        <a class="detail-button" href="{{ route('detail_offer',1) }}">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a class="detail-button" href="{{ route('detail_sale',1) }}">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <br>
