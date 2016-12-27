@@ -40,7 +40,8 @@ Route::group(['prefix' => 'sale'], function () {
 
 Route::group(['prefix' => 'adminzone'], function () {
 
-    Route::get('/home', '\App\Http\Controllers\Admin\AdminController@addAgency')->name('add_agency');
+    Route::get('/home', '\App\Http\Controllers\Admin\AdminController@Home')->name('home_admin');
+    Route::get('/agency/add', '\App\Http\Controllers\Admin\AgencyController@add')->name('add_agency');
 
 });
 

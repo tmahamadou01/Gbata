@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin/css/AdminLTE.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/tinymince/skin.min.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('admin/css/_all-skins.min.css') }}">
@@ -78,7 +80,7 @@
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-plus" aria-hidden="true"></i> Créer</a></li>
+                        <li><a href="{{ route('add_agency') }}"><i class="fa fa-plus" aria-hidden="true"></i> Créer</a></li>
                         <li><a href=""><i class="fa fa-list" aria-hidden="true"></i> Lister</a></li>
                     </ul>
                 </li>
@@ -124,6 +126,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('admin/js/app.min.js') }}"></script>
-    @yield('js_script')
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+        tinymce.init({ selector:'textarea' });
+        @yield('js_script')
+    </script>
+
 </body>
 </html>

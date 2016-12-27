@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class AdminController extends Controller
+class AgencyController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -22,9 +22,9 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-public function Home()
+public function add()
     {
-        return view('admin/home/home');
+        return view('admin/agency/add');
     }
 
 }
