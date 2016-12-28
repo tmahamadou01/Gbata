@@ -23,11 +23,13 @@
                     <!-- message d'erreur enfin je pense hien -->
                         {{ csrf_field() }}
                     <!-- end message d'erreur -->
+
+                    @include('partials.flash')
                     
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon">+225</div>
-                            <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
+                            <input id="mobile" type="number" class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
                         </div>
                         @if ($errors->has('mobile'))
                             <span class="help-block">

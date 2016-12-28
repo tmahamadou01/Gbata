@@ -54,7 +54,18 @@
                         @if (Auth::guest())
                             <li class="menu-item connexion-btn-style"><a href="{{ route('login') }}" class="">Connexion</a></li>
                         @else
-                            {{ Auth::user()->name }} <a href="{{ route('logout') }}" class="btn btn-danger">Deconnexion</a>
+                            <span style="color: green;">{{ Auth::user()->name }}</span>
+                            <div class="btn-group" role="group" aria-label="">
+
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a style="color: red;" href="{{ route('logout') }}">Deconnexion</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         @endif
                     </ul>
                     <ul id="menu-sm">

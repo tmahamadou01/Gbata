@@ -12,6 +12,8 @@
 */
 
 
+Route::get('/home', 'HomeController@home')->name('home');
+
 Route::get('/', 'HomeController@index')->name('accueil');
 
 Route::get('/comment-ca-marche', 'HomeController@how')->name('how');
@@ -49,4 +51,5 @@ Route::group(['prefix' => 'adminzone'], function () {
 
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('register/confirm/{token}', '\App\Http\Controllers\Auth\RegisterController@confirmEmail');
 

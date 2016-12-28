@@ -22,6 +22,8 @@
 
                     {{ csrf_field() }}
 
+                    @include('partials.flash')
+
                     <div class="form-group">
                         <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nom ..." required autofocus>
                         @if ($errors->has('name'))
@@ -35,25 +37,11 @@
 
                         @if ($errors->has('lastname'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('lastname') }}</strong>
-                            </span>
+                                    <strong>{{ $errors->first('lastname') }}</strong>
+                                    </span>
                         @endif
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-addon">+225</div>
-                                    <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Numero de téléphone ..." required>
-
-                                    @if ($errors->has('mobile'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('mobile') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail ..." required>
@@ -63,6 +51,20 @@
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">+225</div>
+                                    <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Numero de téléphone ..." required>
+
+                                    @if ($errors->has('mobile'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('mobile') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>

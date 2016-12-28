@@ -66,7 +66,7 @@
                 <li class="header text-center">MENU PRINCIPAL</li>
 
                 <li>
-                    <a href="pages/widgets.html">
+                    <a href="{{ route('home_admin') }}">
                         <i class="fa fa-th"></i> <span>ACCUEIL</span>
                     </a>
                 </li>

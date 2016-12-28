@@ -24,6 +24,8 @@
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
                     {{ csrf_field() }}
 
+                    @include('partials.flash')
+
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                         <label for="email" class="col-md-4 control-label">Addresse E-Mail </label>
 
@@ -41,7 +43,7 @@
                     <div class="form-group">
                         <div class="col-sm-12">
                             <button type="submit" class="connexion-button">
-                                Reinitialiser mon mot de passe
+                                Venvoyer mon adresse mail
                             </button>
                         </div>
                     </div>
