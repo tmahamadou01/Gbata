@@ -8,6 +8,10 @@
 
     <div class="container" style="margin-top: 6.5em;">
 
+        {{ Form::open() }}
+
+        {{ Form::close() }}
+
         <div class="row">
             <div class="col-sm-3 text-justify">
 
@@ -117,14 +121,22 @@
                 <div class="row">
 
                     <div class="col-sm-12">
-                    
+
                         <div class="add-offer-form">
 
-                            <form action="">
+
+                                @if (count($errors) > 0)
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
 
                                 <div class="form-group">
                                     <label for="">Titre de l'annonce</label>
-                                    <input type="text" class="form-control" placeholder="ex. Duplex villa">
                                 </div>
 
                                 <div class="row">
@@ -236,10 +248,6 @@
                                     </div>
                                     <div class="col-sm-4"></div>
                                 </div>
-
-
-
-                            </form>
 
                         </div>
 

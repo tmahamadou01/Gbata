@@ -23,7 +23,7 @@
                         </div>
                         <div class="service_agence">
                             <ul>
-                                <li><a href="{{ route('add_offer') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
+                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
                                 <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Lister mes biens</a></li>
                             </ul>
                         </div>
@@ -99,7 +99,7 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="active"><a href="" role="tab" data-toggle="tab">LOCATION</a></li>
-                                <li><a href="{{ route('list_sale') }}">VENTE</a></li>
+                                <li><a href="">VENTE</a></li>
                             </ul>
 
                             <!-- Tab panes -->
@@ -142,7 +142,7 @@
                                         <span style="font-size: 14px; font-weight: bold;">Appartement</span>
                                     </div>
                                     <div class="col-sm-6 text-right" style="margin-top: 5px;">
-                                        <a class="detail-button" href="{{ route('detail_offer',1) }}">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a class="detail-button" href="">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <br>
@@ -181,7 +181,7 @@
                                         <span style="font-size: 14px; font-weight: bold;">Appartement</span>
                                     </div>
                                     <div class="col-sm-6 text-right" style="margin-top: 5px;">
-                                        <a class="detail-button" href="{{ route('detail_offer',1) }}">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a class="detail-button" href="">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <br>
