@@ -48,7 +48,7 @@
                 <div class="col-sm-10 text-right">
                     <ul id="menu">
                         <li class="menu-item"><a class="menu-link" href="{{ route('how') }}">Comment ça marche ?</a></li>
-                        <li class="menu-item"><a class="menu-link" href="">Offres</a></li>
+                        <li class="menu-item"><a class="menu-link" href="{{ route('offers.index') }}">Offres</a></li>
                         <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
                         <!-- Authentication Links -->
                         @if (Auth::guest())
