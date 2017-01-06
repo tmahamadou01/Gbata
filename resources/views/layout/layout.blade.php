@@ -48,7 +48,7 @@
                 <div class="col-sm-10 text-right">
                     <ul id="menu">
                         <li class="menu-item"><a class="menu-link" href="{{ route('how') }}">Comment ça marche ?</a></li>
-                        <li class="menu-item"><a class="menu-link" href="{{ route('list_offer') }}">Offres</a></li>
+                        <li class="menu-item"><a class="menu-link" href="">Offres</a></li>
                         <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
                         <!-- Authentication Links -->
                         @if (Auth::guest())
@@ -72,7 +72,7 @@
                         <li class="menu-item"><span class="menu-link" href=""><i class="fa fa-align-justify fa-2x" aria-hidden="true"></i></span>
                             <ul id="sous-menu-sm">
                                 <li><a href="{{ route('how') }}">Comment ça marche ?</a></li>
-                                <li><a href="{{ route('list_offer') }}">Offres</a></li>
+                                <li><a href="">Offres</a></li>
                                 <li><a href="">Contacts</a></li>
                             </ul>
                         </li>

@@ -23,7 +23,7 @@
                         </div>
                         <div class="service_agence">
                             <ul>
-                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
+                                <li><a href="{{ route('offers.create') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
                                 <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Lister mes biens</a></li>
                             </ul>
                         </div>
@@ -91,33 +91,6 @@
             </div>
             <div class="col-sm-9 text-justify">
 
-                <div class="row">
-                    <div class="col-sm-12">
-
-                        <div>
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="" role="tab" data-toggle="tab">LOCATION</a></li>
-                                <li><a href="">VENTE</a></li>
-                            </ul>
-
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                            </div>
-
-                        </div>
-
-
-                        <!--<div class="location-link">
-                            <a href="">LOCATION</a>
-                        </div>
-                        <div class="vente-link">
-                            <a href="">VENTE</a>
-                        </div>-->
-                    </div>
-                </div>
-                <br>
                 <div class="row">
 
                     <?php for($i=0; $i<=5; $i++){ ?>

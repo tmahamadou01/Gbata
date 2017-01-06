@@ -27,7 +27,7 @@
                         </div>
                         <div class="service_agence">
                             <ul>
-                                <li><a href="{{ route('add_offer') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
+                                <li><a href="{{ route('offers.store') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
                                 <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Lister mes biens</a></li>
                             </ul>
                         </div>
@@ -96,158 +96,114 @@
             <div class="col-sm-9 text-justify">
 
                 <div class="row">
-                    <div class="col-sm-12">
-
-                        <div>
-
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="" role="tab" data-toggle="tab">LOCATION</a></li>
-                                <li><a href="{{ route('add_sale') }}" >VENTE</a></li>
-                            </ul>
-
-                        </div>
-
-
-                        <!--<div class="location-link">
-                            <a href="">LOCATION</a>
-                        </div>
-                        <div class="vente-link">
-                            <a href="">VENTE</a>
-                        </div>-->
-                    </div>
-                </div>
-                <br>
-                <div class="row">
 
                     <div class="col-sm-12">
 
                         <div class="add-offer-form">
 
+                            @include('partials.flash')
 
-                                @if (count($errors) > 0)
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                @endif
+                            {!! Form::open(array('route' => 'offers.store', 'enctype' => "multipart/form-data")) !!}
 
                                 <div class="form-group">
-                                    <label for="">Titre de l'annonce</label>
+                                    {!! Form::label('titre', 'Titre de l\'annonce') !!}
+                                    {!! Form::text('titre', null, ['class' => 'form-control', 'placeholder' => 'ex. Appartement du 75']) !!}
                                 </div>
 
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="">Ville / Commune</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Selectionnez une commune ...</option>
-                                                <option value="">Yopougon</option>
-                                                <option value="">Abobo</option>
-                                                <option value="">Marcory</option>
-                                                <option value="">Atte-Coube</option>
-                                                <option value="">Plateau</option>
-                                                <option value="">Koumassi</option>
-                                                <option value="">Port-Bouet</option>
-                                                <option value="">Treichville</option>
-                                                <option value="">Adjame</option>
-                                                <option value="">Cocody</option>
-                                            </select>
+                                            {!! Form::label('commune', 'Commune') !!}
+                                            {!! Form::select('commune',array(
+                                                'yopougon' => 'Yopougon',
+                                                'abobo' => 'Abobo',
+                                                'adjame' => 'Adjame',
+                                                'plateau' => 'Plateau',
+                                                'cocody' => 'Cocody',
+                                                'treichville' => 'Treicheville',
+                                                'koumassi' => 'Koumassi',
+                                                'marcory' => 'Marcory',
+                                                'atecoube' => 'AtteCoubé',
+                                                'portboue' => 'Port Bouet',
+                                                ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner une commune ...'])
+                                            !!}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="">Zone</label>
-                                            <input type="text" class="form-control" placeholder="ex. Paillet">
+                                            {!! Form::label('zone', 'zone') !!}
+                                            {!! Form::text('zone', null, ['class' => 'form-control', 'placeholder' => 'ex. paillet']) !!}
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Type de bien</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Selectionnez le type de bien ...</option>
-                                    </select>
-                                </div>
-
-                                <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="">Bien</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Selectionnez le bien ...</option>
-                                            </select>
+                                            {!! Form::label('type_maison', 'Type de maison') !!}
+                                            {!! Form::text('type_maison', null, ['class' => 'form-control', 'placeholder' => 'ex. studio']) !!}
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label for="">Nombre de pièce</label>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Nombre de pièces ...</option>
-                                            @for($j=1; $j<7; $j++)
-                                                <option value="">{{ $j }}</option>
-                                            @endfor
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="">Loyer</label>
-                                            <input type="text" class="form-control" placeholder="ex. 150000">
+                                            {!! Form::label('piece', 'Nombre de pièces') !!}
+                                            {!! Form::number('piece', null, ['class' => 'form-control', 'placeholder' => 'ex. 5']) !!}
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <label for="">Caution</label>
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Selectionner la caution ...</option>
-                                            @for($i=1; $i<10; $i++)
-                                                <option value="">{{ $i }} moi(s)</option>
-                                            @endfor
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Autres Options</label>
-                                    <input type="text" id="divers" value="" placeholder="ex. garage">
-
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="">Description</label>
-                                    <textarea name="" id="" style="height: 200px;">
-
-                                    </textarea>
-
-                                </div>
-
-                                <div class="row">
                                     <div class="col-sm-4">
-                                        <label for="">Image 1</label>
-                                        <input type="file" class="btn btn-default btn-block">
+                                        <div class="form-group">
+                                            {!! Form::label('loyer', 'Coût du loyer') !!}
+                                            {!! Form::number('loyer', null, ['class' => 'form-control', 'placeholder' => 'ex. 40000']) !!}
+                                        </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <label for="">Image 2</label>
-                                        <input type="file" class="btn btn-default btn-block">
+                                        <div class="form-group">
+                                            {!! Form::label('caution', 'Caution') !!}
+                                            {!! Form::number('caution', null, ['class' => 'form-control', 'placeholder' => 'ex. 8']) !!}
+                                        </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <label for="">Image 3</label>
-                                        <input type="file" class="btn btn-default btn-block">
+                                        <div class="form-group">
+                                            {!! Form::label('contact', 'Contact') !!}
+                                            {!! Form::number('contact', null, ['class' => 'form-control', 'placeholder' => 'ex. 07070707']) !!}
+                                        </div>
                                     </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            {!! Form::label('plus_information', 'Plus d\'information') !!}
+                                            {!! Form::text('plus_information', null, ['id' => 'divers']) !!}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            {!! Form::label('description', 'Description') !!}
+                                            {!! Form::textarea('description') !!}
+                                        </div>
+                                    </div>
                                     <div class="col-sm-4">
-                                        <button class="search-box-button" role="button" type="submit">
-                                            Publier mon offre
-                                        </button>
+                                        <div class="form-group">
+                                            {!! Form::label('image1', 'Image 1') !!}
+                                            {!! Form::file('image1', ['class' => 'btn btn-block btn-default']) !!}
+                                        </div>
                                     </div>
-                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            {!! Form::label('image2', 'Image 2') !!}
+                                            {!! Form::file('image2', ['class' => 'btn btn-block btn-default']) !!}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            {!! Form::label('image3', 'Image 3') !!}
+                                            {!! Form::file('image3', ['class' => 'btn btn-block btn-default']) !!}
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-2 col-sm-offset-5">
+                                        <div class="form-group">
+                                            {!! Form::button('Create', ['type' => 'submit', 'class' => 'search-box-button']) !!}
+                                        </div>
+                                    </div>
                                 </div>
+
+                            {!! Form::close() !!}
 
                         </div>
 
