@@ -64,8 +64,8 @@
                             <div class="form-group">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nom ..." required autofocus>
                                 @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                    <span>
+                                        <ul class="basic_error"><li>{{ $errors->first('name') }}</li></ul>
                                     </span>
                                 @endif
                             </div>
@@ -73,8 +73,8 @@
                                 <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" placeholder="Prenom ..." required>
 
                                 @if ($errors->has('lastname'))
-                                    <span class="help-block">
-                                    <strong>{{ $errors->first('lastname') }}</strong>
+                                    <span>
+                                        <ul class="basic_error"><li>{{ $errors->first('lastname') }}</li></ul>
                                     </span>
                                 @endif
                             </div>
@@ -93,8 +93,8 @@
                                 <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Numero de téléphone ..." required>
 
                                 @if ($errors->has('mobile'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('mobile') }}</strong>
+                                    <span>
+                                        <ul class="basic_error"><li>{{ $errors->first('mobile') }}</li></ul>
                                     </span>
                                 @endif
                             </div>
@@ -104,8 +104,8 @@
                                 <input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe ..." required>
 
                                 @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                    <span>
+                                        <ul class="basic_error"><li>{{ $errors->first('password') }}</li></ul>
                                     </span>
                                 @endif
                             </div>
