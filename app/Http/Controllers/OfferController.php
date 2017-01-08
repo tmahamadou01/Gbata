@@ -67,6 +67,7 @@ class OfferController extends Controller
         $offer->image1 = $newFileOneName;
         $offer->image2 = $newFileTwoName;
         $offer->image3 = $newFileThreeName;
+        $offer->users_id = 
 
         $offer->save();
 

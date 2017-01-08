@@ -18,6 +18,7 @@
     <link href="{{ URL::asset('css/plugin/selectize/selectize.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     @yield('custom_css')
 
     <!-- Scripts -->
@@ -37,51 +38,56 @@
 <body>
 
 
-<div class="container-fluid">
-
-    <div class="row">
         <div id="menu-bar">
             <div class="container">
-                <div class="col-sm-2">
+                <div class="col-xs-2">
                     <a href="{{ route('accueil') }}"><img src="{{ asset('img/logo.png') }}" class="logo-gbata" alt=""></a>
                 </div>
-                <div class="col-sm-10 text-right">
-                    <ul id="menu">
-                        <li class="menu-item"><a class="menu-link" href="{{ route('how') }}">Comment ça marche ?</a></li>
-                        <li class="menu-item"><a class="menu-link" href="">Offres</a></li>
-                        <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li class="menu-item connexion-btn-style"><a href="{{ route('login') }}" class="">Connexion</a></li>
-                        @else
-                            <span style="color: green;">{{ Auth::user()->name }}</span>
-                            <div class="btn-group" role="group" aria-label="">
-
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a style="color: red;" href="{{ route('logout') }}">Deconnexion</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        @endif
-                    </ul>
-                    <ul id="menu-sm">
-                        <li class="menu-item"><span class="menu-link" href=""><i class="fa fa-align-justify fa-2x" aria-hidden="true"></i></span>
-                            <ul id="sous-menu-sm">
-                                <li><a href="{{ route('how') }}">Comment ça marche ?</a></li>
-                                <li><a href="">Offres</a></li>
-                                <li><a href="">Contacts</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="col-xs-8 disponible">
+                    <i class="phone-icone fa fa-phone" aria-hidden="true"></i>
+                    <div class="phone-number">
+                        <span class="phone">(+225) 47 11 32 02</span><br>
+                        <span class="day">du lundi au samedi de 9h à 18h</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
+
+        <ul id="menu">
+            <li class="menu-item menu-item-one"><a class="menu-link" href="">Annonces</a>
+                <ul class="sous-menu">
+                    <li><a href="">Locations</a></li>
+                    <li><a href="">Ventes</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a class="menu-link" href="">Comment ça marche ?</a></li>
+            <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
+            <li class="menu-item menu-item-with-account">
+                <a class="menu-link" href="">
+                    <i class="myAccount-icone fa fa-user-circle-o" aria-hidden="true"></i>
+                    <span class="mySpace">Mon espace</span>
+                    <span class="myAccount">Connectez-vous</span>
+                </a>
+                <ul class="connexion">
+                    <li class="connexion-btn-style">
+                        <a href="" class="">Connectez-vous</a>
+                    </li>
+                    <li class="create-account"><a href="">Créer un compte</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-passer-une-annonce"><a class="menu-link" href="">Passer une annonce</a></li>
+
+        </ul>
+        <ul id="menu-sm">
+            <li class="menu-item"><span class="menu-link" href=""><i class="fa fa-align-justify fa-2x" aria-hidden="true"></i></span>
+                <ul id="sous-menu-sm">
+                    <li><a href="{{ route('how') }}">Comment ça marche ?</a></li>
+                    <li><a href="">Offres</a></li>
+                    <li><a href="">Contacts</a></li>
+                </ul>
+            </li>
+        </ul>
     @yield('content')
 
     <!-- footer -->

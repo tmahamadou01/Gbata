@@ -48,4 +48,9 @@ class User extends Authenticatable
 
         $this->save();
     }
+
+    public function offers()
+    {
+        return $this->hasMany('App\Offer');
+    }
 }
