@@ -43,12 +43,47 @@
                 <div class="col-xs-2">
                     <a href="{{ route('accueil') }}"><img src="{{ asset('img/logo.png') }}" class="logo-gbata" alt=""></a>
                 </div>
+<<<<<<< HEAD
                 <div class="col-xs-8 disponible">
                     <i class="phone-icone fa fa-phone" aria-hidden="true"></i>
                     <div class="phone-number">
                         <span class="phone">(+225) 47 11 32 02</span><br>
                         <span class="day">du lundi au samedi de 9h à 18h</span>
                     </div>
+=======
+                <div class="col-sm-10 text-right">
+                    <ul id="menu">
+                        <li class="menu-item"><a class="menu-link" href="{{ route('how') }}">Comment ça marche ?</a></li>
+                        <li class="menu-item"><a class="menu-link" href="{{ route('offers.index') }}">Offres</a></li>
+                        <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li class="menu-item connexion-btn-style"><a href="{{ route('login') }}" class="">Connexion</a></li>
+                        @else
+                            <span style="color: green;">{{ Auth::user()->name }}</span>
+                            <div class="btn-group" role="group" aria-label="">
+
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a style="color: red;" href="{{ route('logout') }}">Deconnexion</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        @endif
+                    </ul>
+                    <ul id="menu-sm">
+                        <li class="menu-item"><span class="menu-link" href=""><i class="fa fa-align-justify fa-2x" aria-hidden="true"></i></span>
+                            <ul id="sous-menu-sm">
+                                <li><a href="{{ route('how') }}">Comment ça marche ?</a></li>
+                                <li><a href="">Offres</a></li>
+                                <li><a href="">Contacts</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+>>>>>>> 00de37071a4b69ac9c33de2cf2fe3dd4c413408b
                 </div>
             </div>
         </div>
