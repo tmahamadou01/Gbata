@@ -56,38 +56,41 @@
 
     <div>
         <ul id="menu">
-            <li class="menu-item menu-item-one"><a class="menu-link" href="">Annonces</a>
-                <ul class="sous-menu">
-                    <li><a href="">Locations</a></li>
-                    <li><a href="">Ventes</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a class="menu-link" href="">Comment ça marche ?</a></li>
-            <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
-            <li class="menu-item menu-item-with-account">
-                <a class="menu-link" href="">
-                    <i class="myAccount-icone fa fa-user-circle-o" aria-hidden="true"></i>
-                    <span class="mySpace">Mon espace</span>
-                    @if (Auth::guest())
-                        <span class="myAccount">Connectez-vous</span>
-                    @else
-                        <span class="myAccount">{{ Auth::user()->name }}</span>
-                    @endif
-                </a>
-                <ul class="connexion">
-                    @if (Auth::guest())
-                        <li class="connexion-btn-style">
-                            <a href="{{ route('login') }}" class="">Connectez-vous</a>
-                        </li>
-                        <li class="create-account"><a href="{{ route('register') }}">Créer un compte</a></li>
-                    @else
-                        <li class="connexion-btn-style">
-                            <a href="{{ route('logout') }}" class="">Deconnexion</a>
-                        </li><br>
-                    @endif
-                </ul>
-            </li>
-            <li class="menu-item-passer-une-annonce"><a class="menu-link" href="">Passer une annonce</a></li>
+            <div class="container">
+                <li class="menu-item menu-item-one"><a class="menu-link" href="">Annonces</a>
+                    <ul class="sous-menu">
+                        <li><a href="">Locations</a></li>
+                        <li><a href="">Ventes</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="">Comment ça marche ?</a></li>
+                <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
+                <li class="menu-item menu-item-with-account">
+                    <a class="menu-link" href="">
+                        <i class="myAccount-icone fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span class="mySpace">Mon espace</span>
+                        @if (Auth::guest())
+                            <span class="myAccount">Connectez-vous</span>
+                        @else
+                            <span class="myAccount">{{ Auth::user()->name }}</span>
+                        @endif
+                    </a>
+                    <ul class="connexion">
+                        @if (Auth::guest())
+                            <li class="connexion-btn-style">
+                                <a href="{{ route('login') }}" class="">Connectez-vous</a>
+                            </li>
+                            <li class="create-account"><a href="{{ route('register') }}">Créer un compte</a></li>
+                        @else
+                            <li class="connexion-btn-style">
+                                <a href="{{ route('logout') }}" class="">Deconnexion</a>
+                            </li><br>
+                        @endif
+                    </ul>
+                </li>
+                <li class="menu-item-passer-une-annonce"><a class="menu-link" href="">Passer une annonce</a></li>
+            </div>
+
 
         </ul>
         <ul id="menu-sm">
