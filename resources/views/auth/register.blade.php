@@ -62,7 +62,7 @@
                             @include('partials.flash')
 
                             <div class="form-group">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nom ..." required autofocus>
+                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nom ..."  autofocus>
                                 @if ($errors->has('name'))
                                     <span>
                                         <ul class="basic_error"><li>{{ $errors->first('name') }}</li></ul>
@@ -70,7 +70,7 @@
                                 @endif
                             </div>
                             <div class="form-group">
-                                <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" placeholder="Prenom ..." required>
+                                <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" placeholder="Prenom ..." >
 
                                 @if ($errors->has('lastname'))
                                     <span>
@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail ..." required>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail ..." >
 
                                 @if ($errors->has('email'))
                                     <span>
@@ -90,7 +90,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Numero de téléphone ..." required>
+                                <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Numero de téléphone ..." >
 
                                 @if ($errors->has('mobile'))
                                     <span>
@@ -101,7 +101,7 @@
 
 
                             <div class="form-group">
-                                <input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe ..." required>
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe ..." >
 
                                 @if ($errors->has('password'))
                                     <span>
@@ -110,7 +110,7 @@
                                 @endif
                             </div>
                             <div class="form-group">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confimez le mot de passe" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confimez le mot de passe" >
                             </div>
 
                             <div class="form-group">
