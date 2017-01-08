@@ -18,7 +18,7 @@ Route::get('/', 'HomeController@index')->name('accueil');
 
 Route::get('/comment-ca-marche', 'HomeController@how')->name('how');
 
-Route::get('/bienvenue-sur-GBATA', 'HomeController@bienvenue')->name('bienvenue-message');
+Route::get('/welcome', 'HomeController@bienvenue')->name('bienvenue-message');
 
 /* route des offres*/
 

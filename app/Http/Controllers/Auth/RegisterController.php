@@ -85,7 +85,7 @@ class RegisterController extends Controller
 
         Mail::to($user->email)->send(new ConfirmationEmail($user));
 
-        return redirect('bienvenue-sur-GBATA');
+        return redirect('welcome');
         //back()->with('success', 'Veuillez confirmez votre adresse email.');
     }
 
