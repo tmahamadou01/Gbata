@@ -7,7 +7,7 @@
 @section('content')
 
     <!-- container -->
-
+<div class="container-fluid">
     <div class="row" id="register-page-background">
         <br><br><br><br><br><br><br>
         <div class="col-sm-2"></div>
@@ -128,6 +128,8 @@
         <div class="col-sm-2"></div>
 
     </div>
+</div>
+
 
 @endsection
 

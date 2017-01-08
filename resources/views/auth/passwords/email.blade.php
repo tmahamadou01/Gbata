@@ -12,7 +12,7 @@
     <div class="row" id="connexion-page-background">
 
         <div class="col-sm-4"></div>
-        <div class="col-sm-4" style="margin-top: 7em;">
+        <div class="col-sm-4" style="margin-top: 11em;">
 
             <div class="form-message">
                 Envoyez votre email pour réinitialiser le mot de passe &nbsp;&nbsp;&nbsp; <i id="close" class="fa fa-times" aria-hidden="true"></i>

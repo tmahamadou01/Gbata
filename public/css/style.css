@@ -495,19 +495,18 @@ body{
 #connexion-page-background .connexion-block .title{
     font-size: 22px;
     color: #0F75BC;
-    text-align: center;
 }
 #connexion-page-background .connexion-block .form-group .fa-lock{
     position: absolute;
-    right: 2.3em;
-    top: 4.2em;
+    right: 0.6em;
+    top: 0.1em;
     font-size: 2.5em;
     color: #0F75BC;
 }
 #connexion-page-background .connexion-block .form-group .fa-phone{
     position: absolute;
-    right: 2.3em;
-    top: 2.7em;
+    right: 0.6em;
+    top: 0.1em;
     font-size: 2.5em;
     color: #0F75BC;
 }

@@ -20,6 +20,10 @@ class HomeController extends Controller
     public function home(){
         return redirect('/');
     }
+    public function bienvenue(){
+
+        return view('auth.message');
+    }
 
     /**
      * Show the application dashboard.

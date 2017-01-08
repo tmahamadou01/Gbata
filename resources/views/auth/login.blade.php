@@ -7,7 +7,7 @@
 @section('content')
 
     <!-- container -->
-
+<div class="container-fluid">
     <div class="row" id="connexion-page-background">
         <br><br><br><br><br><br><br>
         <div class="col-sm-2"></div>
@@ -58,29 +58,34 @@
                         <form role="form" method="POST" action="{{ url('/login') }}">
 
                             <!-- message d'erreur enfin je pense hien -->
-                            {{ csrf_field() }}
-                            <!-- end message d'erreur -->
+                        {{ csrf_field() }}
+                        <!-- end message d'erreur -->
 
                             @include('partials.flash')
 
-                            <div class="form-group">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <input id="mobile" type="text" placeholder="Numero de téléphone ..." class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
-                                @if ($errors->has('mobile'))
-                                    <span class="help-block">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <input id="mobile" type="text" placeholder="Numero de téléphone ..." class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
+                                        @if ($errors->has('mobile'))
+                                            <span class="help-block">
                                         <strong>{{ $errors->first('mobile') }}</strong>
                                     </span>
-                                @endif
-                            </div>
-
-                            <div class="form-group">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                                <input id="password" type="password" placeholder="Mot de passe ..." class="form-control" name="password" required>
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                        <input id="password" type="password" placeholder="Mot de passe ..." class="form-control" name="password" required>
+                                        @if ($errors->has('password'))
+                                            <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @endif
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="form-group">
@@ -102,6 +107,8 @@
         <div class="col-sm-2"></div>
 
     </div>
+
+</div>
 
 @endsection
 

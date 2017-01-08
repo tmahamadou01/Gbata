@@ -36,26 +36,25 @@
     <![endif]-->
 </head>
 <body>
+    <div id="menu-bar">
+        <div class="container">
+            <div class="col-xs-2">
+                <a href="{{ route('accueil') }}"><img src="{{ asset('img/logo.png') }}" class="logo-gbata" alt=""></a>
+            </div>
 
-
-        <div id="menu-bar">
-            <div class="container">
-                <div class="col-xs-2">
-                    <a href="{{ route('accueil') }}"><img src="{{ asset('img/logo.png') }}" class="logo-gbata" alt=""></a>
+            <div class="col-xs-10 disponible">
+                <i class="phone-icone fa fa-phone" aria-hidden="true"></i>
+                <div class="phone-number">
+                    <span class="phone">(+225) 47 11 32 02</span><br>
+                    <span class="day">du lundi au samedi de 9h à 18h</span>
                 </div>
 
-                <div class="col-xs-10 disponible">
-                    <i class="phone-icone fa fa-phone" aria-hidden="true"></i>
-                    <div class="phone-number">
-                        <span class="phone">(+225) 47 11 32 02</span><br>
-                        <span class="day">du lundi au samedi de 9h à 18h</span>
-                    </div>
-
-                </div>
             </div>
         </div>
+    </div>
 
 
+    <div>
         <ul id="menu">
             <li class="menu-item menu-item-one"><a class="menu-link" href="">Annonces</a>
                 <ul class="sous-menu">
@@ -69,13 +68,23 @@
                 <a class="menu-link" href="">
                     <i class="myAccount-icone fa fa-user-circle-o" aria-hidden="true"></i>
                     <span class="mySpace">Mon espace</span>
-                    <span class="myAccount">Connectez-vous</span>
+                    @if (Auth::guest())
+                        <span class="myAccount">Connectez-vous</span>
+                    @else
+                        <span class="myAccount">{{ Auth::user()->name }}</span>
+                    @endif
                 </a>
                 <ul class="connexion">
-                    <li class="connexion-btn-style">
-                        <a href="{{ route('login') }}" class="">Connectez-vous</a>
-                    </li>
-                    <li class="create-account"><a href="">Créer un compte</a></li>
+                    @if (Auth::guest())
+                        <li class="connexion-btn-style">
+                            <a href="{{ route('login') }}" class="">Connectez-vous</a>
+                        </li>
+                        <li class="create-account"><a href="{{ route('register') }}">Créer un compte</a></li>
+                    @else
+                        <li class="connexion-btn-style">
+                            <a href="{{ route('logout') }}" class="">Deconnexion</a>
+                        </li><br>
+                    @endif
                 </ul>
             </li>
             <li class="menu-item-passer-une-annonce"><a class="menu-link" href="">Passer une annonce</a></li>
@@ -90,80 +99,83 @@
                 </ul>
             </li>
         </ul>
+    </div>
+
     @yield('content')
 
     <!-- footer -->
-    <div class="row">
-        <div class="block-footer" style="color: #FFF;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="block-footer" style="color: #FFF;">
 
-            <div class="container">
-                <div class="row">
+                <div class="container">
+                    <div class="row">
 
-                    <div class="col-sm-4">
-                        <h3>A propos de nous</h3><br>
-                        <p><a href="">Gbata</a></p>
-                        <p><a href="">Besoin d'aide ?</a></p>
-                        <p><a href="">Partenaires</a></p>
-                        <p><a href="">Contacts</a></p>
-                        <p><a href="">Mentions Légales</a></p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>Information</h3><br>
-                        <p><a href="">Actualités</a></p>
-                        <p><a href="">FAQ</a></p>
-                        <p><a href="">Conditions Générales d'Utilisation</a></p>
-                    </div>
-                    <div class="col-sm-4">
-                        <h3>Suivre l'actualité de Gbata ici</h3><br>
-                        <p><a href="">Soyez le premier au courant en vous inscrivant à notre newsletter.</a></p>
+                        <div class="col-sm-4">
+                            <h3>A propos de nous</h3><br>
+                            <p><a href="">Gbata</a></p>
+                            <p><a href="">Besoin d'aide ?</a></p>
+                            <p><a href="">Partenaires</a></p>
+                            <p><a href="">Contacts</a></p>
+                            <p><a href="">Mentions Légales</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3>Information</h3><br>
+                            <p><a href="">Actualités</a></p>
+                            <p><a href="">FAQ</a></p>
+                            <p><a href="">Conditions Générales d'Utilisation</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3>Suivre l'actualité de Gbata ici</h3><br>
+                            <p><a href="">Soyez le premier au courant en vous inscrivant à notre newsletter.</a></p>
 
-                        <p>
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="" placeholder="ex. infos@gbata.ci">
-                                    <div class="input-group-addon"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                            <p>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="" placeholder="ex. infos@gbata.ci">
+                                        <div class="input-group-addon"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+                                    </div>
                                 </div>
+                            </form>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-4 text-center"><br>
+                        <i class="rubrique-icon fa fa-home" aria-hidden="true"></i>
+                        <div class="bar"></div>
+                    </div>
+                    <br><br>
+                    <div class="col-sm-2">
+                        Copyright GBATA &copy; 2016
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-6">
+                        <div class="social-block">
+                            <div class="reseau-social" >
+                                <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
                             </div>
-                        </form>
-                        </p>
-                    </div>
+                            <div class="reseau-social" >
+                                <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="reseau-social" >
+                                <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                            </div>
 
-                </div>
-                <div class="col-sm-4 col-sm-offset-4 text-center"><br>
-                    <i class="rubrique-icon fa fa-home" aria-hidden="true"></i>
-                    <div class="bar"></div>
-                </div>
-                <br><br>
-                <div class="col-sm-2">
-                    Copyright GBATA &copy; 2016
-                </div>
-                <div class="col-sm-4 col-sm-offset-6">
-                    <div class="social-block">
-                        <div class="reseau-social" >
-                            <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
                         </div>
-                        <div class="reseau-social" >
-                            <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                        <div class="top text-right">
+                            <a id="back-to-top" href="#" role="button">
+                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <div class="reseau-social" >
-                            <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-                        </div>
+                    </div>
+                </div>
 
-                    </div>
-                    <div class="top text-right">
-                        <a id="back-to-top" href="#" role="button">
-                            <i class="fa fa-caret-up" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
             </div>
-
         </div>
     </div>
 
 
-</div>
 
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>

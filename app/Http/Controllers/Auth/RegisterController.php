@@ -85,12 +85,13 @@ class RegisterController extends Controller
 
         Mail::to($user->email)->send(new ConfirmationEmail($user));
 
-        return back()->with('success', 'Veuillez confirmez votre adresse email.');
+        return redirect('bienvenue-sur-GBATA');
+        //back()->with('success', 'Veuillez confirmez votre adresse email.');
     }
 
     public function confirmEmail($token){
         User::whereToken($token)->firstOrFail()->hasVerified();
 
-        return redirect('login')->with('success', 'Votre adresse à été confirmé. Connectez-vous');
+        return redirect('login')->with('success', 'Votre adresse a été confirmé. Connectez-vous');
     }
 }
