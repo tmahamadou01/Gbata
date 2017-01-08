@@ -6,28 +6,72 @@
 
 @section('content')
 
-    <div class="container" style="margin-top: 6.5em;">
-
+    <div class="container" style="">
+        <br><br><br><br><br><br><br>
         <div class="row">
-            <div class="col-sm-3 text-justify">
-
-                <!-- sidebar -->
-
-                <div class="sidebar-offre">
-
-                    <div class="agence">
-                        <span>KôKôTi Home Agency</span>
-                        <hr>
-                        <div class="agence_logo">
-                            <img src="{{ asset('img/logoagence.bmp') }}" width="200" height="150" alt="">
+            <div class="col-sm-12">
+                <div class="breadcrumbs">
+                    <ol class="breadcrumb">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Annonce</a></li>
+                        <li class="active">Liste</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div id="list-page-search-box">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Selectionnez une commune ...</option>
+                                            <option value="">Yopougon</option>
+                                            <option value="">Abobo</option>
+                                            <option value="">Marcory</option>
+                                            <option value="">Atte-Coube</option>
+                                            <option value="">Plateau</option>
+                                            <option value="">Koumassi</option>
+                                            <option value="">Port-Bouet</option>
+                                            <option value="">Treichville</option>
+                                            <option value="">Adjame</option>
+                                            <option value="">Cocody</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Nombre de pièces ...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Type d'offre ...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Budget maximum ...">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="service_agence">
-                            <ul>
-                                <li><a href="{{ route('offers.create') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
-                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Lister mes biens</a></li>
-                            </ul>
+                        <div class="col-sm-2"><br>
+                            <button class="search-box-button">
+                                <i class="fa fa-search" aria-hidden="true"></i> Rechercher
+                            </button>
                         </div>
                     </div>
+
+                </div>
+                <br>
+            </div>
+            <!--
 
                     <br><br>
                     <div class="recherche">
@@ -83,12 +127,11 @@
                                 <div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
 
-                <!-- sidebar -->
 
-            </div>
+            </div>-->
             <div class="col-sm-9 text-justify">
 
                 <div class="row">
@@ -201,6 +244,26 @@
                             </ul>
                         </nav>
 
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 text-justify">
+
+
+                <div class="sidebar-offre">
+
+                    <div class="agence">
+                        <span>KôKôTi Home Agency</span>
+                        <hr>
+                        <div class="agence_logo">
+                            <img src="{{ asset('img/logoagence.bmp') }}" width="200" height="150" alt="">
+                        </div>
+                        <div class="service_agence">
+                            <ul>
+                                <li><a href="{{ route('offers.create') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
+                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Lister mes biens</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

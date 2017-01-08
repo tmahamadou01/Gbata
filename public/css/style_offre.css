@@ -1,3 +1,24 @@
+#list-page-search-box{
+    border: 1px solid #FFF;
+    width: 100%;
+    padding: 2em;
+    background-color: #0F75BC;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+#list-page-search-box .search-box-button{
+    background-image: linear-gradient(#F7C215 50%,#F79A15);
+    padding: 1em 2em 1em 2em;
+    color: #FFF;
+    font-weight: bold;
+    border-bottom: 2px solid #005EA8;
+    width: 100%;
+    border-radius: 5px;
+}
+#list-page-search-box .search-box-button:hover{
+    background-image: linear-gradient(#F79A15 50%,#F7C215);
+}
+
 .offre-block{
     padding: 7px;
     border: 1px solid #ccc;
