@@ -451,11 +451,146 @@ body{
 .form-register a:hover{
     text-decoration: none;
 }
+
+/*  login page */
+
 #connexion-page-background{
     background-image:-moz-linear-gradient(60deg, #E0E6FF, #FFFFFE);
     background-image:-webkit-linear-gradient(60deg, #E0E6FF, #FFFFFE);
     background-image:-o-linear-gradient(60deg, #E0E6FF, #FFFFFE);
     background-image:linear-gradient(100deg, #E0E6FF, #FEFCE4);
+}
+#connexion-page-background .grace-a-gbata{
+    color: #0F75BC;
+    font-size: 20px;
+}
+#connexion-page-background .icone img{
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+}
+#connexion-page-background .icone{
+    display: inline-block;
+    width: 400px;
+    color: #737373;
+
+}
+
+#connexion-page-background .icone .title{
+    color: #E3017B;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+#connexion-page-background .block{
+    margin-top: 2em;
+}
+#connexion-page-background .connexion-block{
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #DADADA;
+    border-radius: 5px;
+    padding: 2.5em 4em;
+}
+#connexion-page-background .connexion-block .title{
+    font-size: 22px;
+    color: #0F75BC;
+    text-align: center;
+}
+#connexion-page-background .connexion-block .form-group .fa-lock{
+    position: absolute;
+    right: 2.3em;
+    top: 4.2em;
+    font-size: 2.5em;
+    color: #0F75BC;
+}
+#connexion-page-background .connexion-block .form-group .fa-phone{
+    position: absolute;
+    right: 2.3em;
+    top: 2.7em;
+    font-size: 2.5em;
+    color: #0F75BC;
+}
+#connexion-page-background .connexion-block .form-group .validate{
+    color: #FFF;
+    background-image: linear-gradient(#24C1DD 50%,#05AAC8);
+    width: 100%;
+    padding: 15px 3em;
+    border-radius: 4px;
+    border-bottom: 3px solid #04849B;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+/*!!!!!!!!!! register page !!!!!!!!!!!!!!!*/
+#register-page-background{
+    background-image:-moz-linear-gradient(60deg, #E0E6FF, #FFFFFE);
+    background-image:-webkit-linear-gradient(60deg, #E0E6FF, #FFFFFE);
+    background-image:-o-linear-gradient(60deg, #E0E6FF, #FFFFFE);
+    background-image:linear-gradient(100deg, #E0E6FF, #FEFCE4);
+}
+#register-page-background .grace-a-gbata{
+    color: #0F75BC;
+    font-size: 20px;
+}
+#register-page-background .icone img{
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+}
+#register-page-background .icone{
+    display: inline-block;
+    width: 400px;
+    color: #737373;
+
+}
+
+#register-page-background .icone .title{
+    color: #E3017B;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+#register-page-background .block{
+    margin-top: 2em;
+}
+#register-page-background .connexion-block{
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #DADADA;
+    border-radius: 5px;
+    padding: 2em 3em;
+}
+#register-page-background .connexion-block .title{
+    font-size: 22px;
+    color: #0F75BC;
+    text-align: center;
+}
+#register-page-background .connexion-block .form-group .fa-lock{
+    position: absolute;
+    right: 2.3em;
+    top: 4.2em;
+    font-size: 2.5em;
+    color: #0F75BC;
+}
+#register-page-background .connexion-block .form-group .fa-phone{
+    position: absolute;
+    right: 2.3em;
+    top: 2.7em;
+    font-size: 2.5em;
+    color: #0F75BC;
+}
+#register-page-background .connexion-block .form-group .validate{
+    color: #FFF;
+    background-image: linear-gradient(#24C1DD 50%,#05AAC8);
+    width: 100%;
+    padding: 15px 3em;
+    border-radius: 4px;
+    border-bottom: 3px solid #04849B;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
 }
 
 

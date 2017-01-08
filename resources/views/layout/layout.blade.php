@@ -73,7 +73,7 @@
                 </a>
                 <ul class="connexion">
                     <li class="connexion-btn-style">
-                        <a href="" class="">Connectez-vous</a>
+                        <a href="{{ route('login') }}" class="">Connectez-vous</a>
                     </li>
                     <li class="create-account"><a href="">Créer un compte</a></li>
                 </ul>

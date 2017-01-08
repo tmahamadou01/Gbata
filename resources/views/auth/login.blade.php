@@ -9,69 +9,98 @@
     <!-- container -->
 
     <div class="row" id="connexion-page-background">
-
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4" style="margin-top: 7em;">
-
-            <div class="form-message">
-                Vous devez vous inscrire avant de pouvoir le faire ! &nbsp;&nbsp;&nbsp; <i id="close" class="fa fa-times" aria-hidden="true"></i>
-            </div>
-
-
-            <div class="form-content">
-                <form role="form" method="POST" action="{{ url('/login') }}">
-                    <!-- message d'erreur enfin je pense hien -->
-                        {{ csrf_field() }}
-                    <!-- end message d'erreur -->
-
-                    @include('partials.flash')
-                    
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">+225</div>
-                            <input id="mobile" type="number" class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
-                        </div>
-                        @if ($errors->has('mobile'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('mobile') }}</strong>
-                            </span>
-                        @endif
+        <br><br><br><br><br><br><br>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="grace-a-gbata">
+                        Grâce à votre compte <strong>GBATA</strong> :
                     </div>
 
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">&nbsp;&nbsp;<i class="fa fa-key" aria-hidden="true"></i>&nbsp;&nbsp;</div>
-                            <input id="password" type="password" class="form-control" name="password" required><a class="mp-perdu" href="{{ url('/password/reset') }}">Perdu ?</a>
-                        </div>
-                        @if ($errors->has('password'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
-                        @endif
-                    </div>
+                    <div class="block">
+                        <div class="icone">
+                            <img src="{{ asset('img/icon-ringer-alarm-sound.png') }}" alt="">
 
-                    <div class="form-group text-left">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="remember"> Se souvenir de moi
-                            </label>
+                            <span class="title">Gérer</span> <br>
+                            vos alertes e-mails <br>
+                            en toute simplicité !
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <button class="connexion-button" type="submit">
-                            Connexion
-                        </button>
-                    </div>
-                </form>
-            </div>
+                    <div class="block">
+                        <div class="icone">
+                            <img src="{{ asset('img/icon-star-favorite-rating.png') }}" alt="">
 
-            <div class="form-register">
-                Pas encore de compte ? <a href="{{ route('register') }}">inscrivez vous ici</a>
+                            <span class="title">Enregistrer</span> <br>
+                            vos annonces favorites pour <br>
+                            les retrouver rapidement !
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="icone">
+                            <img src="{{ asset('img/icon-chat-message-comment-bubble.png') }}" alt="">
+
+                            <span class="title">Retrouver</span> <br>
+                            l'historique des messages envoyés <br>
+                            aux propriétaires pour <br>
+                            ne pas perdre le fil !
+                        </div>
+                    </div><br><br>
+                </div>
+                <div class="col-sm-7">
+                    <div class="connexion-block text-center">
+                        <div class="title">
+                            Je me connecte <strong>à mon compte</strong>
+                        </div>
+                        <br>
+                        <form role="form" method="POST" action="{{ url('/login') }}">
+
+                            <!-- message d'erreur enfin je pense hien -->
+                            {{ csrf_field() }}
+                            <!-- end message d'erreur -->
+
+                            @include('partials.flash')
+
+                            <div class="form-group">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <input id="mobile" type="text" placeholder="Numero de téléphone ..." class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
+                                @if ($errors->has('mobile'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('mobile') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                <input id="password" type="password" placeholder="Mot de passe ..." class="form-control" name="password" required>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="remember"> Se souvenir de moi
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="validate" value="Me Connecter   ">
+                            </div>
+                        </form>
+                        <a href="{{ url('/password/reset') }}">Mot de passe oublié ?</a><br>
+                        <a href="{{ route('register') }}">Créer mon compte ?</a>
+                    </div>
+                </div>
             </div>
-            <br><br>
         </div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-2"></div>
+
     </div>
 
 @endsection
