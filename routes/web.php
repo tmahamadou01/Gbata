@@ -22,7 +22,7 @@ Route::get('/bienvenue-sur-GBATA', 'HomeController@bienvenue')->name('bienvenue-
 
 /* route des offres*/
 
-Route::resource('offers', 'OfferController');
+
 
 /*route de l'admin zone */
 
@@ -30,7 +30,8 @@ Route::group(['prefix' => 'adminzone'], function () {
 
     Route::get('/home', '\App\Http\Controllers\Admin\AdminController@Home')->name('home_admin');
     Route::get('/agency/add', '\App\Http\Controllers\Admin\AgencyController@add')->name('add_agency');
-
+    //Route::get('/offers/create', '\App\Http\Controllers\Admin\OfferController@create')->name('add_offers');
+    Route::resource('offers', '\App\Http\Controllers\Admin\OfferController');
 });
 
 

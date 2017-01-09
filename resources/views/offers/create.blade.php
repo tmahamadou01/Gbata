@@ -6,8 +6,8 @@
 
 @section('content')
 
-    <div class="container" style="margin-top: 6.5em;">
-
+    <div class="container">
+        <br><br><br><br><br><br><br>
         {{ Form::open() }}
 
         {{ Form::close() }}
@@ -105,9 +105,23 @@
 
                             {!! Form::open(array('route' => 'offers.store', 'enctype' => "multipart/form-data")) !!}
 
-                                <div class="form-group">
-                                    {!! Form::label('titre', 'Titre de l\'annonce') !!}
-                                    {!! Form::text('titre', null, ['class' => 'form-control', 'placeholder' => 'ex. Appartement du 75']) !!}
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            {!! Form::label('titre', 'Titre de l\'annonce') !!}
+                                            {!! Form::text('titre', null, ['class' => 'form-control', 'placeholder' => 'ex. Appartement du 75']) !!}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            {!! Form::label('type_offers_id', 'Type d\'annonce') !!}
+                                            {!! Form::select('type_offers_id',array(
+                                                '1' => 'Location',
+                                                '2' => 'Vente',
+                                                ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner le type d\'annonce ...'])
+                                            !!}
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="row">

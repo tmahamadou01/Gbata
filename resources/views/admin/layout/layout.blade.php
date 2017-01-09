@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="{{ asset('admin/css/AdminLTE.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/tinymince/skin.min.css') }}">
+    <link href="{{ URL::asset('css/tinymice/skin.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/plugin/selectize/selectize.css') }}" rel="stylesheet">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('admin/css/_all-skins.min.css') }}">
@@ -127,8 +129,21 @@
     <!-- AdminLTE App -->
     <script src="{{ asset('admin/js/app.min.js') }}"></script>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="{{ URL::asset('js/selectize/selectize.min.js') }}"></script>
+    <script src="{{ URL::asset('js/selectize/plugin.js') }}"></script>
     <script>
         tinymce.init({ selector:'textarea' });
+        $('#divers').selectize({
+            plugins: ['remove_button'],
+            delimiter: ',',
+            persist: false,
+            create: function(input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            }
+        });
         @yield('js_script')
     </script>
 

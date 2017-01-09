@@ -1,22 +1,37 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\OfferRequest;
 use App\Offer;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OfferController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Guard $auth)
     {
-        return view('offers.index');
+        $offers = DB::table('offers')->where('users_id', $auth->id())->get();
+
+        return view('admin.offers.index', ['offers' => $offers]);
     }
 
     /**
@@ -26,7 +41,7 @@ class OfferController extends Controller
      */
     public function create()
     {
-        return view('offers.create');
+        return view('admin.offers.create');
     }
 
     /**
@@ -37,9 +52,15 @@ class OfferController extends Controller
      */
     public function store(OfferRequest $request, Guard $auth)
     {
-        /* file traitement */
 
-        $offer = new Offer;
+        /* file traitement */
+        $offer = new Offer();
+
+        $this->validate($request, [
+            'image1' => 'required',
+            'image2' => 'required',
+            'image3' => 'required',
+        ]);
 
         $filOne = $request->file('image1');
         $filTwo = $request->file('image2');
@@ -55,13 +76,18 @@ class OfferController extends Controller
         $filTwo->move($destinationPath, $newFileTwoName);
         $filThree->move($destinationPath, $newFileThreeName);
 
+        $offer->loyer = $request->loyer;
+        $offer->caution = $request->caution;
+        $offer->prix = $request->prix;
+
         $offer->titre = $request->titre;
         $offer->commune = $request->commune;
         $offer->zone = $request->zone;
         $offer->type_maison = $request->type_maison;
         $offer->piece = $request->piece;
-        $offer->loyer = $request->loyer;
-        $offer->caution = $request->caution;
+
+
+
         $offer->contact = $request->contact;
         $offer->plus_information = $request->plus_information;
         $offer->description = $request->description;
@@ -95,7 +121,8 @@ class OfferController extends Controller
      */
     public function edit($id)
     {
-        //
+        $offer = Offer::find($id);
+        return view('offer.edit', compact('offer'));
     }
 
     /**
