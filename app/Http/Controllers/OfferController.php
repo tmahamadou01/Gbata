@@ -6,6 +6,7 @@ use App\Http\Requests\OfferRequest;
 use App\Offer;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OfferController extends Controller
 {
@@ -16,7 +17,8 @@ class OfferController extends Controller
      */
     public function index()
     {
-        return view('offers.index');
+        $offers = DB::table('offers')->orderBy('created_at','DESC')->paginate(2);
+        return view('offers.index',['offers' =>$offers]);
     }
 
     /**

@@ -135,8 +135,7 @@
             <div class="col-sm-9 text-justify">
 
                 <div class="row">
-
-                    <?php for($i=0; $i<=5; $i++){ ?>
+                    @foreach($offers as $offer)
 
                     <div class="col-sm-6">
 
@@ -144,15 +143,21 @@
 
                         <div class="offre-block">
                             <div class="offre-img-block">
-                                <img src="{{ asset('img/villa_1.jpg') }}" class="offre-img" alt="">
-                                <div class="block-vert">Appartement</div>
-                                <div class="block-noir">à louer</div>
-                                <div class="block-prix">150000 F / moi</div>
+                                <img src="{{ asset('offers_img/'.$offer->image2) }}" class="offre-img" alt="">
+                                <div class="block-vert">{{$offer->type_maison}}</div>
+                                <div class="block-noir">{{$offer->type_offers_id}}</div>
+                                <div class="block-prix">
+                                    @if($offer->type_offers_id == 'location')
+                                        {{$offer->loyer}} Fr / mois
+                                    @else
+                                        {{$offer->loyer}} Fr
+                                    @endif
+                                </div>
                                 <div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
                             </div>
                             <div class="offre-name">
-                                <span class="name">Appartement Open Source 404</span>
-                                <span class="city-name">Adjamé / Paillet</span>
+                                <span class="name">{{$offer->titre}}</span>
+                                <span class="city-name">{{$offer->commune}} / {{$offer->zone}}</span>
                                 <div class="row">
                                     <div class="col-sm-6" style="margin-top: 5px;">
                                         <span style="font-size: 14px; font-weight: bold;">Appartement</span>
@@ -177,75 +182,50 @@
                         <!-- fin d'une offre -->
 
                     </div>
-                    <div class="col-sm-6">
+                    @endforeach
+                    {{--<div class="col-sm-6">--}}
 
-                        <!-- une offre -->
+                        {{--<!-- une offre -->--}}
 
-                        <div class="offre-block">
-                            <div class="offre-img-block">
-                                <img src="{{ asset('img/villa_3.jpg') }}" class="offre-img" alt="">
-                                <div class="block-vert">Villa</div>
-                                <div class="block-noir">à vendre</div>
-                                <div class="block-prix">150000 F / moi</div>
-                                <div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
-                            </div>
-                            <div class="offre-name">
-                                <span class="name">Appartement Open Source 404</span>
-                                <span class="city-name">Yopougon / Annanerai</span>
-                                <div class="row">
-                                    <div class="col-sm-6" style="margin-top: 5px;">
-                                        <span style="font-size: 14px; font-weight: bold;">Appartement</span>
-                                    </div>
-                                    <div class="col-sm-6 text-right" style="margin-top: 5px;">
-                                        <a class="detail-button" href="">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <br>
-                            </div>
-                            <div style="padding: 0; border-bottom: 1px solid #dddddd;"></div>
-                            <div class="row" style="font-size: 12px; color: #9d9d9d; padding: 5px;">
-                                <div class="col-sm-6" style="margin-top: 5px;">
-                                    <span><i class="fa fa-user" aria-hidden="true"></i> allhasco</span>
-                                </div>
-                                <div class="col-sm-6 text-right" style="margin-top: 5px;">
-                                    <span><i class="fa fa-calendar" aria-hidden="true"></i> 20 / 10 / 2016</span>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <!-- fin d'une offre -->
+                        {{--<div class="offre-block">--}}
+                            {{--<div class="offre-img-block">--}}
+                                {{--<img src="{{ asset('img/villa_3.jpg') }}" class="offre-img" alt="">--}}
+                                {{--<div class="block-vert">Villa</div>--}}
+                                {{--<div class="block-noir">à vendre</div>--}}
+                                {{--<div class="block-prix">150000 F / moi</div>--}}
+                                {{--<div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>--}}
+                            {{--</div>--}}
+                            {{--<div class="offre-name">--}}
+                                {{--<span class="name">Appartement Open Source 404</span>--}}
+                                {{--<span class="city-name">Yopougon / Annanerai</span>--}}
+                                {{--<div class="row">--}}
+                                    {{--<div class="col-sm-6" style="margin-top: 5px;">--}}
+                                        {{--<span style="font-size: 14px; font-weight: bold;">Appartement</span>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="col-sm-6 text-right" style="margin-top: 5px;">--}}
+                                        {{--<a class="detail-button" href="">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<br>--}}
+                            {{--</div>--}}
+                            {{--<div style="padding: 0; border-bottom: 1px solid #dddddd;"></div>--}}
+                            {{--<div class="row" style="font-size: 12px; color: #9d9d9d; padding: 5px;">--}}
+                                {{--<div class="col-sm-6" style="margin-top: 5px;">--}}
+                                    {{--<span><i class="fa fa-user" aria-hidden="true"></i> allhasco</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-sm-6 text-right" style="margin-top: 5px;">--}}
+                                    {{--<span><i class="fa fa-calendar" aria-hidden="true"></i> 20 / 10 / 2016</span>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<br>--}}
+                        {{--<!-- fin d'une offre -->--}}
 
-                    </div>
-
-                    <?php } ?>
+                    {{--</div>--}}
 
                 </div>
+                {{$offers->links()}}
 
-                <div class="row">
-                    <div class="col-sm-12">
-
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                </div>
             </div>
             <div class="col-sm-3 text-justify">
 
