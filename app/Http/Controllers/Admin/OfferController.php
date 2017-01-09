@@ -99,7 +99,7 @@ class OfferController extends Controller
 
         $offer->save();
 
-        return redirect()->route('offers.create')->with('success', 'Enregistrement effectué avec succès');
+        return redirect()->route('offers.create')->with('success', 'Votre annonce à été enregistré avec succès');
     }
 
     /**

@@ -34,6 +34,7 @@
                                 <th data-field="name">COMMUNE</th>
                                 <th data-field="price">LOYER</th>
                                 <th data-field="price">CAUTION</th>
+                                <th data-field="price">TYPE OFFRE</th>
                                 <th data-field="price">DATE CREATION</th>
                                 <th data-field="price">ACTIONS</th>
                             </tr>
@@ -45,6 +46,14 @@
                                     <td>{{ $offer->commune }}</td>
                                     <td>{{ $offer->loyer }}</td>
                                     <td>{{ $offer->caution }}</td>
+                                    <td>
+                                        @if($offer->type_offers_id == 'location')
+                                            <span class="label label-primary">{{ $offer->type_offers_id }}</span>
+                                        @else
+                                            <span class="label label-success">{{ $offer->type_offers_id }}</span>
+
+                                        @endif
+                                    </td>
                                     <td>{{ $offer->created_at }}</td>
                                     <td>
                                         <a class="btn btn-warning btn-sm" href="">Modifier</a>
