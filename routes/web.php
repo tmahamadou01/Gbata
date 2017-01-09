@@ -21,7 +21,7 @@ Route::get('/comment-ca-marche', 'HomeController@how')->name('how');
 Route::get('/welcome', 'HomeController@bienvenue')->name('bienvenue-message');
 
 /* route des offres*/
-
+Route::get('/offers', 'OfferController@index');
 
 
 /*route de l'admin zone */

@@ -78,12 +78,25 @@
                         <i class="fa fa-university" aria-hidden="true"></i>
                         <span>Agence</span>
                         <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="{{ route('add_agency') }}"><i class="fa fa-plus" aria-hidden="true"></i> Créer</a></li>
-                        <li><a href=""><i class="fa fa-list" aria-hidden="true"></i> Lister</a></li>
+                        <li><a href=""><i class="fa fa-list" aria-hidden="true"></i> Liste</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                        <span>Offres</span>
+                        <span class="pull-right-container">
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('offers.create') }}"><i class="fa fa-plus" aria-hidden="true"></i> Créer</a></li>
+                        <li><a href="{{ route('offers.index') }}"><i class="fa fa-list" aria-hidden="true"></i> Liste</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -91,8 +104,8 @@
                         <i class="fa fa-cog" aria-hidden="true"></i>
                         <span>Reglage</span>
                         <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href=""><i class="fa fa-plus" aria-hidden="true"></i> Créer un Admin</a></li>
