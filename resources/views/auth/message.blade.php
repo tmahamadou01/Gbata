@@ -50,16 +50,16 @@
                         </div><br><br>
                     </div>
                     <div class="col-sm-7">
-                        <div class="connexion-block text-justify">
-                            <div class="title">
-                                <strong>Bienvenue sur GBATA.CI</strong><br>
-                                Votre inscription a été éffectué avec succès, un mail de confirmation vous a été envoyé.
-                                Veuillez confirmer votre compte GBATA. <br>
-                                Avec GBATA vous pouvez recevoir toutes les offres immobillières partout en Côte d'Ivoire et en fonction de votre budget.
-                            </div>
-
-                            <a href="{{ route('accueil') }}">Retour à l'accueil</a>
+                        <div class="alert alert-success" role="alert">
+                            <strong>Bienvenue sur GBATA.</strong> Votre inscription s'est effectuée avec succès.
                         </div>
+                        <div class="alert alert-info" role="alert">
+                            Un mail de confirmation vous a été envoyé.
+                            Veuillez confirmer votre compte GBATA. <br>
+                            Avec GBATA vous pouvez recevoir toutes les offres immobillières partout en Côte d'Ivoire et en fonction de votre budget.
+                        </div>
+                        <a href="{{ route('accueil') }}">Retour à l'accueil</a>
+
                     </div>
                 </div>
             </div>

@@ -7,7 +7,8 @@
     margin-bottom: 10px;
 }
 #list-page-search-box .search-box-button{
-    background-image: linear-gradient(#F7C215 50%,#F79A15);
+    /*background-image: linear-gradient(#F7C215 50%,#F79A15);*/
+    background-color: darkcyan;
     padding: 1em 2em 1em 2em;
     color: #FFF;
     font-weight: bold;

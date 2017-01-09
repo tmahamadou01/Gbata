@@ -152,7 +152,8 @@ body{
     list-style: none;
     display: inline-block;
     height: 52px !important;
-    background-image: linear-gradient(#EF518F 50%,#E4087D);
+    /*background-image: linear-gradient(#EF518F 50%,#E4087D);*/
+    background-color: darkcyan;
     padding: 10px 1em;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -182,7 +183,8 @@ body{
 
 .connexion-btn-style{
     color: #FFF;
-    background-image: linear-gradient(#24C1DD 50%,#05AAC8);
+    /*background-image: linear-gradient(#24C1DD 50%,#05AAC8);*/
+    background-color: darkcyan;
     width: 200px;
     padding: 15px 3em;
     border-radius: 4px;
@@ -622,6 +624,19 @@ body{
     border: 1px solid #C8C9CA;
 }
 
+.basic_error{
+    border: 0;
+    padding: .5rem;
+    list-style: none;
+    margin: 0;
+    font-size: 1em;
+    background-color: #f1abab !important;
+    width: 100%;
+    border-radius: 0;
+    color: #DB2828 !important;
+    border-color: #DB2828 !important;
+    font-weight: bold;
+}
 
 
 

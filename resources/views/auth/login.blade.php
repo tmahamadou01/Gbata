@@ -67,22 +67,22 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <input id="mobile" type="text" placeholder="Numero de téléphone ..." class="form-control" name="mobile" value="{{ old('mobile') }}" required autofocus>
+                                        <input id="mobile" type="text" placeholder="Numero de téléphone ..." class="form-control" name="mobile" value="{{ old('mobile') }}" autofocus>
                                         @if ($errors->has('mobile'))
-                                            <span class="help-block">
-                                        <strong>{{ $errors->first('mobile') }}</strong>
-                                    </span>
+                                            <span>
+                                                <ul class="basic_error"><li>{{ $errors->first('mobile') }}</li></ul>
+                                            </span>
                                         @endif
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <i class="fa fa-lock" aria-hidden="true"></i>
-                                        <input id="password" type="password" placeholder="Mot de passe ..." class="form-control" name="password" required>
+                                        <input id="password" type="password" placeholder="Mot de passe ..." class="form-control" name="password" >
                                         @if ($errors->has('password'))
-                                            <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                            <span>
+                                                <ul class="basic_error"><li>{{ $errors->first('password') }}</li></ul>
+                                            </span>
                                         @endif
                                     </div>
                                 </div>
