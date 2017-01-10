@@ -47,8 +47,8 @@
                                     <td>{{ $offer->caution }}</td>
                                     <td>{{ $offer->created_at }}</td>
                                     <td>
-                                        <a class="btn btn-warning btn-sm" href="">Modifier</a>
-                                        <a class="btn btn-danger btn-sm">Supprimer</a>
+                                        <a class="btn btn-warning btn-sm" href="{{ route('offers.edit', $offer->id) }}">Modifier</a>
+                                        <a class="btn btn-danger btn-sm" href="{{ route('offers.destroy', $offer->id) }}">Supprimer</a>
                                     </td>
 
                                 </tr>
