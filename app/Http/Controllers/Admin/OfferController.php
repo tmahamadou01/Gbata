@@ -50,7 +50,7 @@ class OfferController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(OfferRequest $request, Guard $auth)
+    public function store(Request $request, Guard $auth)
     {
 
         /* file traitement */
@@ -122,7 +122,7 @@ class OfferController extends Controller
     public function edit($id)
     {
         $offer = Offer::find($id);
-        return view('offer.edit', compact('offer'));
+        return view('admin.offers.edit', ['offers' => $offer]);
     }
 
     /**
@@ -134,7 +134,9 @@ class OfferController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $offers = Offer::findOrFail($id);
+        $offers->update($request->all());
+        return redirect(route('offers.edit', $offers))->with('success', 'Modification éffectué avec succès');
     }
 
     /**
@@ -143,8 +145,10 @@ class OfferController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        Offer::findOrFail($id)->delete();
+
+        return redirect()->route('offers.index')->with('success', 'Supression éffectué avec succès');
     }
 }

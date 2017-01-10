@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -22,6 +23,11 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('admin/css/_all-skins.min.css') }}">
     @yield('css_style')
+    <script>
+        window.Laravel = <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -78,7 +84,11 @@
                         <i class="fa fa-university" aria-hidden="true"></i>
                         <span>Agence</span>
                         <span class="pull-right-container">
+
+                            <i class="fa fa-angle-left pull-right"></i>
+
                           <i class="fa fa-angle-left pull-right"></i>
+
                         </span>
                     </a>
                     <ul class="treeview-menu">
@@ -101,10 +111,27 @@
                 </li>
                 <li class="treeview">
                     <a href="#">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        <span>Annonces</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ route('offers.create') }}"><i class="fa fa-plus" aria-hidden="true"></i> Créer</a></li>
+                        <li><a href="{{ route('offers.index') }}"><i class="fa fa-list" aria-hidden="true"></i> Lister</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
                         <i class="fa fa-cog" aria-hidden="true"></i>
                         <span>Reglage</span>
                         <span class="pull-right-container">
+
+                            <i class="fa fa-angle-left pull-right"></i>
+
                           <i class="fa fa-angle-left pull-right"></i>
+
                         </span>
                     </a>
                     <ul class="treeview-menu">

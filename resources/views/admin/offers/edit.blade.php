@@ -40,22 +40,23 @@
 
                         @include('partials.flash')
 
-                        {!! Form::open(array('route' => 'offers.store', 'enctype' => "multipart/form-data")) !!}
+                        {!! Form::open(['method' => 'put', 'url' => route('offers.update', $offers)]) !!}
 
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        {!! csrf_field() !!}
+
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('titre', 'Titre de l\'annonce') !!}
-                                    {!! Form::text('titre', null, ['class' => 'form-control', 'placeholder' => 'ex. Appartement du 75']) !!}
+                                    {!! Form::text('titre', $offers->titre, ['class' => 'form-control', 'placeholder' => 'ex. Appartement du 75']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('type_offers_id', 'Type d\'annonce') !!}
+                                    {!! Form::label('type_offers_id', 'Type d\'annonce') !!} <strong style="color: red;">*</strong>
                                     {!! Form::select('type_offers_id',array(
-                                        'location' => 'Location',
-                                        'vente' => 'Vente',
+                                        '1' => 'Location',
+                                        '2' => 'Vente',
                                         ),null, ['class' => 'form-control home-type', 'placeholder' => 'Selectionner le type d\'annonce ...'])
                                     !!}
                                 </div>
@@ -77,86 +78,68 @@
                                         'marcory' => 'Marcory',
                                         'atecoube' => 'AtteCoubé',
                                         'portboue' => 'Port Bouet',
-                                        ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner une commune ...'])
+                                        ),$offers->commune, ['class' => 'form-control', 'placeholder' => 'Selectionner une commune ...'])
                                     !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('zone', 'zone') !!}
-                                    {!! Form::text('zone', null, ['class' => 'form-control', 'placeholder' => 'ex. paillet']) !!}
+                                    {!! Form::text('zone', $offers->zone, ['class' => 'form-control', 'placeholder' => 'ex. paillet']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('type_maison', 'Type de maison') !!}
-                                    {!! Form::text('type_maison', null, ['class' => 'form-control', 'placeholder' => 'ex. studio']) !!}
+                                    {!! Form::text('type_maison', $offers->type_maison, ['class' => 'form-control', 'placeholder' => 'ex. studio']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     {!! Form::label('piece', 'Nombre de pièces') !!}
-                                    {!! Form::number('piece', null, ['class' => 'form-control', 'placeholder' => 'ex. 5']) !!}
+                                    {!! Form::number('piece', $offers->piece, ['class' => 'form-control', 'placeholder' => 'ex. 5']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-8 prix">
                                 <div class="form-group">
                                     {!! Form::label('prix', 'Prix') !!}
-                                    {!! Form::number('prix', null, ['class' => 'form-control', 'placeholder' => 'ex. 65000000']) !!}
+                                    {!! Form::number('prix', $offers->prix, ['class' => 'form-control', 'placeholder' => 'ex. 65000000']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-4 loyer">
                                 <div class="form-group">
                                     {!! Form::label('loyer', 'Coût du loyer') !!}
-                                    {!! Form::number('loyer', null, ['class' => 'form-control', 'placeholder' => 'ex. 40000']) !!}
+                                    {!! Form::number('loyer', $offers->loyer, ['class' => 'form-control', 'placeholder' => 'ex. 40000']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-4 caution">
                                 <div class="form-group">
                                     {!! Form::label('caution', 'Caution') !!}
-                                    {!! Form::number('caution', null, ['class' => 'form-control', 'placeholder' => 'ex. 8']) !!}
+                                    {!! Form::number('caution', $offers->caution, ['class' => 'form-control', 'placeholder' => 'ex. 8']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     {!! Form::label('contact', 'Contact') !!}
-                                    {!! Form::number('contact', null, ['class' => 'form-control', 'placeholder' => 'ex. 07070707']) !!}
+                                    {!! Form::number('contact', $offers->contact, ['class' => 'form-control', 'placeholder' => 'ex. 07070707']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     {!! Form::label('plus_information', 'Plus d\'information') !!}
-                                    {!! Form::text('plus_information', null, ['id' => 'divers']) !!}
+                                    {!! Form::text('plus_information', $offers->plus_information, ['id' => 'divers']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     {!! Form::label('description', 'Description') !!}
-                                    {!! Form::textarea('description') !!}
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    {!! Form::label('image1', 'Image 1') !!}
-                                    {!! Form::file('image1', ['class' => 'btn btn-block btn-default']) !!}
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    {!! Form::label('image2', 'Image 2') !!}
-                                    {!! Form::file('image2', ['class' => 'btn btn-block btn-default']) !!}
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    {!! Form::label('image3', 'Image 3') !!}
-                                    {!! Form::file('image3', ['class' => 'btn btn-block btn-default']) !!}
+                                    {!! Form::textarea('description', $offers->description) !!}
                                 </div>
                             </div>
 
-                            <div class="col-sm-2 col-sm-offset-5">
+                            <div class="col-sm-2 col-sm-offset-1">
                                 <div class="form-group">
-                                    {!! Form::button('Create', ['type' => 'submit', 'class' => 'search-box-button']) !!}
+                                    {!! Form::button('Modifier', ['type' => 'submit', 'class' => 'btn btn-primary btn-block btn-lg']) !!}
                                 </div>
                             </div>
                         </div>
