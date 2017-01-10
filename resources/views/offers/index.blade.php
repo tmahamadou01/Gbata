@@ -20,53 +20,53 @@
             </div>
             <div class="col-sm-12">
                 <div id="list-page-search-box">
+                    {!! Form::open(array('route' => 'search')) !!}
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Selectionnez une commune ...</option>
-                                            <option value="">Yopougon</option>
-                                            <option value="">Abobo</option>
-                                            <option value="">Marcory</option>
-                                            <option value="">Atte-Coube</option>
-                                            <option value="">Plateau</option>
-                                            <option value="">Koumassi</option>
-                                            <option value="">Port-Bouet</option>
-                                            <option value="">Treichville</option>
-                                            <option value="">Adjame</option>
-                                            <option value="">Cocody</option>
-                                        </select>
+                                        {!! Form::select('commune',array(
+                                            'yopougon' => 'Yopougon',
+                                            'abobo' => 'Abobo',
+                                            'adjame' => 'Adjame',
+                                            'plateau' => 'Plateau',
+                                            'cocody' => 'Cocody',
+                                            'treichville' => 'Treicheville',
+                                            'koumassi' => 'Koumassi',
+                                            'marcory' => 'Marcory',
+                                            'atecoube' => 'AtteCoubé',
+                                            'portboue' => 'Port Bouet',
+                                            ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner une commune ...'])
+                                        !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Nombre de pièces ...</option>
-                                        </select>
+                                        {!! Form::number('piece', null, ['class' => 'form-control', 'placeholder' => 'ex. 5']) !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <select name="" id="" class="form-control">
-                                            <option value="">Type d'offre ...</option>
-                                        </select>
+                                        {!! Form::select('type_offers_id',array(
+                                                '1' => 'Location',
+                                                '2' => 'Vente',
+                                                ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner le type d\'annonce ...'])
+                                            !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <input type="number" class="form-control" placeholder="Budget maximum ...">
+                                        {!! Form::number('budget', null, ['class' => 'form-control', 'placeholder' => 'ex. 50000']) !!}
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-2"><br>
-                            <button class="search-box-button">
-                                <i class="fa fa-search" aria-hidden="true"></i> Rechercher
-                            </button>
+                            {!! Form::button('<i class="fa fa-search" aria-hidden="true"></i> Rechercher', ['type' => 'submit', 'class' => 'search-box-button']) !!}
                         </div>
                     </div>
+                    {!! Form::close() !!}
 
                 </div>
                 <br>
@@ -132,9 +132,15 @@
 
 
             </div>-->
+
             <div class="col-sm-9 text-justify">
 
                 <div class="row">
+                    @if (count($offers) === 0)
+                        <div class="col-sm-6">
+                            Aucune offre disponible pour votre recherche {{$query}}
+                        </div>
+                    @elseif (count($offers) >= 1)
                     @foreach($offers as $offer)
 
                     <div class="col-sm-6">
@@ -222,11 +228,13 @@
                         {{--<!-- fin d'une offre -->--}}
 
                     {{--</div>--}}
+                    @endif
 
                 </div>
                 {{$offers->links()}}
 
             </div>
+
             <div class="col-sm-3 text-justify">
 
 
