@@ -22,6 +22,8 @@ Route::get('/welcome', 'HomeController@bienvenue')->name('bienvenue-message');
 
 /* route des offres*/
 Route::get('/offers', 'OfferController@index');
+Route::get('/detail/id/{id_offer}', 'OfferController@detail')->name('detail_offer');
+
 
 
 /*route de l'admin zone */

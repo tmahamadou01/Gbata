@@ -122,4 +122,9 @@ class OfferController extends Controller
     {
         //
     }
+
+    public function detail($id_offer){
+        $offer = Offer::find($id_offer);
+        return view('offers.detail', compact('offer'));
+    }
 }
