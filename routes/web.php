@@ -21,6 +21,9 @@ Route::get('/comment-ca-marche', 'HomeController@how')->name('how');
 Route::get('/welcome', 'HomeController@bienvenue')->name('bienvenue-message');
 
 /* route des offres*/
+Route::get('/offers', 'OfferController@index');
+Route::post('/offers', 'OfferController@search')->name('search');
+Route::get('/detail/id/{id_offer}', 'OfferController@detail')->name('detail_offer');
 
 
 

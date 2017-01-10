@@ -29,7 +29,7 @@ class OfferController extends Controller
      */
     public function index(Guard $auth)
     {
-        $offers = DB::table('offers')->where('users_id', $auth->id())->get();
+        $offers = DB::table('offers')->where('users_id', $auth->id())->orderBy('created_at','DESC')->get();
 
         return view('admin.offers.index', ['offers' => $offers]);
     }
@@ -99,7 +99,7 @@ class OfferController extends Controller
 
         $offer->save();
 
-        return redirect()->route('offers.create')->with('success', 'Enregistrement effectué avec succès');
+        return redirect()->route('offers.create')->with('success', 'Votre annonce à été enregistré avec succès');
     }
 
     /**

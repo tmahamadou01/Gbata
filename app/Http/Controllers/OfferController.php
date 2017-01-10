@@ -6,6 +6,7 @@ use App\Http\Requests\OfferRequest;
 use App\Offer;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OfferController extends Controller
 {
@@ -14,10 +15,25 @@ class OfferController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('offers.index');
+        //dd($request->method());
+        //if ($request->method() == "GET"){
+          //  $query = $request->input('commune');
+            //dd($query);
+        //}
+        $offers = DB::table('offers')->orderBy('created_at','DESC')->paginate(2);
+        return view('offers.index',['offers' =>$offers]);
     }
+
+    public function search(Request $request){
+        $query = $request->input('commune');
+        //dd($query);
+        $offers = DB::table('offers')->where('commune', 'LIKE', '%' . $query . '%')->orderBy('created_at','DESC')->paginate(2);
+        return view('offers.index',compact('offers', 'query'));
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -119,5 +135,10 @@ class OfferController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function detail($id_offer){
+        $offer = Offer::find($id_offer);
+        return view('offers.detail', compact('offer'));
     }
 }
