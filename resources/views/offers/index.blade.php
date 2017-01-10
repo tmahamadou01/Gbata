@@ -48,9 +48,9 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        {!! Form::select('type_offers_id',array(
-                                                '1' => 'Location',
-                                                '2' => 'Vente',
+                                        {!! Form::select('type_offer',array(
+                                                'location' => 'Location',
+                                                'vente' => 'Vente',
                                                 ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner le type d\'annonce ...'])
                                             !!}
                                     </div>
