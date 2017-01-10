@@ -55,8 +55,8 @@
                                 <div class="form-group">
                                     {!! Form::label('type_offers_id', 'Type d\'annonce') !!} <strong style="color: red;">*</strong>
                                     {!! Form::select('type_offers_id',array(
-                                        '1' => 'Location',
-                                        '2' => 'Vente',
+                                        'location' => 'Location',
+                                        'vente' => 'Vente',
                                         ),null, ['class' => 'form-control home-type', 'placeholder' => 'Selectionner le type d\'annonce ...'])
                                     !!}
                                 </div>
