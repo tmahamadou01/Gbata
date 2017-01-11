@@ -312,17 +312,40 @@
 
 /*:::::::::::::::::::::::::::::::: page detail ::::::::::::::::::::::::::::::::*/
 
-.detail-page-style{
-    width: 100%;
+#offers-detail-page .offers-references{
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 0.5em 2em;
+}
+#offers-detail-page .offers-references .offers-name-price .name{
+    color: #0F75BC;
+    font-size: 2em;
+}
+#offers-detail-page .offers-references .offers-name-price .ref{
+    color: #737373;
+    font-size: 12px;
+    display: block;
+}
+#offers-detail-page .offers-references .offers-name-price .price{
+    color: #00a7d0;
+    font-size: 1.5em;
+}
+#offers-detail-page .offers-references .offers-name-price .favorie-button{
+    padding: 2em 1em;
+}
+#offers-detail-page .offers-references .offers-name-price .favorie-button a{
     padding: 1em;
-    border: 1px solid #DDDDDD;
+    font-size: 14px;
+    border: 1px solid #0F75BC;
+    background-color: #FFF;
+    color: #0F75BC;
+    border-radius: 5px;
 }
-
-.detail-page-style .offre-name{
-    font-size: 20px;
-    padding: 5px;
+#offers-detail-page .offers-references .offers-name-price .favorie-button a:hover{
+    text-decoration: none;
+    color: #008B8B;
+    border: 1px solid #008B8B;
 }
-
 .offre-slide-arrow{
     text-align: center;
 }
@@ -331,48 +354,38 @@
     margin: 5px;
     cursor: pointer;
 }
-.detail-page-style .control-right{
+#offers-detail-page .control-right{
     z-index: 9;
     position: absolute;
-    top: 23em;
-    right: 3em;
-    font-weight: bold;
-    color: #FFF;
-    font-size: 12px;
-    background-color: #000;
-    opacity: 0.7;
-    padding: 15px;
-    border-radius: 3px;
+    top: 5em;
+    right: 0.5em;
+    color: #0F75BC;
+    font-size: 3em;
+    background-color: #FFF;
+    padding: 0 15px 10px;
+    border-radius: 100%;
     cursor: pointer;
-    transition: 0.2s;
+    width: 45px;
+    height: 45px;
 }
-.detail-page-style .control-left{
+#offers-detail-page .control-left{
     z-index: 9;
     position: absolute;
-    top: 23em;
-    left: 3em;
-    font-weight: bold;
-    color: #FFF;
-    font-size: 12px;
-    background-color: #000;
-    opacity: 0.7;
-    padding: 15px;
-    border-radius: 3px;
+    top: 5em;
+    left: 0.5em;
+    color: #0F75BC;
+    font-size: 3em;
+    background-color: #FFF;
+    padding: 0 15px 10px;
+    border-radius: 100%;
     cursor: pointer;
-    transition: 0.2s;
+    width: 45px;
+    height: 45px;
 }
-.detail-page-style .control-left:hover{
-    background-color: #00AEEF;
-}
-
-.detail-page-style .control-right:hover{
-    background-color: #00AEEF;
-}
-
-.detail-page-style .carateristique{
+#offers-detail-page .carateristique{
     margin-top: 15px;
 }
-.detail-page-style .carateristique table{
+#offers-detail-page .carateristique table{
     padding-left: 5px;
     text-align: left;
     font-weight: bold;
@@ -380,63 +393,59 @@
     background-color: #EEEEEE;
     color: #818799;
 }
-.detail-page-style .les-detail span{
+
+.les-detail span{
     font-size: 16px;
     padding: 5px;
     text-transform: uppercase;
 }
-.detail-page-style .les-detail table{
+#offers-detail-page .les-detail table{
     margin-top: 15px;
 }
-.les-detail .diviseur{
+#offers-detail-page .les-detail .diviseur{
     padding: 0;
     text-align: right;
     display: inline-block;
     margin-left: 5em;
 
 }
-.diviseur img{
+#offers-detail-page .diviseur img{
     margin: -2px;
     text-align: right;
 }
-.detail-page-style .les-detail-over{
+#offers-detail-page .les-detail-over{
     padding: 10px;
-}
-.les-detail-over .col-sm-3{
-    padding: 10px;
-}
-.les-detail-over .fa{
-    color: green;
 }
 
-.detail-page-style .description span{
+#offers-detail-page .description span{
     font-size: 16px;
     padding: 5px;
     text-transform: uppercase;
 }
-.detail-page-style .description table{
+#offers-detail-page .description table{
     margin-top: 15px;
 }
-.description .diviseur{
+#offers-detail-page .description .diviseur{
     padding: 0;
     text-align: right;
     display: inline-block;
     margin-left: 16em;
 
 }
-.description .col-sm-12{
+#offers-detail-page .description .col-sm-12{
     padding: 1.5em;
 }
-.detail-page-style .localisation span{
+#offers-detail-page .localisation span{
     text-transform: uppercase;
 }
-.localisation .diviseur{
+#offers-detail-page .localisation .diviseur{
     padding: 0;
     text-align: right;
     display: inline-block;
     margin-left: 18em;
 
 }
+
 /*::::::::::::::: detail page side bar ::::::::::::::::::::*/
 .detail-page-sidebar{
     padding: 0;

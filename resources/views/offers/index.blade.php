@@ -150,8 +150,14 @@
                         <div class="offre-block">
                             <div class="offre-img-block">
                                 <img src="{{ asset('offers_img/'.$offer->image2) }}" class="offre-img" alt="">
-                                <div class="block-vert">{{$offer->type_maison}}</div>
-                                <div class="block-noir">{{$offer->type_offers_id}}</div>
+
+                                <div class="block-noir">
+                                    @if($offer->type_offers_id == 1)
+                                        Location
+                                    @else
+                                        Vente
+                                    @endif
+                                </div>
                                 <div class="block-prix">
                                     @if($offer->type_offers_id == 'location')
                                         {{$offer->loyer}} Fr / mois
@@ -166,7 +172,7 @@
                                 <span class="city-name">{{$offer->commune}} / {{$offer->zone}}</span>
                                 <div class="row">
                                     <div class="col-sm-6" style="margin-top: 5px;">
-                                        <span style="font-size: 14px; font-weight: bold;">Appartement</span>
+                                        <span style="font-size: 14px; font-weight: bold;">{{$offer->type_maison}}</span>
                                     </div>
                                     <div class="col-sm-6 text-right" style="margin-top: 5px;">
                                         <a class="detail-button" href="{{ route('detail_offer', $offer->id) }}">Details &nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
