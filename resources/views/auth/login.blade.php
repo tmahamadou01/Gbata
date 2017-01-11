@@ -101,10 +101,13 @@
                         <a href="{{ url('/password/reset') }}">Mot de passe oublié ?</a><br>
                         <a href="{{ route('register') }}">Créer mon compte ?</a>
                     </div>
+                    <br>
                 </div>
             </div>
         </div>
-        <div class="col-sm-2"></div>
+        <div class="col-sm-2">
+
+        </div>
 
     </div>
 
