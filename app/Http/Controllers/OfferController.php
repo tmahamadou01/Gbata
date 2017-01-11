@@ -28,8 +28,13 @@ class OfferController extends Controller
 
     public function search(Request $request){
         $query = $request->input('commune');
-        //dd($query);
-        $offers = DB::table('offers')->where('commune', 'LIKE', '%' . $query . '%')->orderBy('created_at','DESC')->paginate(2);
+        $query2 = $request->input('type_offer');
+        //dd($query2);
+        $offers = DB::table('offers')
+                                //->orWhere('type_offers_id', 'LIKE', '%' . $query2 . '%')
+                                ->Where('commune', 'LIKE', '%' . $query . '%')
+                                ->orderBy('created_at','DESC')
+                                ->paginate(2);
         return view('offers.index',compact('offers', 'query'));
     }
 
