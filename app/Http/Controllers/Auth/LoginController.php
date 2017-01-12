@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -47,6 +48,15 @@ class LoginController extends Controller
     public function username()
     {
         return 'mobile';
+    }
+    protected function authenticated(Request $request, $user)
+    {
+        //redirect user if admin
+        if($user->hasRole('admin') || $user->hasRole('agence')) {
+            return redirect()->intended('/adminzone');
+        }
+
+        return redirect()->intended('/home');
     }
 
 }
