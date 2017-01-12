@@ -31,8 +31,8 @@ class OfferController extends Controller
         $query2 = $request->input('type_offer');
         //dd($query2);
         $offers = DB::table('offers')
-                                //->orWhere('type_offers_id', 'LIKE', '%' . $query2 . '%')
-                                ->Where('commune', 'LIKE', '%' . $query . '%')
+                                ->orWhere('type_offers_id', 'LIKE', '%' . $query2 . '%')
+                                ->orWhere('commune', 'LIKE', '%' . $query . '%')
                                 ->orderBy('created_at','DESC')
                                 ->paginate(2);
         return view('offers.index',compact('offers', 'query'));

@@ -65,7 +65,9 @@
                     </ul>
                 </li>
                 <li class="menu-item"><a class="menu-link" href="">Comment ça marche ?</a></li>
+                @role('admin')
                 <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
+                @endrole
                 <li class="menu-item menu-item-with-account">
                     <a class="menu-link" href="">
                         <i class="myAccount-icone fa fa-user-circle-o" aria-hidden="true"></i>
