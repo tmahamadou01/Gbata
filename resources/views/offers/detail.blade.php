@@ -9,7 +9,7 @@
 <div class="container" id="offers-detail-page">
     <br><br><br><br><br><br><br>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-10">
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="#">Accueil</a></li>
@@ -17,6 +17,11 @@
                     <li class="#">Liste</li>
                     <li class="active">Detail</li>
                 </ol>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="retour-button">
+                <a href=""><i class="fa fa-list" aria-hidden="true"></i> Retour à la liste</a>
             </div>
         </div>
     </div>
@@ -39,7 +44,9 @@
                     </div>
                     <div class="col-sm-12 favorie-button">
                         <div>
-                            <a href=""><i class="fa fa-star-o" aria-hidden="true"></i> Ajouter à mes favoris</a>
+                            <a href=""><i class="fa fa-star-o" aria-hidden="true"></i> Ajouter à mes favoris</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href=""><i class="fa fa-print" aria-hidden="true"></i> Imprimer la fiche de visite</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href=""><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Envoyer à un ami</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +89,7 @@
                     </div>
 
                 </div>
-                <br><br>
+                <br>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="carateristique">
@@ -111,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <br><br>
+                <br>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="les-detail">
@@ -163,13 +170,11 @@
                         </div>
                     </div>
                 </div>
-                <br><br>
+                <br>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="description">
                             <span>description</span>
-
-
                             <div class="row">
                                 <div class="col-sm-12">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque laboriosam laborum nemo numquam voluptate. Beatae, ea, neque? Accusantium aliquam debitis ducimus ea eum, facere facilis iusto non quam reprehenderit voluptates?
@@ -180,23 +185,172 @@
                         </div>
                     </div>
                 </div>
-                <br><br>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="localisation">
-                            <span>localisation</span>
+                        <div class="user-phone">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i> <span class="annonceur">Afficher le numero</span> <span class="numero">49 32 66 23</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-annonceur-form">
+                        <div class="form-header">
+                            Contacter le propriétaire
+                        </div>
+                        <div class="conact-form-content">
+                            <div class="row">
+                                <form action="">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <i class="votre-nom fa fa-user-circle-o" aria-hidden="true"></i>
+                                                    <input type="text" class="form-control" placeholder="votre nom">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <i class="votre-prenom fa fa-user-circle-o" aria-hidden="true"></i>
+                                                    <input type="text" class="form-control" placeholder="votre prenom">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <i class="votre-email fa fa-envelope-open-o" aria-hidden="true"></i>
+                                                    <input type="text" class="form-control" placeholder="votre email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <i class="votre-telephone fa fa-phone" aria-hidden="true"></i>
+                                                    <input type="text" class="form-control" placeholder="votre telephone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <textarea style="max-width: 100%; height: 205px;" class="form-control" placeholder="Votre message (penser à indiquer si vous êtes etudiant ou un couple en CDI/CDD etc ..., vos revenu et si vous avez un garant)"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 text-center">
+                                        <button role="button" type="submit" class="search-box-button">
+                                            Envoyer
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="detail-all-parameter">
+                        <div class="signaler">
+                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><br>
+                            <a href="">signaler <br> un probleme</a>
+                        </div>
+                        <div class="diviseur"></div>
+                        <div class="imprimer">
+                            <i class="fa fa-print" aria-hidden="true"></i><br>
+                            <a href="">imprimer la <br> fiche de visite</a>
+                        </div>
+                        <div class="diviseur"></div>
+                        <div class="envoyer">
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i><br>
+                            <a href="">envoyer l'annonce <br> à un ami</a>
+                        </div>
+                        <div class="diviseur"></div>
+                        <div class="suprimer">
+                            <i class="fa fa-star-o" aria-hidden="true"></i><br>
+                            <a href="">suprimer <br> de mes favoris</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-annonceur-form-sidebar">
+                        <div class="form-header">
+                            Contacter le propriétaire
+                        </div>
+                        <div class="conact-form-content-sidebar">
 
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-4.037690162658692%2C5.3401045702320715%2C-4.006834030151368%2C5.365698755750563&amp;layer=mapnik&amp;marker=5.352880432802857%2C-4.02224063873291" style="border: 1px solid #dddddd; width: 100%; height: 300px;"></iframe>
+                                    <div class="user-phone">
+                                        <i class="fa fa-phone-square" aria-hidden="true"></i> <span class="annonceur">Afficher le numero</span> <span class="numero">49 32 66 23</span>
+                                    </div>
                                 </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <i class="votre-nom fa fa-user-circle-o" aria-hidden="true"></i>
+                                                <input type="text" class="form-control" placeholder="votre nom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <i class="votre-prenom fa fa-user-circle-o" aria-hidden="true"></i>
+                                                <input type="text" class="form-control" placeholder="votre prenom">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <i class="votre-email fa fa-envelope-open-o" aria-hidden="true"></i>
+                                                <input type="text" class="form-control" placeholder="votre email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <i class="votre-telephone fa fa-phone" aria-hidden="true"></i>
+                                                <input type="text" class="form-control" placeholder="votre telephone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <textarea style="max-width: 100%; height: 205px;" class="form-control" placeholder="Votre message (penser à indiquer si vous êtes etudiant ou un couple en CDI/CDD etc ..., vos revenu et si vous avez un garant)"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 text-center">
+                                            <button role="button" type="submit" class="search-box-button-sidebar">
+                                                Envoyer
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4 text-justify">, consectetur adipisicing elit. Accusamus, aperiam asperiores consectetur dolore doloremque earum eius eligendi ex facilis hic labore magnam minima minus natus officia quae ratione repudiandae vel!</div>
 
     </div>
 </div>
@@ -204,5 +358,17 @@
 @endsection
 
 @section('js_script')
+    var indice = 1;
+    $('.user-phone').click(function(){
+        if(indice == 1){
+            $('.annonceur').hide();
+            $('.numero').show();
+            indice = 0;
+        }else{
+            $('.annonceur').show();
+            $('.numero').hide();
+            indice = 1;
+        }
 
+    });
 @endsection

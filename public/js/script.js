@@ -33,6 +33,7 @@ $(document).ready(function(){
         cssEase: 'linear',
         autoplay: true,
         arrows: true,
+        dot: true,
         nextArrow: '.offre-slide .control-right',
         prevArrow: '.offre-slide .control-left'
     });
