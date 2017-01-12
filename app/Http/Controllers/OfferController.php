@@ -22,7 +22,7 @@ class OfferController extends Controller
           //  $query = $request->input('commune');
             //dd($query);
         //}
-        $offers = DB::table('offers')->orderBy('created_at','DESC')->paginate(4);
+        $offers = DB::table('offers')->where('state_offer', '0')->orderBy('created_at','DESC')->paginate(4);
         return view('offers.index',['offers' =>$offers]);
     }
 
