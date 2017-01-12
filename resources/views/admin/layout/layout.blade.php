@@ -78,7 +78,7 @@
                         <i class="fa fa-th"></i> <span>ACCUEIL</span>
                     </a>
                 </li>
-
+                @role('admin')
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-university" aria-hidden="true"></i>
@@ -92,6 +92,7 @@
                         <li><a href=""><i class="fa fa-list" aria-hidden="true"></i> Liste</a></li>
                     </ul>
                 </li>
+                @endrole
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-bullhorn" aria-hidden="true"></i>
@@ -105,6 +106,7 @@
                         <li><a href="{{ route('offers.index') }}"><i class="fa fa-list" aria-hidden="true"></i> Lister</a></li>
                     </ul>
                 </li>
+                @role('admin')
                 <li class="treeview">
                     <a href="#">
                         <i class="fa fa-cog" aria-hidden="true"></i>
@@ -119,6 +121,7 @@
                         <li><a href=""><i class="fa fa-list" aria-hidden="true"></i> Lister les Admin</a></li>
                     </ul>
                 </li>
+                @endrole
             </ul>
         </section>
         <!-- /.sidebar -->

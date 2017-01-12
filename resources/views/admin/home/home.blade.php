@@ -51,6 +51,7 @@
                     </div>
                 </div>
                 <!-- ./col -->
+                @role('admin')
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-yellow">
@@ -65,7 +66,9 @@
                         <a href="#" class="small-box-footer">Lister <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                @endrole
                 <!-- ./col -->
+                @role('admin')
                 <div class="col-lg-3 col-xs-6">
                     <!-- small box -->
                     <div class="small-box bg-red">
@@ -80,6 +83,7 @@
                         <a href="#" class="small-box-footer">utilisateurs gbata</a>
                     </div>
                 </div>
+                @endrole
                 <!-- ./col -->
             </div>
             <!-- /.row -->

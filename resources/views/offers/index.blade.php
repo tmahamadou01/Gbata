@@ -134,7 +134,6 @@
             </div>-->
 
             <div class="col-sm-9 text-justify">
-
                 <div class="row">
                     @if (count($offers) === 0)
                         <div class="col-sm-6">
@@ -152,7 +151,7 @@
                                 <img src="{{ asset('offers_img/'.$offer->image2) }}" class="offre-img" alt="">
 
                                 <div class="block-noir">
-                                    @if($offer->type_offers_id == 1)
+                                    @if($offer->type_offers_id == 'location')
                                         Location
                                     @else
                                         Vente

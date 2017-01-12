@@ -22,7 +22,7 @@ class OfferController extends Controller
           //  $query = $request->input('commune');
             //dd($query);
         //}
-        $offers = DB::table('offers')->orderBy('created_at','DESC')->paginate(2);
+        $offers = DB::table('offers')->orderBy('created_at','DESC')->paginate(4);
         return view('offers.index',['offers' =>$offers]);
     }
 
@@ -34,7 +34,7 @@ class OfferController extends Controller
                                 ->orWhere('type_offers_id', 'LIKE', '%' . $query2 . '%')
                                 ->orWhere('commune', 'LIKE', '%' . $query . '%')
                                 ->orderBy('created_at','DESC')
-                                ->paginate(2);
+                                ->paginate(4);
         return view('offers.index',compact('offers', 'query'));
     }
 
