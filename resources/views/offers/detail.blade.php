@@ -90,33 +90,16 @@
 
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-sm-12">
+                <div class="row carateristique-block">
+                    @for($i=0; $i<10; $i++)
+                    <div class="col-sm-3">
                         <div class="carateristique">
-                            <table class="table table-responsive table-bordered">
-                                <tr>
-                                    <td><i class="fa fa-bath" aria-hidden="true"></i>
-                                        Lorem</td>
-                                    <td><i class="fa fa-shower" aria-hidden="true"></i>
-                                        ipsum</td>
-                                    <td><i class="fa fa-bed" aria-hidden="true"></i>
-                                        dolor</td>
-                                    <td><i class="fa fa-database" aria-hidden="true"></i>
-                                        consectetur</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fa fa-television" aria-hidden="true"></i>
-                                        adipisicing</td>
-                                    <td><i class="fa fa-chrome" aria-hidden="true"></i>
-                                        accusamus</td>
-                                    <td><i class="fa fa-envira" aria-hidden="true"></i>
-                                        3 dolore</td>
-                                    <td><i class="fa fa-usb" aria-hidden="true"></i>
-                                        1 dolorum</td>
-                                </tr>
-                            </table>
+                            <div class="item">
+                                <i class="fa fa-shower" aria-hidden="true"></i> bienvenue
+                            </div>
                         </div>
                     </div>
+                    @endfor
                 </div>
                 <br>
                 <div class="row">
