@@ -29,7 +29,7 @@ Route::get('/detail/id/{id_offer}', 'OfferController@detail')->name('detail_offe
 
 /*route de l'admin zone */
 
-Route::group(['prefix' => 'adminzone'], function () {
+Route::group(['prefix' => 'adminzone', 'middleware' => ['role:admin']], function () {
 
     Route::get('/home', '\App\Http\Controllers\Admin\AdminController@Home')->name('home_admin');
     Route::get('/agency/add', '\App\Http\Controllers\Admin\AgencyController@add')->name('add_agency');
