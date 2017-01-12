@@ -204,7 +204,7 @@
                     Trouvez vite et bien vos locataires
                 </span>
                 <br><br><br><br>
-                <a href="" class="proprietaire-immobilier-button">
+                <a href="{{route('offers.create')}}" class="proprietaire-immobilier-button">
                     Déposer une offre
                 </a>
             </div>
