@@ -185,7 +185,7 @@
                                     <span><i class="fa fa-user" aria-hidden="true"></i> allhasco</span>
                                 </div>
                                 <div class="col-sm-6 text-right" style="margin-top: 5px;">
-                                    <span><i class="fa fa-calendar" aria-hidden="true"></i> 20 / 10 / 2016</span>
+                                    <span><i class="fa fa-calendar" aria-hidden="true"></i> {{date('d M Y à H:i:s' , strtotime($offer->created_at))}}</span>
                                 </div>
                             </div>
                         </div>

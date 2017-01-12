@@ -89,7 +89,7 @@
                         @endif
                     </ul>
                 </li>
-                <li class="menu-item-passer-une-annonce"><a class="menu-link" href="">Passer une annonce</a></li>
+                <li class="menu-item-passer-une-annonce"><a class="menu-link" href="{{route('offers.create')}}">Passer une annonce</a></li>
             </div>
 
 
