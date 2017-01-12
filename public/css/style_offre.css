@@ -320,6 +320,7 @@
 #offers-detail-page .offers-references .offers-name-price .name{
     color: #0F75BC;
     font-size: 2em;
+    font-weight:normal;
 }
 #offers-detail-page .offers-references .offers-name-price .ref{
     color: #737373;
@@ -329,6 +330,7 @@
 #offers-detail-page .offers-references .offers-name-price .price{
     color: #00a7d0;
     font-size: 1.5em;
+    font-weight: bold;
 }
 #offers-detail-page .offers-references .offers-name-price .favorie-button{
     padding: 2em 1em;
