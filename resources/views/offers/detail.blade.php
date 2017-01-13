@@ -93,24 +93,19 @@
 
                     </div>
                     <br>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="les-detail">
-                                <span>informations complémentaires</span>
-                            </div>
-                        </div>
-                </div>
-                <br>
+
                 <div class="row carateristique-block">
-                    @for($i=0; $i<10; $i++)
-                    <div class="col-sm-3">
+                    @if ($offer->plus_information != "")
+                        @foreach(explode(',', $offer->plus_information ) as $diver)
+                        <div class="col-sm-3">
                         <div class="carateristique">
                             <div class="item">
-                                <i class="fa fa-shower" aria-hidden="true"></i> bienvenue
+                                <i class="fa fa-check text-success" aria-hidden="true"></i> {{$diver}}
                             </div>
                         </div>
                     </div>
-                    @endfor
+                        @endforeach
+                    @endif
                 </div>
                 <br>
                 <div class="row">
