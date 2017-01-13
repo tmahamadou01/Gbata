@@ -45,14 +45,22 @@ class OfferController extends Controller
 //                                ->orderBy('created_at','DESC')
 //                                ->paginate(4);
 
-
-        $offers = DB::table('offers')
-            ->where('commune', 'LIKE', '%'.$query.'%')
-            ->where('piece', 'LIKE', '%'.$query3.'%')
-            ->where('type_offers_id', 'LIKE', '%'.$query2.'%')
-            ->where('loyer', '<=', $query4)
-            ->orderBy('created_at','DESC')
-            ->paginate(4);
+        if ($query4 != ''){
+            $offers = DB::table('offers')
+                ->where('commune', 'LIKE', '%'.$query.'%')
+                ->where('piece', 'LIKE', '%'.$query3.'%')
+                ->where('type_offers_id', 'LIKE', '%'.$query2.'%')
+                ->where('loyer', '<=', $query4)
+                ->orderBy('created_at','DESC')
+                ->paginate(4);
+        }else{
+            $offers = DB::table('offers')
+                ->where('commune', 'LIKE', '%'.$query.'%')
+                ->where('piece', 'LIKE', '%'.$query3.'%')
+                ->where('type_offers_id', 'LIKE', '%'.$query2.'%')
+                ->orderBy('created_at','DESC')
+                ->paginate(4);
+        }
 
         //dd($search);
         return view('offers.index',compact('offers', 'query'));
