@@ -37,6 +37,7 @@ class OfferController extends Controller
         $query = $request->input('commune');
         $query2 = $request->input('type_offer');
         $query3 = $request->input('piece');
+        $query4 = $request->input('budget');
 //        //dd($query2);
 //        $offers = DB::table('offers')
 //                                ->orWhere('type_offers_id', 'LIKE', '%' . $query2 . '%')
@@ -49,6 +50,7 @@ class OfferController extends Controller
             ->where('commune', 'LIKE', '%'.$query.'%')
             ->where('piece', 'LIKE', '%'.$query3.'%')
             ->where('type_offers_id', 'LIKE', '%'.$query2.'%')
+            ->where('loyer', '<=', $query4)
             ->orderBy('created_at','DESC')
             ->paginate(4);
 

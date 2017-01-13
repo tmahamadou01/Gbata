@@ -609,3 +609,25 @@
     text-decoration: none;
     color: #FFF;
 }
+
+.search_resultats_list {
+    margin-bottom: 10px;
+}
+.message_not_offer{
+    text-align: center !important;
+}
+.message_not_offer_content{
+    color: #535353 !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+    font-size: 1.5em;
+    line-height: inherit;
+    font-weight: normal;
+    display: block;
+}
+.search_resultats_list hr{
+    border-top: 1px solid silver;
+}
+.search_resultats_list .box.box-alerte-email{
+    margin-bottom: 30px !important;
+}

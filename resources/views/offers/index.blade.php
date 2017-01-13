@@ -36,7 +36,7 @@
                                             'koumassi' => 'Koumassi',
                                             'marcory' => 'Marcory',
                                             'atecoube' => 'AtteCoubé',
-                                            'portboue' => 'Port Bouet',
+                                            'portbouet' => 'Port Bouet',
                                             ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner une commune ...'])
                                         !!}
                                     </div>
@@ -75,7 +75,15 @@
             <div class="col-sm-9 text-justify">
                 <div class="row">
                     @if (count($offers) === 0)
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
+                            <div class="search_resultats_list">
+                                <div class="message_not_offer">
+                                    <p class="message_not_offer_content">
+                                        Nous n'avons pas trouvé d'annonce<br> correspondant exactement à vos critères.
+                                    </p>
+                                    <hr>
+                                </div>
+                            </div>
                             Aucune offre disponible pour votre recherche {{$query}}
                         </div>
                     @elseif (count($offers) >= 1)
