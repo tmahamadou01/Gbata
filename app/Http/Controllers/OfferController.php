@@ -7,6 +7,7 @@ use App\Offer;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class OfferController extends Controller
 {
@@ -30,14 +31,28 @@ class OfferController extends Controller
     }
 
     public function search(Request $request){
+//        dd(Input::all());
+//        $searchTerms = explode(',', $q);
+//        dd($searchTerms);
         $query = $request->input('commune');
         $query2 = $request->input('type_offer');
-        //dd($query2);
+        $query3 = $request->input('piece');
+//        //dd($query2);
+//        $offers = DB::table('offers')
+//                                ->orWhere('type_offers_id', 'LIKE', '%' . $query2 . '%')
+//                                ->orWhere('commune', 'LIKE', '%' . $query . '%')
+//                                ->orderBy('created_at','DESC')
+//                                ->paginate(4);
+
+
         $offers = DB::table('offers')
-                                ->orWhere('type_offers_id', 'LIKE', '%' . $query2 . '%')
-                                ->orWhere('commune', 'LIKE', '%' . $query . '%')
-                                ->orderBy('created_at','DESC')
-                                ->paginate(4);
+            ->where('commune', 'LIKE', '%'.$query.'%')
+            ->where('piece', 'LIKE', '%'.$query3.'%')
+            ->where('type_offers_id', 'LIKE', '%'.$query2.'%')
+            ->orderBy('created_at','DESC')
+            ->paginate(4);
+
+        //dd($search);
         return view('offers.index',compact('offers', 'query'));
     }
 

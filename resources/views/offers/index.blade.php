@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        {!! Form::number('piece', null, ['class' => 'form-control', 'placeholder' => 'ex. 5']) !!}
+                                        {!! Form::number('piece', null, ['class' => 'form-control', 'placeholder' => 'Nombre de pièce', 'min' =>'0']) !!}
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        {!! Form::number('budget', null, ['class' => 'form-control', 'placeholder' => 'ex. 50000']) !!}
+                                        {!! Form::number('budget', null, ['class' => 'form-control', 'placeholder' => 'Budget Maximal', 'min' =>'0']) !!}
                                     </div>
                                 </div>
                             </div>
