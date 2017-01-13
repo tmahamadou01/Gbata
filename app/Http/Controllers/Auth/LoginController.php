@@ -59,4 +59,15 @@ class LoginController extends Controller
         return redirect()->intended('/home');
     }
 
+    /**
+     * Get the needed authorization credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    protected function credentials(Request $request)
+    {
+        return $request->only($this->username(), 'password') + ['verified' => true];
+    }
+
 }
