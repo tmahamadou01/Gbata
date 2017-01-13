@@ -7,20 +7,21 @@
 @section('content')
 
     <!-- gros formulaire de recherche -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12 text-justify search-box">
+    <div class="search-box">
 
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="search-bo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 search-box-padding">
+                    <div class="search-box-text">
+                        <span>Le meilleur logement pour votre budget en un temps record</span>
+                    </div>
+                </div>
 
-                            <div class="search-box-text">
-                                <span>Le meilleur logement pour votre budget en un temps record</span>
-                            </div>
-                            <div class="search-box-form">
-
-                                <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form action="">
+                                <div class="row search-box-form">
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <select name="" id="" class="form-control">
@@ -63,23 +64,23 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
+
                     </div>
                 </div>
-                <br><br>
 
             </div>
+
         </div>
+
     </div>
 
 
     <!-- avantage -->
     <br>
-
-    <div class="container">
+    <div class="container search-box-padding">
         <div class="row">
-
             <div class="col-sm-12 text-center rubrique-title">
                 <span>Avantages</span>
             </div>
@@ -89,96 +90,88 @@
             </div>
 
         </div>
+        <div class="row">
+            <div class="col-sm-3 text-center">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 text-center">
-
-                    <div>
-                        <i style="font-size: 9em; color: #2185D0;" class="fa fa-home" aria-hidden="true"></i>
-                    </div>
-                    <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
-                        Trouvez la maison idéale
-                    </div>
-                    <div class="text-center" style="padding: 10px;">
-                        Avec les informations fournies, nous vous aidons à trouver la maison qui vous convient le mieux. Nous faisons pour vous l'état des lieux et vous permettons d'apprécier les informations relatives à votre voisinage.
-                    </div>
-
+                <div>
+                    <i style="font-size: 9em; color: #2185D0;" class="fa fa-home" aria-hidden="true"></i>
                 </div>
-                <div class="col-sm-3 text-center">
-
-                    <div>
-                        <i style="font-size: 9em; color: #2185D0;" class="fa fa-tachometer" aria-hidden="true"></i>
-                    </div>
-                    <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
-                        Économisez temps et argent
-                    </div>
-                    <div class="text-center" style="padding: 10px;">
-                        Investissez moins de votre temps et de votre argent à chercher un logement. Plus besoin de payer pour vous faire visiter un nombre illimité de maison qui ne sont pas à votre goût, nous le faisons à votre place.
-                    </div>
-
+                <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
+                    Trouvez la maison idéale
                 </div>
-                <div class="col-sm-3 text-center">
-
-                    <div>
-                        <i style="font-size: 9em; color: #2185D0;" class="fa fa-search" aria-hidden="true"></i>
-                    </div>
-                    <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
-                        Recherche Facile
-                    </div>
-                    <div class="text-center" style="padding: 10px;">
-                        Nous vous assurons un service fiable. Nous faisons les enquêtes nécessaires pour vous assurer la disponibilité des logements que nous vous proposons.
-                    </div>
-
+                <div class="text-center" style="padding: 10px;">
+                    Avec les informations fournies, nous vous aidons à trouver la maison qui vous convient le mieux. Nous faisons pour vous l'état des lieux et vous permettons d'apprécier les informations relatives à votre voisinage.
                 </div>
-                <div class="col-sm-3 text-center">
 
-                    <div>
-                        <i style="font-size: 9em; color: #2185D0;" class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
-                        Service client 24/7
-                    </div>
-                    <div class="text-center" style="padding: 10px;">
-                        Nous sommes là pour vous aider dans votre recherche.
-                    </div>
+            </div>
+            <div class="col-sm-3 text-center">
 
+                <div>
+                    <i style="font-size: 9em; color: #2185D0;" class="fa fa-mobile" aria-hidden="true"></i>
                 </div>
+                <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
+                    Recevez les offers en temps réel
+                </div>
+                <div class="text-center" style="padding: 10px;">
+                    Avec le service SMS GBATA, vous recevez les offres par SMS et vous pouvez aussi consulter les offres en fonction de votre commune, ville ou budget.
+                </div>
+
+            </div>
+            <div class="col-sm-3 text-center">
+
+                <div>
+                    <i style="font-size: 9em; color: #2185D0;" class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
+                    Recherche Facile
+                </div>
+                <div class="text-center" style="padding: 10px;">
+                    Nous vous assurons un service fiable. Nous faisons les enquêtes nécessaires pour vous assurer la disponibilité des logements que nous vous proposons.
+                </div>
+
+            </div>
+            <div class="col-sm-3 text-center">
+
+                <div>
+                    <i style="font-size: 9em; color: #2185D0;" class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
+                    Service client 24/7
+                </div>
+                <div class="text-center" style="padding: 10px;">
+                    Nous sommes là pour vous aider dans votre recherche.
+                </div>
+
             </div>
         </div>
     </div>
 
-
     <!-- trouver un bien immobilier -->
     <br>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12 block-blue text-center">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="block-blue-text">
-                            <span style="font-weight: bold; font-size: 4em;">Besoin d'un bien immobilier ?</span>
-                        </div>
-                        <br>
+    <div class="block-blue">
+        <div class="container">
+            <div class="col-sm-12 search-box-padding">
+                <div class="block-blue-text">
+                    <span style="font-weight: bold; font-size: 4em;">Besoin d'un bien immobilier ?</span>
+                </div>
+                <br>
 
-                        <div class="col-sm-4 col-sm-offset-4 text-center"><br>
-                            <i class="rubrique-icon fa fa-home" aria-hidden="true"></i>
-                            <div class="bar"></div>
-                        </div>
+                <div class="col-sm-4 col-sm-offset-4 text-center"><br>
+                    <i class="rubrique-icon fa fa-home" aria-hidden="true"></i>
+                    <div class="bar"></div>
+                </div>
 
-                        <br><br><br>
+                <br><br><br>
 
-
-                        <div class="col-sm-12 text-center">
-                        <span style="color: #FFF; font-weight: bold;">
-                            Vous cherchez à louer rapidement appartement, maison, studio, chambre ? Contactez-nous et nous nous en chargeons
-                        </span>
-                            <br><br><br><br>
-                            <a href="" class="bien-immobilier-button">
-                                Trouver votre bien
-                            </a>
-                        </div>
-                    </div>
+                <div class="col-sm-12 text-center">
+                    <span style="color: #FFF; font-weight: bold;">
+                        Vous cherchez à louer rapidement appartement, maison, studio, chambre ? Contactez-nous et nous nous en chargeons
+                    </span>
+                    <br><br><br><br>
+                    <a href="" class="bien-immobilier-button">
+                        Trouver votre bien
+                    </a>
+                    <br><br><br><br>
                 </div>
 
             </div>

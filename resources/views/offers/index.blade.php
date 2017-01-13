@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="container" style="">
+    <div class="container search-box-padding" style="">
         <br><br><br><br><br><br><br>
         <div class="row">
             <div class="col-sm-12">
@@ -71,67 +71,6 @@
                 </div>
                 <br>
             </div>
-            <!--
-
-                    <br><br>
-                    <div class="recherche">
-
-                        <span>Trouver votre bien immobilier</span>
-                        <hr>
-                        <form action="">
-                            <div class="form-group">
-                                <select name="" id="" class="form-control">
-                                    <option value="">Selectionnez une commune ...</option>
-                                    <option value="">Yopougon</option>
-                                    <option value="">Abobo</option>
-                                    <option value="">Marcory</option>
-                                    <option value="">Atte-Coube</option>
-                                    <option value="">Plateau</option>
-                                    <option value="">Koumassi</option>
-                                    <option value="">Port-Bouet</option>
-                                    <option value="">Treichville</option>
-                                    <option value="">Adjame</option>
-                                    <option value="">Cocody</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select name="" id="" class="form-control">
-                                    <option value="">Nombre de pièces ...</option>
-                                    <?php for($j=1; $j<7; $j++){ ?>
-                                    <option value=""><?= $j; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select name="" id="" class="form-control">
-                                    <option value="">Type d'offre ...</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control" placeholder="Budget maximum ...">
-                            </div>
-                            <button class="search-box-button">
-                                Rechercher
-                            </button>
-                        </form>
-                    </div>
-
-                    <!--<div class="associe">
-                        <hr>
-                        <div>
-                            <div class="offre-img-block">
-                                <img src="{{-- asset('img/mg_2381.jpg') --}}" class="offre-img" alt="">
-                                <div class="block-vert">Villa</div>
-                                <div class="block-noir">à vendre</div>
-                                <div class="block-prix">150000 F / moi</div>
-                                <div class="block-favorite"><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>-->
 
             <div class="col-sm-9 text-justify">
                 <div class="row">
@@ -189,6 +128,7 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
 
                         <!-- fin d'une offre -->
 

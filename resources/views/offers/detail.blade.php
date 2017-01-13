@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container" id="offers-detail-page">
+    <div class="container search-box-padding" id="offers-detail-page">
         <br><br><br><br><br><br><br>
         <div class="row">
             <div class="col-sm-10">

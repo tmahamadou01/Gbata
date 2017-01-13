@@ -7,6 +7,7 @@ body{
 }
 #menu-bar{
     position: fixed;
+    margin-left: -1.1em;
     width: 100%;
     height: 80px;
     background-color: #FFF;
@@ -24,7 +25,7 @@ body{
 #menu-bar .phone-icone{
     font-size: 3em;
     color: #0F75BC;
-    margin-left: 70%;
+    margin-left: 74%;
 }
 #menu-bar .disponible{
     padding: 20px;
@@ -47,6 +48,7 @@ body{
 #menu{
     position: fixed;
     margin-top: 5.7em;
+    margin-left: -1.1em;
     z-index: 99;
     background-color: #0F75BC;
     width: 100%;
@@ -55,15 +57,13 @@ body{
 #menu .menu-item{
     list-style: none;
     display: inline-block;
-    padding: 12px 25px;
+    padding: 12px 4em 12px 5px;
     cursor: pointer;
 }
 #menu .menu-item-with-account{
     padding: 3px 25px !important;
 }
-#menu .menu-item-one{
-    margin-left: 10em;
-}
+
 #menu .menu-item:hover{
     background-color: #2981C5;
 }
@@ -78,7 +78,7 @@ body{
     position: absolute;
     padding: 0;
     margin: 0;
-    left: 17.3em;
+    left: 1em;
     top: 3.2em;
     transform: scaleY(0);
     transform-origin: 50% 0;
@@ -148,7 +148,7 @@ body{
 #menu .menu-item-passer-une-annonce{
     position: absolute;
     top: -0.5em;
-    margin-left: 20em;
+    margin-left: 32em;
     list-style: none;
     display: inline-block;
     height: 52px !important;
@@ -214,9 +214,13 @@ body{
 /*::::::::::: search box :::::::::::*/
 .search-box{
     width: 100%;
-    height: 504px;
+    color: #FFF;
+    height: 520px;
     background-color: #4C4C4C;
     margin-top: 6em;
+}
+.search-box-padding{
+    padding: 1em 2.5em;
 }
 .search-box-text{
     text-align: center;
@@ -224,16 +228,15 @@ body{
 }
 .search-box-text span{
     color: #FFF;
-    font-size: 4.9em;
+    font-size: 4.5em;
     line-height: 1;
+    letter-spacing: -3px;
 }
 .search-box-form{
-    width: 90%;
-    height: 180px;
     background-color: #808080;
     border-radius: 5px;
-    margin-top: 2em;
-    margin-left: 3.8em;
+    width: 98%;
+    margin-left: 7px;
     padding: 15px;
 }
 .search-box-button{
@@ -271,7 +274,6 @@ body{
     background-color: #FFF;
 }
 .block-blue{
-    height: 370px;
     background-color: #2185D0;
 }
 .block-blue-text{
@@ -279,6 +281,7 @@ body{
     color: #FFF;
     font-size: 1em;
     line-height: 1;
+    text-align: center;
 }
 .bien-immobilier-button{
     padding: 1em 2em 1em 2em;
@@ -418,28 +421,8 @@ body{
     border: 1px solid #DDDDDD;
     height: 40px;
 }
-.mp-perdu{
-    border: 1px solid #0F75BC;
-    padding: 5px 15px;
-    color: #0F75BC;
-    background-color: #FFF;
-    text-align: center;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 4px;
-    position: absolute;
-    right: 0.3em;
-    top: 5px;
-    z-index:9;
-    font-size: 12px;
-    font-weight: bold;
-}
-.mp-perdu:hover{
-    border: 1px solid #0F75BC;
-    color: #FFF;
-    background-color: #0F75BC;
-    text-decoration: none;
-}
+
+
 .form-register{
     margin-top: 1em;
     padding: 1em;
@@ -455,6 +438,8 @@ body{
     text-decoration: none;
 }
 
+
+
 /*  login page */
 
 #connexion-page-background{
@@ -462,6 +447,9 @@ body{
     background-image:-webkit-linear-gradient(60deg, #E0E6FF, #FFFFFE);
     background-image:-o-linear-gradient(60deg, #E0E6FF, #FFFFFE);
     background-image:linear-gradient(100deg, #E0E6FF, #FEFCE4);
+}
+#connexion-page-background .search-box-padding{
+    margin-top: 10em;
 }
 #connexion-page-background .grace-a-gbata{
     color: #0F75BC;
@@ -474,7 +462,7 @@ body{
 }
 #connexion-page-background .icone{
     display: inline-block;
-    width: 400px;
+    width: 100%;
     color: #737373;
 
 }
@@ -493,26 +481,20 @@ body{
     background-color: #FFF;
     border: 1px solid #DADADA;
     border-radius: 5px;
-    padding: 2.5em 4em;
+    padding: 4em;
 }
 #connexion-page-background .connexion-block .title{
     font-size: 22px;
     color: #0F75BC;
 }
-#connexion-page-background .connexion-block .form-group .fa-lock{
+#connexion-page-background .connexion-block .form-group .fa-lock, #connexion-page-background .connexion-block .form-group .fa-phone{
     position: absolute;
-    right: 0.6em;
-    top: 0.1em;
-    font-size: 2.5em;
+    right: 1em;
+    top: 0.3em;
+    font-size: 2em;
     color: #0F75BC;
 }
-#connexion-page-background .connexion-block .form-group .fa-phone{
-    position: absolute;
-    right: 0.6em;
-    top: 0.1em;
-    font-size: 2.5em;
-    color: #0F75BC;
-}
+
 #connexion-page-background .connexion-block .form-group .validate{
     color: #FFF;
     background-image: linear-gradient(#24C1DD 50%,#05AAC8);

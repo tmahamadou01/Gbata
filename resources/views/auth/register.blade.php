@@ -7,13 +7,10 @@
 @section('content')
 
     <!-- container -->
-<div class="container-fluid">
-    <div class="row" id="register-page-background">
-        <br><br><br><br><br><br><br>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
+    <div class="container-fluid" id="connexion-page-background">
+        <div class="container search-box-padding">
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                     <div class="grace-a-gbata">
                         Grâce à votre compte <strong>GBATA</strong> :
                     </div>
@@ -44,12 +41,11 @@
 
                             <span class="title">Retrouver</span> <br>
                             l'historique des messages envoyés <br>
-                            aux propriétaires pour <br>
-                            ne pas perdre le fil !
+                            aux propriétaires pour ne pas perdre le fil !
                         </div>
-                    </div>
+                    </div><br><br>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-6">
                     <div class="connexion-block text-center">
                         <div class="title">
                             Je me crée <strong>mon compte personnel</strong>
@@ -125,11 +121,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-2"></div>
-
     </div>
-</div>
-
 
 @endsection
 
