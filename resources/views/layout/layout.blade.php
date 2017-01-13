@@ -41,7 +41,7 @@
 
 <!-- header with logo -->
 <div class="container-fluid">
-    <div id="menu-bar">
+    <div id="menu-bar" style="background-color: rgb(242, 242, 242)">
         <div class="container">
             <div class="row">
                 <div class="col-xs-2">
@@ -68,10 +68,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <li class="menu-item menu-item-one"><a class="menu-link" href="">Annonces</a>
+                    <li class="menu-item menu-item-one"><a class="menu-link" href="{{route('liste_des_offres')}}">Annonces</a>
                         <ul class="sous-menu">
-                            <li><a href="">Locations</a></li>
-                            <li><a href="">Ventes</a></li>
+                            <li><a href="{{route('offre_location')}}">Locations</a></li>
+                            <li><a href="{{route('offre_vente')}}">Ventes</a></li>
                         </ul>
                     </li>
                     <li class="menu-item"><a class="menu-link" href="">Comment ça marche ?</a></li>

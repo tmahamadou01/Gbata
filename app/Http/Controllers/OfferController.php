@@ -17,12 +17,15 @@ class OfferController extends Controller
      */
     public function index(Request $request)
     {
-        //dd($request->method());
-        //if ($request->method() == "GET"){
-          //  $query = $request->input('commune');
-            //dd($query);
-        //}
         $offers = DB::table('offers')->where('state_offer', '0')->orderBy('created_at','DESC')->paginate(4);
+        return view('offers.index',['offers' =>$offers]);
+    }
+    public function offer_location(){
+        $offers = DB::table('offers')->where('type_offers_id', 'location')->orderBy('created_at','DESC')->paginate(4);
+        return view('offers.index',['offers' =>$offers]);
+    }
+    public function offer_vente(){
+        $offers = DB::table('offers')->where('type_offers_id', 'vente')->orderBy('created_at','DESC')->paginate(4);
         return view('offers.index',['offers' =>$offers]);
     }
 
