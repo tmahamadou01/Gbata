@@ -110,7 +110,7 @@
                     <i style="font-size: 9em; color: #2185D0;" class="fa fa-mobile" aria-hidden="true"></i>
                 </div>
                 <div style="color: #494C4F; font-size: 2em; font-weight: bold; line-height: 1;">
-                    Recevez les offers en temps réel
+                    Recevez les offres en temps réel
                 </div>
                 <div class="text-center" style="padding: 10px;">
                     Avec le service SMS GBATA, vous recevez les offres par SMS et vous pouvez aussi consulter les offres en fonction de votre commune, ville ou budget.
