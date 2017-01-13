@@ -20,7 +20,7 @@
             </div>
             <div class="col-sm-2">
                 <div class="retour-button">
-                    <a href="{{route('offers.index')}}"><i class="fa fa-list" aria-hidden="true"></i> Retour à la liste</a>
+                    <a href="{{route('liste_des_offres')}}"><i class="fa fa-list" aria-hidden="true"></i> Retour à la liste</a>
                 </div>
             </div>
         </div>
@@ -76,19 +76,19 @@
                                     <i class="control-left fa fa-angle-left" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <div class="offre-slide-arrow">
-                                <div class="item">
-                                    <img src="{{ asset('offers_img/'.$offer->image1) }}" style="width: 100px; height: 60px;" alt="">
-                                </div>
+                            {{--<div class="offre-slide-arrow">--}}
+                                {{--<div class="item">--}}
+                                    {{--<img src="{{ asset('offers_img/'.$offer->image1) }}" style="width: 100px; height: 60px;" alt="">--}}
+                                {{--</div>--}}
 
-                                <div class="item">
-                                    <img src="{{ asset('offers_img/'.$offer->image2) }}" style="width: 100px; height: 60px;" alt="">
-                                </div>
+                                {{--<div class="item">--}}
+                                    {{--<img src="{{ asset('offers_img/'.$offer->image2) }}" style="width: 100px; height: 60px;" alt="">--}}
+                                {{--</div>--}}
 
-                                <div class="item">
-                                    <img src="{{ asset('offers_img/'.$offer->image3) }}" style="width: 100px; height: 60px;" alt="">
-                                </div>
-                            </div>
+                                {{--<div class="item">--}}
+                                    {{--<img src="{{ asset('offers_img/'.$offer->image3) }}" style="width: 100px; height: 60px;" alt="">--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                         </div>
 
                     </div>
