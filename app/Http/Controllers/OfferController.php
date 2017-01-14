@@ -16,9 +16,9 @@ class OfferController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index(Request $request)
     {
-
         $offers = DB::table('offers')->where('state_offer', '0')->orderBy('created_at','DESC')->paginate(4);
         return view('offers.index',['offers' =>$offers]);
     }

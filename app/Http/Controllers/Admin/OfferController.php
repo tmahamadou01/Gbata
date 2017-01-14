@@ -96,6 +96,7 @@ class OfferController extends Controller
         $offer->image3 = $newFileThreeName;
         $offer->users_id = $auth->id();
         $offer->type_offers_id = $request->type_offers_id;
+        $offer->code_offer = $offer->GenerateCodeOffer();
 
         $offer->save();
 

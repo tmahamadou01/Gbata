@@ -84,7 +84,6 @@
                                     <hr>
                                 </div>
                             </div>
-                            Aucune offre disponible pour votre recherche {{$query}}
                         </div>
                     @elseif (count($offers) >= 1)
                     @foreach($offers as $offer)
