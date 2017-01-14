@@ -89,8 +89,16 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('type_maison', 'Type de maison') !!}
-                                    {!! Form::text('type_maison', null, ['class' => 'form-control', 'placeholder' => 'ex. studio']) !!}
+                                    {!! Form::label('type_maison', 'Type de bien') !!}
+                                    {!! Form::select('type_maison',array(
+                                        'studio' => 'studio',
+                                        'appartement' => 'appartement',
+                                        'duplex' => 'duplex',
+                                        'triplex' => 'triplex',
+                                        'chalet' => 'chalet',
+                                        'immeuble' => 'immeuble',
+                                        ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner le type de bien...'])
+                                    !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -126,7 +134,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     {!! Form::label('plus_information', 'Plus d\'information') !!}
-                                    {!! Form::text('plus_information', null, ['id' => 'divers']) !!}
+                                    {!! Form::text('plus_information', null, ['id' => 'divers', 'value' => 'bonjour']) !!}
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -156,7 +164,7 @@
 
                             <div class="col-sm-2 col-sm-offset-5">
                                 <div class="form-group">
-                                    {!! Form::button('Create', ['type' => 'submit', 'class' => 'search-box-button']) !!}
+                                    {!! Form::button('Créer une offre', ['type' => 'submit', 'class' => 'btn btn-primary btn-lg']) !!}
                                 </div>
                             </div>
                         </div>

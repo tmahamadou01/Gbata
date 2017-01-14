@@ -90,8 +90,16 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    {!! Form::label('type_maison', 'Type de maison') !!}
-                                    {!! Form::text('type_maison', $offers->type_maison, ['class' => 'form-control', 'placeholder' => 'ex. studio']) !!}
+                                    {!! Form::label('type_maison', 'Type de bien') !!}
+                                    {!! Form::select('commune',array(
+                                        'studio' => 'studio',
+                                        'appartement' => 'appartement',
+                                        'duplex' => 'duplex',
+                                        'triplex' => 'triplex',
+                                        'chalet' => 'chalet',
+                                        'immeuble' => 'immeuble',
+                                        ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner le type de bien...'])
+                                    !!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
