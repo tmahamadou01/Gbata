@@ -141,6 +141,20 @@ class OfferController extends Controller
         return redirect(route('offers.edit', $offers))->with('success', 'Modification éffectué avec succès');
     }
 
+    public function desactivate_offer(Request $request, $id){
+        $offer = Offer::findOrFail($id);
+        $offer->state_offer = 1;
+        $offer->update($request->all());
+        return redirect(route('offers.index'));
+    }
+
+    public function activate_offer(Request $request, $id){
+        $offer = Offer::findOrFail($id);
+        $offer->state_offer = 0;
+        $offer->update($request->all());
+        return redirect(route('offers.index'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *
