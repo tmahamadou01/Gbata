@@ -631,3 +631,26 @@
 .search_resultats_list .box.box-alerte-email{
     margin-bottom: 30px !important;
 }
+.required::after{
+    content:' *';
+    color: red;
+    font-weight: bold;
+}
+.les-numeros .col-xs-2{
+    font-size: 4em;
+}
+.les-numeros{
+    border: 1px solid #FFF;
+    padding: 1em 2em;
+    border-radius: 5px;
+    background-color: #008B8B;
+    color: #FFF;
+}
+.les-numeros .col-xs-10{
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+.les-numeros .first{
+    font-weight: bold;
+    font-size: 18px;
+}
