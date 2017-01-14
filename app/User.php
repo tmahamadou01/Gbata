@@ -56,13 +56,4 @@ class User extends Authenticatable
         return $this->hasMany('App\Offer');
     }
 
-    public function createCodeActivation()
-    {
-        $list = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        $code = '';
-        while (strlen($code) != 5) {
-            $code .= $list[rand(0, 63)];
-        }
-        return $code;
-    }
 }

@@ -76,7 +76,7 @@
                                         'koumassi' => 'Koumassi',
                                         'marcory' => 'Marcory',
                                         'atecoube' => 'AtteCoubé',
-                                        'portboue' => 'Port Bouet',
+                                        'portbouet' => 'Port Bouet',
                                         ),null, ['class' => 'form-control', 'placeholder' => 'Selectionner une commune ...'])
                                     !!}
                                 </div>

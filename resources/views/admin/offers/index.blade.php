@@ -57,7 +57,11 @@
                                     <td>{{ $offer->created_at }}</td>
                                     <td>
                                         <a class="btn btn-warning btn-sm" href="{{ route('offers.edit', $offer->id) }}">Modifier</a>
-                                        <a class="btn btn-danger btn-sm" href="{{ route('offers.destroy', $offer->id) }}">Supprimer</a>
+                                        @if($offer->state_offer == 0)
+                                            <a class="btn btn-danger btn-sm" href="{{ route('offers.destroy', $offer->id) }}">Desactiver</a>
+                                        @else
+                                        <a class="btn btn-success btn-sm" href="{{ route('offers.destroy', $offer->id) }}">Activer</a>
+                                        @endif
                                     </td>
 
                                 </tr>
