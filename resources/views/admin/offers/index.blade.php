@@ -41,6 +41,32 @@
                             </thead>
                             <tbody>
                             @foreach($offers as $offer)
+                                @if($offer->state_offer == 1)
+                                <tr style="background-color: lightcoral">
+                                    <td>{{ $offer->titre }}</td>
+                                    <td>{{ $offer->commune }}</td>
+                                    <td>{{ $offer->loyer }}</td>
+                                    <td>{{ $offer->caution }}</td>
+                                    <td>
+                                        @if($offer->type_offers_id == 'location')
+                                            <span class="label label-primary">{{ $offer->type_offers_id }}</span>
+                                        @else
+                                            <span class="label label-success">{{ $offer->type_offers_id }}</span>
+
+                                        @endif
+                                    </td>
+                                    <td>{{ $offer->created_at }}</td>
+                                    <td>
+                                        <a class="btn btn-warning btn-sm" href="{{ route('offers.edit', $offer->id) }}">Modifier</a>
+                                        @if($offer->state_offer == 0)
+                                            <a class="btn btn-danger btn-sm" href="{{ route('desactivate_offer', $offer->id) }}">Desactiver</a>
+                                        @else
+                                            <a class="btn btn-success btn-sm" href="{{ route('activate_offer', $offer->id) }}">Activer</a>
+                                        @endif
+                                    </td>
+
+                                </tr>
+                                @else
                                 <tr>
                                     <td>{{ $offer->titre }}</td>
                                     <td>{{ $offer->commune }}</td>
@@ -57,10 +83,16 @@
                                     <td>{{ $offer->created_at }}</td>
                                     <td>
                                         <a class="btn btn-warning btn-sm" href="{{ route('offers.edit', $offer->id) }}">Modifier</a>
-                                        <a class="btn btn-danger btn-sm" href="{{ route('offers.destroy', $offer->id) }}">Supprimer</a>
+                                        @if($offer->state_offer == 0)
+                                            <a class="btn btn-danger btn-sm" href="{{ route('desactivate_offer', $offer->id) }}">Desactiver</a>
+                                        @else
+                                        <a class="btn btn-success btn-sm" href="{{ route('activate_offer', $offer->id) }}">Activer</a>
+                                        @endif
                                     </td>
 
                                 </tr>
+
+                                @endif
                             @endforeach
                             </tbody>
                         </table>

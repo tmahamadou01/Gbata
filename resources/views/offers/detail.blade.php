@@ -33,7 +33,7 @@
                             {{$offer->titre}}
                         </span>
                             <span class="ref">
-                            Réf. : B13/1897 / 09 janvier 2017
+                            Réf. : {{$offer->code_offer}} / {{date('d M Y à H:i:s' , strtotime($offer->created_at))}}
                         </span>
                         </div>
                         <div class="col-xs-3 text-right" style="padding-top: 5px;">

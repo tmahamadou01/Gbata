@@ -37,6 +37,8 @@ Route::group(['prefix' => 'adminzone', 'middleware' => ['role:admin|agence']], f
     Route::get('/agency/add', '\App\Http\Controllers\Admin\AgencyController@add')->middleware(['role:admin'])->name('add_agency');
     //Route::get('/offers/create', '\App\Http\Controllers\Admin\OfferController@create')->name('add_offers');
     Route::resource('offers', '\App\Http\Controllers\Admin\OfferController');
+    Route::get('offers/{offer}/desactivate', '\App\Http\Controllers\Admin\OfferController@desactivate_offer')->name('desactivate_offer');
+    Route::get('offers/{offer}/activate', '\App\Http\Controllers\Admin\OfferController@activate_offer')->name('activate_offer');
 });
 
 

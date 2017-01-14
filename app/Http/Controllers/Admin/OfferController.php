@@ -96,7 +96,8 @@ class OfferController extends Controller
         $offer->image3 = $newFileThreeName;
         $offer->users_id = $auth->id();
         $offer->type_offers_id = $request->type_offers_id;
-        $offer->code_offer = $offer->GenerateCodeOffer();
+        $offer->code_offer = strtoupper($offer->GenerateCodeOffer());
+        $offer->state_offer = 0;
 
         $offer->save();
 
@@ -138,6 +139,20 @@ class OfferController extends Controller
         $offers = Offer::findOrFail($id);
         $offers->update($request->all());
         return redirect(route('offers.edit', $offers))->with('success', 'Modification éffectué avec succès');
+    }
+
+    public function desactivate_offer(Request $request, $id){
+        $offer = Offer::findOrFail($id);
+        $offer->state_offer = 1;
+        $offer->update($request->all());
+        return redirect(route('offers.index'));
+    }
+
+    public function activate_offer(Request $request, $id){
+        $offer = Offer::findOrFail($id);
+        $offer->state_offer = 0;
+        $offer->update($request->all());
+        return redirect(route('offers.index'));
     }
 
     /**

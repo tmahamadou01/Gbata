@@ -15,11 +15,12 @@ class Offer extends Model
 
     public function GenerateCodeOffer()
     {
-        $list = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        $code = '';
-        while (strlen($code) != 5) {
-            $code .= $list[rand(0, 63)];
+        $characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        $string = '';
+        $max = strlen($characters) - 1;
+        for ($i = 0; $i < 5; $i++) {
+            $string .= $characters[mt_rand(0, $max)];
         }
-        return $code;
+        return $string;
     }
 }
