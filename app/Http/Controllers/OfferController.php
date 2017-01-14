@@ -23,11 +23,14 @@ class OfferController extends Controller
         return view('offers.index',['offers' =>$offers]);
     }
     public function offer_location(){
-        $offers = DB::table('offers')->where('type_offers_id', 'location')->orderBy('created_at','DESC')->paginate(4);
+        $offers = DB::table('offers')->where('type_offers_id', 'location')
+                                        ->where('state_offer', '0')
+                                        ->orderBy('created_at','DESC')
+                                        ->paginate(4);
         return view('offers.index',['offers' =>$offers]);
     }
     public function offer_vente(){
-        $offers = DB::table('offers')->where('type_offers_id', 'vente')->orderBy('created_at','DESC')->paginate(4);
+        $offers = DB::table('offers')->where('type_offers_id', 'vente')->where('state_offer', '0')->orderBy('created_at','DESC')->paginate(4);
         return view('offers.index',['offers' =>$offers]);
     }
 
@@ -52,6 +55,7 @@ class OfferController extends Controller
                 ->where('piece', 'LIKE', '%'.$query3.'%')
                 ->where('type_offers_id', 'LIKE', '%'.$query2.'%')
                 ->where('loyer', '<=', $query4)
+                ->where('state_offer', '0')
                 ->orderBy('created_at','DESC')
                 ->paginate(4);
         }else{
@@ -59,6 +63,7 @@ class OfferController extends Controller
                 ->where('commune', 'LIKE', '%'.$query.'%')
                 ->where('piece', 'LIKE', '%'.$query3.'%')
                 ->where('type_offers_id', 'LIKE', '%'.$query2.'%')
+                ->where('state_offer', '0')
                 ->orderBy('created_at','DESC')
                 ->paginate(4);
         }
