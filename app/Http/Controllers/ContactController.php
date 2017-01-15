@@ -54,7 +54,7 @@ class ContactController extends Controller
             ), function($message) use ($email_user)
             {
                 $message->from($email_user);
-                $message->to('info@gbata.ci', 'GBATA')->subject('Prise de Contact');
+                $message->to('allhas.simon@gmail.com', 'GBATA')->subject('Prise de Contact');
             });
 
         return redirect()->route('contact.index')->with('success', 'Merci, nous vous repondrons dans moin de 48h');

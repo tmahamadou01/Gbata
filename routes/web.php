@@ -21,6 +21,10 @@ Route::get('/comment-ca-marche', 'HomeController@how')->name('how');
 Route::get('/contact', 'ContactController@index')->name('contact.index');
 Route::post('contact/send', 'ContactController@send')->name('contact.send');
 
+Route::get('mail', function (){
+   return dd(Config::get('mail'));
+});
+
 Route::get('/welcome', 'HomeController@bienvenue')->name('bienvenue-message');
 
 /* route des offres*/
