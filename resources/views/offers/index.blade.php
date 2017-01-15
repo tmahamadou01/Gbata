@@ -193,17 +193,9 @@
                 <div class="sidebar-offre">
 
                     <div class="agence">
-                        <span>KôKôTi Home Agency</span>
-                        <hr>
-                        <div class="agence_logo">
-                            <img src="{{ asset('img/logoagence.bmp') }}" alt="">
-                        </div>
-                        <div class="service_agence">
-                            <ul>
-                                <li><a href="{{ route('offers.create') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> Ajouter un bien</a></li>
-                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Lister mes biens</a></li>
-                            </ul>
-                        </div>
+                        <span>
+                            PUBLICITÉ
+                        </span>
                     </div>
                 </div>
             </div>

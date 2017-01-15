@@ -76,7 +76,6 @@
 
 
     <!-- avantage -->
-    <br>
     <div class="container search-box-padding">
         <div class="row">
             <div class="col-sm-12 text-center rubrique-title">
@@ -152,7 +151,6 @@
                 <div class="block-blue-text">
                     <span style="font-weight: bold; font-size: 4em;">Besoin d'un bien immobilier ?</span>
                 </div>
-                <br>
 
                 <div class="col-sm-4 col-sm-offset-4 text-center"><br>
                     <i class="rubrique-icon fa fa-home" aria-hidden="true"></i>

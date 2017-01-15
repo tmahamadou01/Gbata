@@ -197,11 +197,12 @@ class OfferController extends Controller
                 'nom' => $request->get('nom'),
                 'prenom' => $request->get('prenom'),
                 'email' => $request->get('email'),
-                'message' => $request->get('message'),
+                'user_message' => $request->get('message'),
+                'telephone' => $request->get('telephone'),
             ), function($message) use ($email_user)
             {
                 $message->from($email_user);
-                $message->to('mahamadoutraore1@gmail.com', 'GBATA')->subject('Contact suite annonce');
+                $message->to('gbata225@gmail.com', 'GBATA')->subject('Contact suite annonce');
             });
 
         return redirect()->route('detail_offer',$id_offer)->with('success', 'votre message a été envoyé avec succès');

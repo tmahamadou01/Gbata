@@ -172,15 +172,15 @@
     width: 150px;
 }
 .sidebar-offre .agence{
-    padding: 5px;
-    /*background-color: #808080;*/
-    border: 1px solid #dddddd;
+    padding: 6em;
+    background-color: #FFF;
+    border: 1px solid #ddd;
     color: #00AEEF;
+    height: 200px;
 }
 .sidebar-offre .agence span{
     font-size: 16px;
     font-weight: bold;
-    padding: 5px;
 }
 .agence .agence_logo{
     text-align: center;

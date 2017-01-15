@@ -55,9 +55,9 @@ class ContactController extends Controller
             {
                 $message->from($email_user);
 
-                $message->to('info@gbata.ci', 'GBATA')->subject('Prise de Contact');
+                $message->to('gbata225@gmail.com', 'GBATA')->subject('Prise de Contact');
 
-                $message->to('mahamadoutraore1@gmail.com', 'GBATA')->subject('Prise de Contact');
+                //$message->to('mahamadoutraore1@gmail.com', 'GBATA')->subject('Prise de Contact');
 
             });
 

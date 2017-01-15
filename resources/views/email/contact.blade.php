@@ -153,6 +153,12 @@
         <tr>
             <td align="center" valign="top" id="bodyCell">
 
+                <table>
+                    <tr>
+                        <td style="margin-top: 6em;"></td>
+                    </tr>
+                </table>
+
 
                 <table bgcolor="#FFFFFF"  border="0" cellpadding="0" cellspacing="0" width="500" id="emailBody">
 
@@ -180,6 +186,7 @@
                                           Most content tables within can then be
                                           given 100% widths.
                                         -->
+                                        <br><br>
                                         <table border="0" cellpadding="0" cellspacing="0" width="500" class="flexibleContainer">
                                             <tr>
                                                 <td align="center" valign="top" width="500" class="flexibleContainerCell">
@@ -194,8 +201,8 @@
                                                         <tr>
                                                             <td align="center" valign="top" class="textContent">
                                                                 <div class=""><img src="https://fb-s-c-a.akamaihd.net/h-ak-xlf1/v/t1.0-1/p100x100/15826507_958410544302378_5537890646977123427_n.png?oh=1c241d92edbcb8afaf3603bdce513818&oe=59165F29&__gda__=1494864276_91b58b98f5ad240a976dc7919a7d73e9"></div>
-                                                                <h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">GBATA</h1>
-                                                                <div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">Plate-forme de diffusion d'offre immobilière en Côte d'Ivoire</div>
+
+                                                                <div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;">Plate-forme de diffusion d'annonces immobilières en Côte d'Ivoire</div>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -250,6 +257,7 @@
                                                                                 <br>
                                                                                 <br>
 
+                                                                                Message : <br>
                                                                                 {{ $user_message }}
 
                                                                             </div>
