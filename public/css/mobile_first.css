@@ -1,0 +1,537 @@
+
+/*::::::::::::::::::::::::::::::::::: affichage tablette :::::::::::::::::::::::::*/
+@media all and (min-width: 992px) and (max-width: 1280px){
+    .search-box-text{
+        margin-top: 4em;
+    }
+    .search-box-form{
+        height: 200px;
+    }
+
+    #menu-bar .phone-icone{
+        margin-left: 70%;
+    }
+    #menu .menu-item{
+        padding: 12px 3em 12px 5px;
+    }
+    #menu .menu-item-passer-une-annonce{
+        top: -0.5em;
+        right: 3em;
+        padding: 10px 1em;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers detail page mobile first ::::::::::::::::::::::::::::*/
+    #offers-detail-page .offers-references .offers-name-price .favorie-button a{
+        padding: 5px;
+        font-size: 12px;
+    }
+    #offers-detail-page .detail-all-parameter{
+        padding: 5px;
+    }
+    #offers-detail-page .detail-all-parameter .signaler,#offers-detail-page .detail-all-parameter .envoyer,#offers-detail-page .detail-all-parameter .imprimer,#offers-detail-page .detail-all-parameter .suprimer{
+
+        font-size: 12px;
+        padding: 2em;
+    }
+    #offers-detail-page .detail-all-parameter .signaler .fa, #offers-detail-page .detail-all-parameter .imprimer .fa, #offers-detail-page .detail-all-parameter .envoyer .fa, #offers-detail-page .detail-all-parameter .suprimer .fa{
+        font-size: 2.5em;
+    }
+    #offers-detail-page .retour-button{
+        padding: 5px;
+        font-size: 12px;
+    }
+    #offers-detail-page .user-phone .fa{
+        font-size: 2.5em;
+        top: -2px;
+        left: 0.3em;
+    }
+    #offers-detail-page .user-phone{
+        width: 14em;
+        font-size: 16px;
+    }
+
+}
+@media all and (min-width: 960px) and (max-width: 991px){
+
+
+    #menu-bar .phone-icone{
+        margin-left: 70%;
+    }
+    #menu .menu-item{
+        padding: 12px 2em 12px 5px;
+    }
+    #menu .menu-item-passer-une-annonce{
+        top: -0.5em;
+        margin-left: 25%;
+        padding: 10px 0.5em;
+    }
+    #menu .menu-item-passer-une-annonce a{
+        font-size: 20px;
+    }
+    .search-box-text{
+        margin-top: 10.5em;
+    }
+    .search-box-text span{
+        font-size: 3.5em;
+    }
+    .search-box-button{
+        padding: 5px;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers page mobile first ::::::::::::::::::::::::::::*/
+    .offre-name .detail-button{
+        padding: 10px;
+        display: block;
+    }
+    .sidebar-offre .agence_logo{
+        display: none;
+    }
+    .service_agence li{
+        font-size: 14px;
+        overflow: visible;
+    }
+    .service_agence li a{
+        margin-left: -2em;
+    }
+    .service_agence li a:hover{
+        text-decoration: none;
+        margin-left: -2em;
+    }
+    #list-page-search-box .search-box-button{
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers detail page mobile first ::::::::::::::::::::::::::::*/
+    #offers-detail-page .offers-references .offers-name-price .favorie-button a{
+        padding: 5px;
+        font-size: 12px;
+    }
+    #offers-detail-page .detail-all-parameter{
+        padding: 5px;
+    }
+    #offers-detail-page .detail-all-parameter .signaler,#offers-detail-page .detail-all-parameter .envoyer,#offers-detail-page .detail-all-parameter .imprimer,#offers-detail-page .detail-all-parameter .suprimer{
+
+        font-size: 12px;
+        padding: 2em;
+    }
+    #offers-detail-page .detail-all-parameter .signaler .fa, #offers-detail-page .detail-all-parameter .imprimer .fa, #offers-detail-page .detail-all-parameter .envoyer .fa, #offers-detail-page .detail-all-parameter .suprimer .fa{
+        font-size: 2.5em;
+    }
+    #offers-detail-page .retour-button{
+        padding: 5px;
+        font-size: 12px;
+    }
+    #offers-detail-page .user-phone .fa{
+        font-size: 2.5em;
+        top: -2px;
+        left: 0.3em;
+    }
+    #offers-detail-page .user-phone{
+        width: 14em;
+        font-size: 10px;
+    }
+}
+
+@media all and (min-width: 770px) and (max-width: 959px){
+
+    #menu-bar .phone-icone{
+        margin-left: 60%;
+    }
+    #menu .menu-item{
+        padding: 12px 1em 12px 5px;
+    }
+    #menu .menu-item-passer-une-annonce{
+        top: -0.5em;
+        margin-left: 25%;
+        padding: 10px 0.5em;
+    }
+    #menu .menu-item-passer-une-annonce a{
+        font-size: 20px;
+    }
+    .search-box-text{
+        margin-top: 10.5em;
+    }
+    .search-box-text span{
+        font-size: 3.5em;
+    }
+    .search-box-button{
+        padding: 5px;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers page mobile first ::::::::::::::::::::::::::::*/
+    .offre-name .detail-button{
+        padding: 10px;
+        display: block;
+    }
+    .sidebar-offre .agence_logo{
+        display: none;
+    }
+    .service_agence li{
+        font-size: 14px;
+        overflow: visible;
+    }
+    .service_agence li a{
+        margin-left: -2em;
+    }
+    .service_agence li a:hover{
+        text-decoration: none;
+        margin-left: -2em;
+    }
+    #list-page-search-box .search-box-button{
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers detail page mobile first ::::::::::::::::::::::::::::*/
+    #offers-detail-page .offers-references .offers-name-price .favorie-button a{
+        padding: 5px;
+        font-size: 12px;
+    }
+    #offers-detail-page .detail-all-parameter{
+        padding: 5px;
+    }
+    #offers-detail-page .detail-all-parameter .signaler,#offers-detail-page .detail-all-parameter .envoyer,#offers-detail-page .detail-all-parameter .imprimer,#offers-detail-page .detail-all-parameter .suprimer{
+
+        font-size: 12px;
+        padding: 2em;
+    }
+    #offers-detail-page .detail-all-parameter .signaler .fa, #offers-detail-page .detail-all-parameter .imprimer .fa, #offers-detail-page .detail-all-parameter .envoyer .fa, #offers-detail-page .detail-all-parameter .suprimer .fa{
+        font-size: 2.5em;
+    }
+    #offers-detail-page .retour-button{
+        padding: 5px;
+        font-size: 12px;
+    }
+    #offers-detail-page .user-phone .fa{
+        font-size: 2.5em;
+        top: -2px;
+        left: 0.3em;
+    }
+    #offers-detail-page .user-phone{
+        width: 14em;
+        font-size: 10px;
+    }
+}
+@media all and (min-width: 650px) and (max-width: 769px){
+    #menu{
+        display: none;
+    }
+    #menu-bar .disponible{
+        display: none;
+    }
+    #menu-bar .menu-sm-nav{
+        position: absolute;
+        right: 1em;
+        top: 0.3em;
+        font-size: 3em;
+        cursor: pointer;
+    }
+    #menu-bar .menu-sm-nav:hover{
+        color: #0F75BC;
+    }
+
+    #menu-sm{
+        display: block;
+        padding: 0;
+        margin-top: -6.2em;
+    }
+    #menu-sm .menu-item:hover{
+        background-color: #008B8B;
+    }
+    #menu-sm .menu-item{
+        padding: 10px 10px 10px 2em;
+        background-color: #0F75BC;
+        border-bottom: 1px solid #f2f2f2;
+        width: 100%;
+        color: #FFF;
+        font-weight: bold;
+    }
+    #menu-sm .menu-item a:hover{
+        text-decoration: none;
+    }
+    #menu-sm .menu-item a{
+        color: #FFF;
+    }
+    .search-box{
+        margin-top: 0;
+    }
+    .search-box-text{
+        margin-top: 8em;
+    }
+    .search-box-text span{
+        font-size: 3em;
+    }
+    .search-box-button{
+        padding: 5px;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers detail page mobile first ::::::::::::::::::::::::::::*/
+    #offers-detail-page .offers-references .offers-name-price .favorie-button a{
+        display: block;
+    }
+    #offers-detail-page .offers-references .offers-name-price .favorie-button{
+        margin: 3em 0 0 0;
+    }
+    #offers-detail-page .offers-references .offers-name-price .favorie-button div{
+        margin: 1em;
+    }
+
+    #offers-detail-page .retour-button{
+        margin-bottom: 10px;
+    }
+
+    /* :::::::::::::::::::::::::::: mobile first connexion page :::::::::::::::::::*/
+
+    #hidden-if-screen-is-sm{
+        display: none;
+    }
+    #connexion-page-background .search-box-padding{
+        margin-top: 2em;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers page mobile first ::::::::::::::::::::::::::::*/
+    #bread-space{
+        margin-top: -10em;
+    }
+
+}
+
+@media all and (min-width: 490px) and (max-width: 649px){
+
+    #menu{
+        display: none;
+    }
+    #menu-bar .disponible{
+        display: none;
+    }
+    #menu-bar .menu-sm-nav{
+        position: absolute;
+        right: 1em;
+        top: 0.3em;
+        font-size: 3em;
+        cursor: pointer;
+    }
+    #menu-bar .menu-sm-nav:hover{
+        color: #0F75BC;
+    }
+
+    #menu-sm{
+        display: block;
+        padding: 0;
+        margin-top: -6.2em;
+    }
+    #menu-sm .menu-item:hover{
+        background-color: #008B8B;
+    }
+    #menu-sm .menu-item{
+        padding: 10px 10px 10px 2em;
+        background-color: #0F75BC;
+        border-bottom: 1px solid #f2f2f2;
+        width: 100%;
+        color: #FFF;
+        font-weight: bold;
+    }
+    #menu-sm .menu-item a:hover{
+        text-decoration: none;
+    }
+    #menu-sm .menu-item a{
+        color: #FFF;
+    }
+    .search-box{
+        margin-top: 0;
+    }
+    .search-box-text{
+        margin-top: 5em;
+    }
+    .search-box-text span{
+        font-size: 3em;
+    }
+    .search-box-button{
+        padding: 5px;
+    }
+
+    /* :::::::::::::::::::::::::::: mobile first connexion page :::::::::::::::::::*/
+
+    #hidden-if-screen-is-sm{
+        display: none;
+    }
+    #connexion-page-background .search-box-padding{
+        margin-top: 2em;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers page mobile first ::::::::::::::::::::::::::::*/
+    #bread-space{
+        margin-top: -10em;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers detail page mobile first ::::::::::::::::::::::::::::*/
+    #offers-detail-page .offers-references .offers-name-price .favorie-button a{
+        display: block;
+    }
+    #offers-detail-page .offers-references .offers-name-price .favorie-button{
+        margin: 3em 0 0 0;
+    }
+    #offers-detail-page .offers-references .offers-name-price .favorie-button div{
+        margin: 1em;
+    }
+
+    #offers-detail-page .retour-button{
+        margin-bottom: 10px;
+    }
+}
+
+@media all and (max-width: 489px){
+
+    #menu{
+        display: none;
+    }
+    #menu-bar .disponible{
+        display: none;
+    }
+    #menu-bar .menu-sm-nav{
+        position: absolute;
+        right: 1em;
+        top: 0.3em;
+        font-size: 3em;
+        cursor: pointer;
+    }
+    #menu-bar .menu-sm-nav:hover{
+        color: #0F75BC;
+    }
+
+    #menu-sm{
+        display: block;
+        padding: 0;
+        margin-top: -6.2em;
+    }
+    #menu-sm .menu-item:hover{
+        background-color: #008B8B;
+    }
+    #menu-sm .menu-item{
+        padding: 10px 10px 10px 2em;
+        background-color: #0F75BC;
+        border-bottom: 1px solid #f2f2f2;
+        width: 100%;
+        color: #FFF;
+        font-weight: bold;
+    }
+    #menu-sm .menu-item a:hover{
+        text-decoration: none;
+    }
+    #menu-sm .menu-item a{
+        color: #FFF;
+    }
+    .search-box{
+        margin-top: 0;
+    }
+    .search-box-text{
+        margin-top: 3em;
+    }
+    .search-box-text span{
+        font-size: 3em;
+    }
+    .search-box-button{
+        padding: 5px;
+    }
+
+    /* :::::::::::::::::::::::::::: mobile first connexion page :::::::::::::::::::*/
+
+    #hidden-if-screen-is-sm{
+        display: none;
+    }
+    #connexion-page-background .search-box-padding{
+        margin-top: 2em;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers page mobile first ::::::::::::::::::::::::::::*/
+    #bread-space{
+        margin-top: -10em;
+    }
+
+    /* ::::::::::::::::::::::::::::: offers detail page mobile first ::::::::::::::::::::::::::::*/
+    #offers-detail-page .offers-references .offers-name-price .favorie-button a{
+        display: block;
+    }
+    #offers-detail-page .offers-references .offers-name-price .favorie-button{
+        margin: 3em 0 0 0;
+    }
+    #offers-detail-page .offers-references .offers-name-price .favorie-button div{
+        margin: 1em;
+    }
+
+    #offers-detail-page .retour-button{
+        margin-bottom: 10px;
+    }
+}
+/*
+@media all and (max-width: 320px){
+
+    #menu-sm{
+        position: absolute;
+        top: -5em;
+        right: 0;
+        display: block;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    #menu-sm{
+        padding-top: 2em;
+        margin: 0;
+        z-index: 99;
+    }
+
+    #menu-sm li{
+        list-style: none;
+        display: block;
+        margin-right: 1.5em;
+    }
+    #menu-sm li a:hover{
+        text-decoration: none;
+        color: rgba(0,0,0,0.5);
+    }
+    #menu-sm li span{
+        cursor: pointer;
+    }
+    #menu-sm #sous-menu-sm{
+        position: absolute;
+        right: 0.5em;
+        visibility: hidden;
+    }
+    #menu-sm #sous-menu-sm li{
+        border-bottom: 1px solid #FFF;
+        background-color: #2185D0;
+        padding: 5px;
+        width: 200px;
+        text-align: left;
+    }
+    #menu-sm #sous-menu-sm li:hover{
+        background-color: #4C4C4C;
+    }
+    #menu-sm #sous-menu-sm a{
+        color: #FFF;
+
+    }
+    #menu-sm #sous-menu-sm a:hover{
+        color: #FFF;
+        text-decoration: none;
+        padding-left: 10px;
+        transition: 0.2s;
+    }
+
+    .search-box{
+        height: 1000px;
+    }
+    .search-box-text{
+        margin-top: 1em;
+    }
+    .search-box-form{
+        display: none;
+    }
+    .block-blue{
+        height: 600px;
+    }
+}

@@ -13,7 +13,7 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-sm-5" id="hidden-if-screen-is-sm">
                         <div class="grace-a-gbata">
                             Grâce à votre compte <strong>GBATA</strong> :
                         </div>

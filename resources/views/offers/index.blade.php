@@ -8,7 +8,7 @@
 
     <div class="container search-box-padding" style="">
         <br><br><br><br><br><br><br>
-        <div class="row">
+        <div class="row" id="bread-space">
             <div class="col-sm-12">
                 <div class="breadcrumbs">
                     <ol class="breadcrumb">
@@ -196,7 +196,7 @@
                         <span>KôKôTi Home Agency</span>
                         <hr>
                         <div class="agence_logo">
-                            <img src="{{ asset('img/logoagence.bmp') }}" width="200" height="150" alt="">
+                            <img src="{{ asset('img/logoagence.bmp') }}" alt="">
                         </div>
                         <div class="service_agence">
                             <ul>
