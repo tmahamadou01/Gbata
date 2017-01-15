@@ -178,7 +178,7 @@
 
 
     <!-- proprietaire -->
-
+    <br><br>
     <div class="container">
         <div class="row">
 
@@ -190,7 +190,7 @@
                 <div class="bar"></div>
             </div>
 
-            <div class="col-sm-12 text-center"><br><br><br>
+            <div class="col-sm-12 text-center">
                 <span style="color: #4C4F52; font-size: 2em; font-weight: 700;">
                     Trouvez vite et bien vos locataires
                 </span>

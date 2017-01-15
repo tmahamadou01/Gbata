@@ -262,6 +262,7 @@ body{
     width: 100%;
     background-color: #D9DADA;
     height: 1px;
+    margin-bottom: 5em;
 }
 .rubrique-icon{
     border: 1px solid #D9DADA;
@@ -357,6 +358,9 @@ body{
 }
 .back-to-top {
 
+}
+.rubrique-title{
+    margin-bottom: 3em;
 }
 
 /*:::::::::::::::::::::::::::::::: page connexion ::::::::::::::::::::::::::::::::*/
