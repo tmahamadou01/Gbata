@@ -1,24 +1,20 @@
 $(document).ready(function(){
 
     var cpt = 0;
-    $('#menu-sm').click(function(){
+    var sousmenu = document.getElementById("menu-sm");
+
+    $('#menu-sm-nav').click(function(){
 
         if(cpt == 0){
 
-            // on récupère l'élément
-            var sousmenu = document.getElementById("sous-menu-sm");
-
-            // on modifie son style
-            sousmenu.style.visibility = "visible";
+            sousmenu.style.marginTop = "6em";
+            sousmenu.style.transition = "0.5s";
+            //var searchbox = document.getElementById("search-box");
 
             cpt = 1;
         }else{
 
-            // on récupère l'élément
-            var sousmenu = document.getElementById("sous-menu-sm");
-
-            // on modifie son style
-            sousmenu.style.visibility = "hidden";
+            sousmenu.style.marginTop = "-6.2em";
 
             cpt = 0;
         }

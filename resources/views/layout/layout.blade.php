@@ -13,6 +13,7 @@
     <link href="{{ URL::asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/style_offre.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/mobile_first.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/plugin/slick/slick.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/plugin/animate.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/tinymice/skin.min.css') }}" rel="stylesheet">
@@ -56,6 +57,9 @@
                     </div>
 
                 </div>
+                <div class="menu-sm-nav" id="menu-sm-nav">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +79,7 @@
                         </ul>
                     </li>
                     <li class="menu-item"><a class="menu-link" href="">Comment ça marche ?</a></li>
-                    <li class="menu-item"><a class="menu-link" href="">Contacts</a></li>
+                    <li class="menu-item"><a class="menu-link" href="{{ route('contact.index') }}">Contacts</a></li>
                     <li class="menu-item menu-item-with-account">
                         <a class="menu-link" href="">
                             <i class="myAccount-icone fa fa-user-circle-o" aria-hidden="true"></i>
@@ -107,20 +111,21 @@
     </ul>
 </div>
 
-
-
-
-    <!--</ul>
-    <ul id="menu-sm">
-        <li class="menu-item"><span class="menu-link" href=""><i class="fa fa-align-justify fa-2x" aria-hidden="true"></i></span>
-            <ul id="sous-menu-sm">
-                <li><a href="{{ route('how') }}">Comment ça marche ?</a></li>
-                <li><a href="">Offres</a></li>
-                <li><a href="">Contacts</a></li>
-            </ul>
-        </li>
-    </ul>-->
-
+<!-- ===================== menu sm ==========-->
+<div id="menu-sm">
+    <div class="menu-item">
+        <a href="">Annonces</a>
+    </div>
+    <div class="menu-item">
+        <a href="">Comment ça marche</a>
+    </div>
+    <div class="menu-item">
+        <a href="">Contact</a>
+    </div>
+    <div class="menu-item">
+        <a href="">Connexion</a>
+    </div>
+</div>
 
     @yield('content')
 

@@ -10,7 +10,7 @@
     <div class="container-fluid" id="connexion-page-background">
         <div class="container search-box-padding">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" id="hidden-if-screen-is-sm">
                     <div class="grace-a-gbata">
                         Grâce à votre compte <strong>GBATA</strong> :
                     </div>

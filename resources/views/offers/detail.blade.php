@@ -7,7 +7,7 @@
 @section('content')
     <div class="container search-box-padding" id="offers-detail-page">
         <br><br><br><br><br><br><br>
-        <div class="row">
+        <div class="row" id="bread-space">
             <div class="col-sm-10">
                 <div class="breadcrumbs">
                     <ol class="breadcrumb">
@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-sm-12 favorie-button">
                             <div>
-                                <a href=""><i class="fa fa-star-o" aria-hidden="true"></i> Ajouter à mes favoris</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href=""><i class="fa fa-star-o make-space" aria-hidden="true"></i> Ajouter à mes favoris</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href=""><i class="fa fa-print" aria-hidden="true"></i> Imprimer la fiche de visite</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href=""><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Envoyer à un ami</a>
                             </div>

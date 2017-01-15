@@ -7,7 +7,7 @@
 @section('content')
 
     <!-- gros formulaire de recherche -->
-    <div class="search-box">
+    <div class="search-box" id="search-box">
 
         <div class="container">
             <div class="row">

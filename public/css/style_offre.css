@@ -168,6 +168,9 @@
     padding: 5px;
 }
 
+.sidebar-offre .agence img{
+    width: 150px;
+}
 .sidebar-offre .agence{
     padding: 5px;
     /*background-color: #808080;*/
