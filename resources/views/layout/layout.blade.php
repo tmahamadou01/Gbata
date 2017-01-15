@@ -114,16 +114,20 @@
 <!-- ===================== menu sm ==========-->
 <div id="menu-sm">
     <div class="menu-item">
-        <a href="">Annonces</a>
+        <a href="{{route('liste_des_offres')}}">Annonces</a>
     </div>
     <div class="menu-item">
-        <a href="">Comment ça marche</a>
+        <a href="#">Comment ça marche</a>
     </div>
     <div class="menu-item">
-        <a href="">Contact</a>
+        <a href="{{route('contact.index')}}">Contact</a>
     </div>
     <div class="menu-item">
-        <a href="">Connexion</a>
+        @if (Auth::guest())
+            <a href="{{ route('login') }}" class="">Connectez-vous</a>
+        @else
+            <span class="myAccount">{{ Auth::user()->name }}</span> ( <i class="fa fa-power-off" aria-hidden="true"></i> <a href="{{ route('logout') }}" class="">Deconnexion</a> )
+        @endif
     </div>
 </div>
 
