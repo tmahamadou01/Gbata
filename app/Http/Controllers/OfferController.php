@@ -191,7 +191,7 @@ class OfferController extends Controller
 
         $email_user = $request->get('email');
         $id_offer = $request->get('id_offer');
-
+        $users = DB::table('users')->count();
         Mail::send('email.contact_agence',
             array(
                 'nom' => $request->get('nom'),

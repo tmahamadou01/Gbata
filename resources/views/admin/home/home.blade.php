@@ -25,8 +25,7 @@
                     <!-- small box -->
                     <div class="small-box bg-aqua">
                         <div class="inner">
-                            <h3>15000</h3>
-
+                            <h3>{{$nbre_location}}</h3>
                             <p>Offres de location</p>
                         </div>
                         <div class="icon">
@@ -40,8 +39,7 @@
                     <!-- small box -->
                     <div class="small-box bg-green">
                         <div class="inner">
-                            <h3>5300</h3>
-
+                            <h3>{{$nbre_vente}}</h3>
                             <p>Offres de vente</p>
                         </div>
                         <div class="icon">
@@ -56,8 +54,7 @@
                     <!-- small box -->
                     <div class="small-box bg-yellow">
                         <div class="inner">
-                            <h3>10000</h3>
-
+                            <h3>{{$nbre_agence}}</h3>
                             <p>Agences</p>
                         </div>
                         <div class="icon">
@@ -73,8 +70,7 @@
                     <!-- small box -->
                     <div class="small-box bg-red">
                         <div class="inner">
-                            <h3>650000</h3>
-
+                            <h3>{{$nbre_utilisateur}}</h3>
                             <p>Utilisateurs</p>
                         </div>
                         <div class="icon">
