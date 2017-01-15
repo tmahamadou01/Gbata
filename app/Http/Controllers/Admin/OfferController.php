@@ -29,7 +29,7 @@ class OfferController extends Controller
      */
     public function index(Guard $auth)
     {
-        $offers = DB::table('offers')->where('users_id', $auth->id())->orderBy('created_at','DESC')->get();
+        $offers = DB::table('offers')->where('users_id', $auth->id())->orderBy('created_at','DESC')->paginate(16);
 
         return view('admin.offers.index', ['offers' => $offers]);
     }

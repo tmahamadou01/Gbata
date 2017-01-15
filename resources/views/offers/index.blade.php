@@ -128,7 +128,7 @@
                             <div style="padding: 0; border-bottom: 1px solid #dddddd;"></div>
                             <div class="row" style="font-size: 12px; color: #9d9d9d; padding: 5px;">
                                 <div class="col-sm-6" style="margin-top: 5px;">
-                                    <span><i class="fa fa-user" aria-hidden="true"></i> allhasco</span>
+                                    <span><i class="fa fa-user" aria-hidden="true"></i> gbata</span>
                                 </div>
                                 <div class="col-sm-6 text-right" style="margin-top: 5px;">
                                     <span><i class="fa fa-calendar" aria-hidden="true"></i> {{date('d M Y à H:i:s' , strtotime($offer->created_at))}}</span>
