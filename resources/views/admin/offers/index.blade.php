@@ -25,8 +25,6 @@
             <div class="row">
 
                 <div class="col-sm-12">
-
-                    @if($offers != [])
                         <table class="table table-bordered" >
                             <thead>
                             <tr>
@@ -40,6 +38,18 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @if (count($offers) === 0)
+                                <div class="col-sm-12">
+                                    <div class="search_resultats_list">
+                                        <div class="message_not_offer">
+                                            <p class="message_not_offer_content">
+                                                Nous n'avons pas trouvé d'annonce<br> correspondant exactement à vos critères.
+                                            </p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif (count($offers) >= 1)
                             @foreach($offers as $offer)
                                 @if($offer->state_offer == 1)
                                 <tr style="background-color: lightcoral">
@@ -94,12 +104,10 @@
 
                                 @endif
                             @endforeach
+                                @endif
                             </tbody>
                         </table>
-                    @else
-                        <?= ' vide '?>
-
-                    @endif
+                    {{$offers->links()}}
 
                 </div>
 

@@ -20,6 +20,7 @@ Route::get('/comment-ca-marche', 'HomeController@how')->name('how');
 
 Route::get('/contact', 'ContactController@index')->name('contact.index');
 Route::post('contact/send', 'ContactController@send')->name('contact.send');
+Route::post('sendmessage', 'OfferController@sendmessage')->name('message.send');
 
 Route::get('/welcome', 'HomeController@bienvenue')->name('bienvenue-message');
 

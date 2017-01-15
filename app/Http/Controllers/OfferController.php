@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Mail;
 
 class OfferController extends Controller
 {
@@ -27,6 +28,7 @@ class OfferController extends Controller
                                         ->where('state_offer', '0')
                                         ->orderBy('created_at','DESC')
                                         ->paginate(4);
+        $agence = DB::table('users')->where('users_id', $auth->id())->value('email');
         return view('offers.index',['offers' =>$offers]);
     }
     public function offer_vente(){
@@ -179,5 +181,29 @@ class OfferController extends Controller
     public function detail($id_offer){
         $offer = Offer::find($id_offer);
         return view('offers.detail', compact('offer'));
+    }
+    public function sendmessage(Request $request){
+        $this->validate($request, [
+            'prenom' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+        ]);
+
+        $email_user = $request->get('email');
+        $id_offer = $request->get('id_offer');
+
+        Mail::send('email.contact_agence',
+            array(
+                'nom' => $request->get('nom'),
+                'prenom' => $request->get('prenom'),
+                'email' => $request->get('email'),
+                'message' => $request->get('message'),
+            ), function($message) use ($email_user)
+            {
+                $message->from($email_user);
+                $message->to('mahamadoutraore1@gmail.com', 'GBATA')->subject('Contact suite annonce');
+            });
+
+        return redirect()->route('detail_offer',$id_offer)->with('success', 'votre message a été envoyé avec succès');
     }
 }
