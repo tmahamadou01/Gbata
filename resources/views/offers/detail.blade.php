@@ -15,6 +15,7 @@
                         <li><a href="#">Annonce</a></li>
                         <li class="#">Liste</li>
                         <li class="active">Detail</li>
+                        <li class="active">{{$offer->titre}}</li>
                     </ol>
                 </div>
             </div>
@@ -140,26 +141,26 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <table class="table table-responsive">
-                                            <tr>
-                                                <td>Chambre</td>
-                                                <td>5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Salon</td>
-                                                <td>2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Parcking</td>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Espace</td>
-                                                <td>10m²</td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                                    {{--<div class="col-sm-6">--}}
+                                        {{--<table class="table table-responsive">--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Chambre</td>--}}
+                                                {{--<td>5</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Salon</td>--}}
+                                                {{--<td>2</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Parcking</td>--}}
+                                                {{--<td>1</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Espace</td>--}}
+                                                {{--<td>10m²</td>--}}
+                                            {{--</tr>--}}
+                                        {{--</table>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
                         </div>
