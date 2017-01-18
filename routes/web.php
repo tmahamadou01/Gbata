@@ -33,7 +33,7 @@ Route::get('/offers', 'OfferController@index')->name('liste_des_offres');
 Route::get('/offers/locations', 'OfferController@offer_location')->name('offre_location');
 Route::get('/offers/sales', 'OfferController@offer_vente')->name('offre_vente');
 Route::post('/offers', 'OfferController@search')->name('search');
-Route::get('/detail/id/{id_offer}', 'OfferController@detail')->name('detail_offer');
+Route::get('/detail/id/{id_offer}', 'OfferController@detail')->name('detail_offer')->middleware(['auth']);
 
 
 
