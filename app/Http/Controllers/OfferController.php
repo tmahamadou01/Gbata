@@ -28,7 +28,6 @@ class OfferController extends Controller
                                         ->where('state_offer', '0')
                                         ->orderBy('created_at','DESC')
                                         ->paginate(4);
-        $agence = DB::table('users')->where('users_id', $auth->id())->value('email');
         return view('offers.index',['offers' =>$offers]);
     }
     public function offer_vente(){
