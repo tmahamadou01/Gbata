@@ -183,13 +183,13 @@
                     <div class="col-sm-4 col-sm-offset-6">
                         <div class="social-block">
                             <div class="reseau-social" >
-                                <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/gbataproject/"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
                             </div>
                             <div class="reseau-social" >
-                                <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                                <a target="_blank" href="https://twitter.com/gbataproject"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
                             </div>
                             <div class="reseau-social" >
-                                <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                                <a target="_blank" href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
                             </div>
 
                         </div>
