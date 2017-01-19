@@ -317,12 +317,17 @@
                                 </div>
                                 <hr>
                                 <div class="row">
-                                    <form action="">
+                                    {!! Form::open(array('route' => 'message.send', 'enctype' => "multipart/form-data")) !!}
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-nom fa fa-user-circle-o" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre nom">
+                                                    {!! Form::text('nom', null, ['class' => 'form-control', 'placeholder' => 'votre nom']) !!}
+                                                    @if ($errors->has('nom'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('nom') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -330,7 +335,12 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-prenom fa fa-user-circle-o" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre prenom">
+                                                    {!! Form::text('prenom', null, ['class' => 'form-control', 'placeholder' => 'votre prenom']) !!}
+                                                    @if ($errors->has('prenom'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('prenom') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -338,7 +348,12 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-email fa fa-envelope-open-o" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre email">
+                                                    {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'votre email']) !!}
+                                                    @if ($errors->has('email'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('email') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -346,24 +361,34 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-telephone fa fa-phone" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre telephone">
+                                                    {!! Form::number('telephone', null, ['class' => 'form-control', 'placeholder' => 'votre numero de telephone']) !!}
+                                                    @if ($errors->has('telephone'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('telephone') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <textarea style="max-width: 100%; height: 205px;" class="form-control" placeholder="Votre message (penser à indiquer si vous êtes etudiant ou un couple en CDI/CDD etc ..., vos revenu et si vous avez un garant)"></textarea>
+                                                    {!! Form::textarea('message',null, ['style' => 'max-width: 100%; height: 205px;', 'placeholder' =>'votre message']) !!}
+                                                    @if ($errors->has('message'))
+                                                        <span>
+                                                        <ul class="basic_error"><li>{{ $errors->first('message') }}</li></ul>
+                                                    </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 text-center">
-                                                <button role="button" type="submit" class="search-box-button-sidebar">
-                                                    Envoyer
-                                                </button>
+                                                {!! Form::button('Envoyer', ['type' => 'submit', 'class' => 'search-box-button']) !!}
                                             </div>
                                         </div>
-                                    </form>
+                                    {!! Form::hidden('id_offer', $offer->id,['class' => 'hide'] ) !!}
+                                    {!! Form::close() !!}
                                 </div>
+                                @include('partials.flash')
                             </div>
                         </div>
                     </div>
