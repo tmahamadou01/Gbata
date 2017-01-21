@@ -81,8 +81,8 @@
                                     Par téléphone
                                 </div>
                                 <div class="second">
-                                    +225 00 00 00 00 <br>
-                                    +225 44 44 44 44 <br>
+                                    +225 47 11 32 02 <br>
+                                    +225 49 09 20 87 <br>
                                     24h /24 et 7j/7
 
                                 </div>

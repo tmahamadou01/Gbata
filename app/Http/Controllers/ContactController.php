@@ -61,6 +61,6 @@ class ContactController extends Controller
 
             });
 
-        return redirect()->route('contact.index')->with('success', 'Merci, nous vous repondrons dans moin de 48h');
+        return redirect()->route('contact.index')->with('success', 'Votre message à été envoyé avec succès');
     }
 }

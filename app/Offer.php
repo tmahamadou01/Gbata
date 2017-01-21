@@ -21,6 +21,7 @@ class Offer extends Model
         for ($i = 0; $i < 5; $i++) {
             $string .= $characters[mt_rand(0, $max)];
         }
+
         return $string;
     }
 }
