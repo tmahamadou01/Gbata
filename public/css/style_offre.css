@@ -336,6 +336,9 @@
     font-size: 1.5em;
     font-weight: bold;
 }
+#offers-detail-page .offers-references .offers-name-price .favorie-button .fa-facebook,#offers-detail-page .offers-references .offers-name-price .favorie-button .fa-twitter{
+    padding: 2em 1.2em;
+}
 #offers-detail-page .offers-references .offers-name-price .favorie-button{
     padding: 2em 1em;
 }

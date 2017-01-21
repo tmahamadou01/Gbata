@@ -49,7 +49,8 @@
                         <div class="col-sm-12 favorie-button">
                             <div>
                                 <a href=""><i class="fa fa-star-o make-space" aria-hidden="true"></i> Ajouter à mes favoris</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href=""><i class="fa fa-print" aria-hidden="true"></i> Imprimer la fiche de visite</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href=""><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Envoyer à un ami</a>
                             </div>
                         </div>
