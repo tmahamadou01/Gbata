@@ -86,7 +86,11 @@
                             </div>
 
                             <div class="form-group">
-                                <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Numero de téléphone ..." >
+                                <div class="input-group">
+                                    <div class="input-group-addon">+225</div>
+                                    <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Numero de téléphone ..." >
+                                </div>
+
 
                                 @if ($errors->has('mobile'))
                                     <span>

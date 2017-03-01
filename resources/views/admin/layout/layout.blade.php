@@ -122,6 +122,12 @@
                     </ul>
                 </li>
                 @endrole
+
+                <li>
+                    <a href="{{ route('home') }}">
+                        <i class="fa fa-reply" aria-hidden="true"></i> <span>Aller sur le site</span>
+                    </a>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
