@@ -173,7 +173,7 @@
 
         var indice = $('.home-type').val();
 
-        if(indice == 2){
+        if(indice == 'vente'){
             $('.prix').show();
             $('.loyer').hide();
             $('.caution').hide();

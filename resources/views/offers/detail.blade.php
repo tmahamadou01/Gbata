@@ -15,6 +15,7 @@
                         <li><a href="#">Annonce</a></li>
                         <li class="#">Liste</li>
                         <li class="active">Detail</li>
+                        <li class="active">{{$offer->titre}}</li>
                     </ol>
                 </div>
             </div>
@@ -48,7 +49,8 @@
                         <div class="col-sm-12 favorie-button">
                             <div>
                                 <a href=""><i class="fa fa-star-o make-space" aria-hidden="true"></i> Ajouter à mes favoris</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href=""><i class="fa fa-print" aria-hidden="true"></i> Imprimer la fiche de visite</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://gbataservice.com/detail/id/{{ $offer->id }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class = "twitter-share-bouton" target="_blank" data-count="vertical" data-via="gbata.ci" href="https://twitter.com/intent/tweet?text=http://gbataservice.com/detail/id/{{ $offer->id }} @gbata"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href=""><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Envoyer à un ami</a>
                             </div>
                         </div>
@@ -140,26 +142,26 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <table class="table table-responsive">
-                                            <tr>
-                                                <td>Chambre</td>
-                                                <td>5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Salon</td>
-                                                <td>2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Parcking</td>
-                                                <td>1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Espace</td>
-                                                <td>10m²</td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                                    {{--<div class="col-sm-6">--}}
+                                        {{--<table class="table table-responsive">--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Chambre</td>--}}
+                                                {{--<td>5</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Salon</td>--}}
+                                                {{--<td>2</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Parcking</td>--}}
+                                                {{--<td>1</td>--}}
+                                            {{--</tr>--}}
+                                            {{--<tr>--}}
+                                                {{--<td>Espace</td>--}}
+                                                {{--<td>10m²</td>--}}
+                                            {{--</tr>--}}
+                                        {{--</table>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
                         </div>
@@ -316,12 +318,17 @@
                                 </div>
                                 <hr>
                                 <div class="row">
-                                    <form action="">
+                                    {!! Form::open(array('route' => 'message.send', 'enctype' => "multipart/form-data")) !!}
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-nom fa fa-user-circle-o" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre nom">
+                                                    {!! Form::text('nom', null, ['class' => 'form-control', 'placeholder' => 'votre nom']) !!}
+                                                    @if ($errors->has('nom'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('nom') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -329,7 +336,12 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-prenom fa fa-user-circle-o" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre prenom">
+                                                    {!! Form::text('prenom', null, ['class' => 'form-control', 'placeholder' => 'votre prenom']) !!}
+                                                    @if ($errors->has('prenom'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('prenom') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -337,7 +349,12 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-email fa fa-envelope-open-o" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre email">
+                                                    {!! Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'votre email']) !!}
+                                                    @if ($errors->has('email'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('email') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -345,24 +362,34 @@
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <i class="votre-telephone fa fa-phone" aria-hidden="true"></i>
-                                                    <input type="text" class="form-control" placeholder="votre telephone">
+                                                    {!! Form::number('telephone', null, ['class' => 'form-control', 'placeholder' => 'votre numero de telephone']) !!}
+                                                    @if ($errors->has('telephone'))
+                                                        <span>
+                                                                <ul class="basic_error"><li>{{ $errors->first('telephone') }}</li></ul>
+                                                            </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <textarea style="max-width: 100%; height: 205px;" class="form-control" placeholder="Votre message (penser à indiquer si vous êtes etudiant ou un couple en CDI/CDD etc ..., vos revenu et si vous avez un garant)"></textarea>
+                                                    {!! Form::textarea('message',null, ['style' => 'max-width: 100%; height: 205px;', 'placeholder' =>'votre message']) !!}
+                                                    @if ($errors->has('message'))
+                                                        <span>
+                                                        <ul class="basic_error"><li>{{ $errors->first('message') }}</li></ul>
+                                                    </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 text-center">
-                                                <button role="button" type="submit" class="search-box-button-sidebar">
-                                                    Envoyer
-                                                </button>
+                                                {!! Form::button('Envoyer', ['type' => 'submit', 'class' => 'search-box-button']) !!}
                                             </div>
                                         </div>
-                                    </form>
+                                    {!! Form::hidden('id_offer', $offer->id,['class' => 'hide'] ) !!}
+                                    {!! Form::close() !!}
                                 </div>
+                                @include('partials.flash')
                             </div>
                         </div>
                     </div>

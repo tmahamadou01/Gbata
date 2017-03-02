@@ -62,8 +62,12 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <input id="mobile" type="text" placeholder="Numero de téléphone ..." class="form-control" name="mobile" value="{{ old('mobile') }}" autofocus>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">+225</div>
+                                        <input id="mobile" type="text" placeholder="Numero de téléphone ..." class="form-control" name="mobile" value="{{ old('mobile') }}" autofocus>
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </div>
+
                                     @if ($errors->has('mobile'))
                                         <span>
                                             <ul class="basic_error"><li>{{ $errors->first('mobile') }}</li></ul>
@@ -73,7 +77,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <i class="fa fa-lock" aria-hidden="true"></i>
+
                                     <input id="password" type="password" placeholder="Mot de passe ..." class="form-control" name="password" >
                                     @if ($errors->has('password'))
                                         <span>

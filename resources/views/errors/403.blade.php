@@ -21,7 +21,7 @@
 </div>
 
 <footer>
-    <p>Contact: <a href="">info (at) gbata _dot_ ci</a></p>
+    <p>Contact: <a href="">info@gbata.ci</a></p>
 </footer>
 
 </body>
